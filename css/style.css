@@ -169,7 +169,7 @@ img {
   border-style: none; }
 
 svg {
-  overflow: auto;
+  overflow: hidden;
   vertical-align: middle; }
 
 table {
@@ -2679,7 +2679,7 @@ input[type="button"].btn-block {
 .dropdown-divider {
   height: 0;
   margin: 0.5rem 0;
-  overflow: auto;
+  overflow: hidden;
   border-top: 1px solid #e9ecef; }
 
 .dropdown-item {
@@ -8140,7 +8140,7 @@ body {
   font-weight: 400;
   color: #999999; }
   body.menu-show {
-    overflow: auto;
+    overflow: hidden;
     position: fixed;
     height: 100%;
     width: 100%; }
