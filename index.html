@@ -133,53 +133,70 @@
 
 
 	<section id="home-section" class="hero">
-		<div class="home-slider owl-carousel">
-			<div class="slider-item">
-				<div class="overlay"></div>
-				<div class="container-fluid px-md-0">
-					<div class="row d-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-						<!-- Corrected single class attribute -->
-						<div class="one-third order-md-last img img-fluid" style="background-image:url(images/bg_1.jpg);">
-							<div class="overlay"></div>
-							<div class="overlay-1"></div>
-						</div>
-						<div class="one-forth d-flex align-items-center ftco-animate" data-scrollax="properties: { translateY: '70%' }">
-							<div class="text">
-								<span class="subheading">Hello! This is Dilshad Alam</span>
-								<h1 class="mb-4 mt-3">Full <span>Stack</span> Developer</h1>
-								<p>
-									<a href="#" class="btn btn-primary">Hire me</a>
-									<a href="#" class="btn btn-primary btn-outline-primary">Download CV</a>
-								</p>
-							</div>
-						</div>
-					</div>
+		<div class="home-slider owl-carousel owl-theme">
+	  
+		  <!-- Slide 1 -->
+		  <div class="slider-item d-flex">
+			<div class="container-fluid px-0">
+			  <div class="row g-0 d-flex slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+				
+				<!-- Image -->
+				<div class="col-12 col-md-6 order-md-last d-flex p-0">
+				  <div class="img flex-fill" style="background-image:url(images/bg_1.jpg); background-size: cover; background-position: center;">
+					<div class="overlay"></div>
+					<div class="overlay-1"></div>
+				  </div>
 				</div>
-			</div>
-	
-			<div class="slider-item">
-				<div class="overlay"></div>
-				<div class="container-fluid px-md-0">
-					<div class="row d-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-						<div class="one-third order-md-last img img-fluid" style="background-image:url(images/bg_2.jpg);">
-							<div class="overlay"></div>
-							<div class="overlay-1"></div>
-						</div>
-						<div class="one-forth d-flex align-items-center ftco-animate" data-scrollax="properties: { translateY: '70%' }">
-							<div class="text">
-								<span class="subheading">We Develop &amp; Build Website</span>
-								<h1 class="mb-4 mt-3">Hi, I am <span>Dilshad Alam</span> This is my favorite work.</h1>
-								<p>
-									<a href="#" class="btn btn-primary">Hire me</a>
-									<a href="#" class="btn btn-primary btn-outline-primary">Download CV</a>
-								</p>
-							</div>
-						</div>
-					</div>
+	  
+				<!-- Text -->
+				<div class="col-12 col-md-6 d-flex align-items-center px-3 px-md-5">
+				  <div class="text">
+					<span class="subheading">Hello! This is Dilshad Alam</span>
+					<h1 class="mb-4 mt-3">Full <span>Stack</span> Developer</h1>
+					<p>
+					  <a href="#" class="btn btn-primary">Hire me</a>
+					  <a href="#" class="btn btn-primary btn-outline-primary">Download CV</a>
+					</p>
+				  </div>
 				</div>
+	  
+			  </div>
 			</div>
+		  </div>
+	  
+		  <!-- Slide 2 -->
+		  <div class="slider-item d-flex">
+			<div class="container-fluid px-0">
+			  <div class="row g-0 d-flex slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+				
+				<!-- Image -->
+				<div class="col-12 col-md-6 order-md-last d-flex p-0">
+				  <div class="img flex-fill" style="background-image:url(images/bg_2.jpg); background-size: cover; background-position: center;">
+					<div class="overlay"></div>
+					<div class="overlay-1"></div>
+				  </div>
+				</div>
+	  
+				<!-- Text -->
+				<div class="col-12 col-md-6 d-flex align-items-center px-3 px-md-5">
+				  <div class="text">
+					<span class="subheading">We Develop &amp; Build Website</span>
+					<h1 class="mb-4 mt-3">Hi, I am <span>Dilshad Alam</span>. This is my favorite work.</h1>
+					<p>
+					  <a href="#" class="btn btn-primary">Hire me</a>
+					  <a href="#" class="btn btn-primary btn-outline-primary">Download CV</a>
+					</p>
+				  </div>
+				</div>
+	  
+			  </div>
+			</div>
+		  </div>
+	  
 		</div>
-	</section>
+	  </section>
+	  
+	  
 	
 
 
@@ -1203,19 +1220,36 @@
 			});
 
 
-
-
 			$(document).ready(function(){
-  $('.owl-carousel').owlCarousel({
+  $('.home-slider').owlCarousel({
     items: 1,
     loop: true,
     nav: true,
     dots: true,
-    touchDrag: true,   // mobile swipe
+    autoplay: true,
+    touchDrag: true,
     mouseDrag: true,
-    autoplay: true
+    margin: 0,
+    responsive: {
+      0: { items: 1 },
+      768: { items: 1 }
+    }
   });
 });
+
+
+
+// 			$(document).ready(function(){
+//   $('.owl-carousel').owlCarousel({
+//     items: 1,
+//     loop: true,
+//     nav: true,
+//     dots: true,
+//     touchDrag: true,   // mobile swipe
+//     mouseDrag: true,
+//     autoplay: true
+//   });
+// });
 
 
 
