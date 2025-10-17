@@ -988,16 +988,16 @@
 
 //slider touch
 $('.home-slider').owlCarousel({
-    items: 1,
     loop: true,
     autoplay: true,
-    smartSpeed: 800,
+    autoplayTimeout: 4000,
+    autoplayHoverPause: false,
+    items: 1,
+    margin: 0,
+    animateOut: 'fadeOut',
     touchDrag: true,
     mouseDrag: true,
-    pullDrag: true,
-    nav: true,
-    dots: true,
-    navText: ["<"," >"] 
+    smartSpeed: 800
 });
 
     // Mobile vertical scroll fix
