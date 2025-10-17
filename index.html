@@ -26,14 +26,13 @@
 	
 <!-- Minimal CSS fix -->
 <style>
-	.hero,
-	.home-slider {
-		overflow: visible;
-		touch-action: pan-y;
-	}
-	.overlay, .overlay-1 {
-		pointer-events: none;
-	}
+.overlay, .overlay-1 {
+    pointer-events: none;
+}
+.overlay {
+    pointer-events: none;
+}
+
 	</style>
 
 </head>
@@ -987,37 +986,36 @@
 
 
 //slider touch
-
-$(document).ready(function(){
-    $('.home-slider').owlCarousel({
-        items: 1,
-        loop: true,
-        autoplay: true,
-        smartSpeed: 800,
-        touchDrag: true,
-        mouseDrag: true,
-        pullDrag: true,
-        nav: true,
-        dots: true
-    });
+$('.home-slider').owlCarousel({
+    items: 1,
+    loop: true,
+    autoplay: true,
+    smartSpeed: 800,
+    touchDrag: true,
+    mouseDrag: true,
+    pullDrag: true,
+    nav: true,
+    dots: true,
+    navText: ["<"," >"] 
+});
 
     // Mobile vertical scroll fix
-    var startX, startY;
-    $('.home-slider').on('touchstart', function(e){
-        var touch = e.originalEvent.touches[0];
-        startX = touch.clientX;
-        startY = touch.clientY;
-    });
+//     var startX, startY;
+//     $('.home-slider').on('touchstart', function(e){
+//         var touch = e.originalEvent.touches[0];
+//         startX = touch.clientX;
+//         startY = touch.clientY;
+//     });
 
-    $('.home-slider').on('touchmove', function(e){
-        var touch = e.originalEvent.touches[0];
-        var deltaX = touch.clientX - startX;
-        var deltaY = touch.clientY - startY;
-        if(Math.abs(deltaY) > Math.abs(deltaX)){
-            e.stopPropagation(); // vertical swipe → allow page scroll
-        }
-    });
-});
+//     $('.home-slider').on('touchmove', function(e){
+//         var touch = e.originalEvent.touches[0];
+//         var deltaX = touch.clientX - startX;
+//         var deltaY = touch.clientY - startY;
+//         if(Math.abs(deltaY) > Math.abs(deltaX)){
+//             e.stopPropagation(); // vertical swipe → allow page scroll
+//         }
+//     });
+// });
 
 //slider touch
 
@@ -1025,42 +1023,7 @@ $(document).ready(function(){
 	  </script>   
 
 
-	  <!-- <script>
-		document.querySelectorAll('#ftco-nav .nav-link').forEach(function(link){
-		  link.addEventListener('click', function(e){
-			e.preventDefault();
-		
-			var target = document.querySelector(this.getAttribute('href'));
-			var navbarCollapse = document.getElementById('ftco-nav');
-		
-			// Close menu first
-			if (navbarCollapse.classList.contains('show')){
-			  var bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
-			  if(!bsCollapse){
-				bsCollapse = new bootstrap.Collapse(navbarCollapse, { toggle: false });
-			  }
-			  bsCollapse.hide();
-			}
-		
-			// Delay scroll to let collapse animation finish
-			setTimeout(function(){
-			  var navbarHeight = document.getElementById('ftco-navbar').offsetHeight;
-			  var elementPosition = target.offsetTop;
-		
-			  // Home section ke liye thoda offset
-			  if(target.id === "home-section"){
-				elementPosition = 1; // 1px scroll → collapse animation dikhe
-			  }
-		
-			  window.scrollTo({
-				top: elementPosition - navbarHeight,
-				behavior: 'smooth'
-			  });
-			}, 300); // 300ms delay
-		  });
-		});
-		</script> -->
-		
+	
 	  <!----new code-->
 
 	  
