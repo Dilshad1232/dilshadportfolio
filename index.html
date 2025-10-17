@@ -944,6 +944,25 @@ $('.home-slider').owlCarousel({
     dots: true
 });
 
+//slider touch
+var startX, startY;
+
+$('.home-slider').on('touchstart', function(e) {
+    var touch = e.originalEvent.touches[0];
+    startX = touch.clientX;
+    startY = touch.clientY;
+});
+
+$('.home-slider').on('touchmove', function(e) {
+    var touch = e.originalEvent.touches[0];
+    var deltaX = touch.clientX - startX;
+    var deltaY = touch.clientY - startY;
+
+    if (Math.abs(deltaY) > Math.abs(deltaX)) {
+        // Vertical swipe detected → allow page scroll
+        e.stopPropagation(); // slider ko horizontal swipe consider na karne do
+    }
+});
 
 
 	  </script>   
