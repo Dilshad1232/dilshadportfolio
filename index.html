@@ -23,17 +23,18 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 
-	<style>
-		.overlay, .overlay-1 {
-    pointer-events: none;
-}
-.hero, .home-slider {
-    overflow: visible;       /* hidden na ho */
-    touch-action: pan-y;     /* vertical scroll allow kare */
-}
-
+	
+<!-- Minimal CSS fix -->
+<style>
+	.hero,
+	.home-slider {
+		overflow: visible;
+		touch-action: pan-y;
+	}
+	.overlay, .overlay-1 {
+		pointer-events: none;
+	}
 	</style>
-
 
 </head>
 
@@ -72,7 +73,7 @@
 
 
 
-	<section id="home-section" class="hero">
+	<!-- <section id="home-section" class="hero">
 		<div class="home-slider owl-carousel">
 			<div class="slider-item">
 				<div class="overlay"></div>
@@ -119,7 +120,59 @@
 				</div>
 			</div>
 		</div>
+	</section> -->
+
+	<section id="home-section" class="hero">
+		<div class="home-slider owl-carousel">
+			<!-- Slide 1 -->
+			<div class="slider-item">
+				<div class="overlay"></div>
+				<div class="container-fluid px-md-0">
+					<div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end">
+						<div class="one-third order-md-last img" style="background-image:url(images/bg_1.jpg);">
+							<div class="overlay"></div>
+							<div class="overlay-1"></div>
+						</div>
+						<div class="one-forth d-flex align-items-center ftco-animate">
+							<div class="text">
+								<span class="subheading">Hello! This is Dilshad Alam</span>
+								<h1 class="mb-4 mt-3">Full <span>Stack</span> Developer</h1>
+								<p>
+									<a href="#" class="btn btn-primary">Hire me</a>
+									<a href="#" class="btn btn-primary btn-outline-primary">Download CV</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	
+			<!-- Slide 2 -->
+			<div class="slider-item">
+				<div class="overlay"></div>
+				<div class="container-fluid px-md-0">
+					<div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end">
+						<div class="one-third order-md-last img" style="background-image:url(images/bg_2.jpg);">
+							<div class="overlay"></div>
+							<div class="overlay-1"></div>
+						</div>
+						<div class="one-forth d-flex align-items-center ftco-animate">
+							<div class="text">
+								<span class="subheading">We Develop &amp; Build Website</span>
+								<h1 class="mb-4 mt-3">Hi, I am <span>Dilshad Alam</span> This is my favorite work.</h1>
+								<p>
+									<a href="#" class="btn btn-primary">Hire me</a>
+									<a href="#" class="btn btn-primary btn-outline-primary">Download CV</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</section>
+	
+
 
 	<section class="ftco-counter img bg-light" id="section-counter">
 		<div class="container">
@@ -240,68 +293,71 @@
 
 
 	<!-- About Section -->
-<section class="ftco-about ftco-section ftco-no-pt ftco-no-pb" id="about-section">
-    <div class="container">
-        <div class="row d-flex flex-column flex-md-row">
+	<section class="ftco-about ftco-section ftco-no-pt ftco-no-pb" id="about-section">
+		<div class="container" style="width:100%; max-width:1200px; margin:auto;">
+			<div class="row d-flex flex-column flex-md-row">
+	
+				<!-- Image Section -->
+				<div class="col-12 col-md-6 col-lg-5 mb-4 mb-md-0" style="padding:0;">
+					<div class="img-about img d-flex align-items-stretch w-100" style="width:100%; min-height:300px;">
+						<img src="images/Dillu.jpg" 
+							 alt="Dilshad Alam" 
+							 style="width:100%; height:100%; object-fit:cover; display:block;">
+					</div>
+				</div>
+				
 
-            <!-- Image Section -->
-            <div class="col-12 col-md-6 col-lg-5 mb-4 mb-md-0">
-                <div class="img-about img d-flex align-items-stretch w-100">
-                    <div class="overlay"></div>
-                    <div class="img d-flex align-self-stretch align-items-center w-100"
-                        style="background-image:url(images/bg_1.jpg); background-size:cover; background-position:center; min-height:250px;">
-                    </div>
-                </div>
-            </div>
-
-            <!-- Text Section -->
-            <div class="col-12 col-md-6 col-lg-7 ps-md-4 ps-lg-5 py-4 py-md-5">
-                <div class="py-md-4">
-                    <div class="row justify-content-start pb-3">
-                        <div class="col-12 heading-section ftco-animate">
-                            <span class="subheading">My Intro</span>
-                            <h2 class="mb-4" style="font-size: 28px;">About Me</h2>
-                            <p>Hi! I am Dilshad Alam, a passionate Web Developer who loves creating modern,
-                                responsive, and user-friendly websites.</p>
-
-                            <ul class="about-info mt-4 list-unstyled">
-                                <li class="d-flex flex-wrap"><span class="me-2 fw-bold">Name:</span> <span>Dilshad Alam</span></li>
-                                <li class="d-flex flex-wrap"><span class="me-2 fw-bold">Date of birth:</span> <span>July 10, 2006</span></li>
-                                <li class="d-flex flex-wrap"><span class="me-2 fw-bold">Address:</span> <span>Kushinagar, India</span></li>
-                                <li class="d-flex flex-wrap"><span class="me-2 fw-bold">Zip code:</span> <span>274305</span></li>
-                                <li class="d-flex flex-wrap text-break"><span class="me-2 fw-bold">Email:</span> <span>alam.techno.com@gmail.com</span></li>
-                                <li class="d-flex flex-wrap"><span class="me-2 fw-bold">Phone:</span> <span>+91 9793145874</span></li>
-                            </ul>
-                        </div>
-
-                        <div class="col-12 mt-3">
-                            <div class="my-interest d-flex flex-wrap gap-3">
-                                <div class="interest-wrap d-flex align-items-center">
-                                    <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-listening"></span></div>
-                                    <div class="text ms-2">Music</div>
-                                </div>
-                                <div class="interest-wrap d-flex align-items-center">
-                                    <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-suitcases"></span></div>
-                                    <div class="text ms-2">Travel</div>
-                                </div>
-                                <div class="interest-wrap d-flex align-items-center">
-                                    <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-video-player"></span></div>
-                                    <div class="text ms-2">Movie</div>
-                                </div>
-                                <div class="interest-wrap d-flex align-items-center">
-                                    <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-football"></span></div>
-                                    <div class="text ms-2">Sports</div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
+				
+					
+	
+				<!-- Text Section -->
+				<div class="col-12 col-md-6 col-lg-7 ps-md-4 ps-lg-5 py-4 py-md-5" style="padding-left:1rem; padding-top:1rem; padding-bottom:1rem;">
+					<div class="py-md-4">
+						<div class="row justify-content-start pb-3">
+							<div class="col-12 heading-section ftco-animate">
+								<span class="subheading">My Intro</span>
+								<h2 class="mb-4" style="font-size: 24px; line-height:1.2;">About Me</h2>
+								<p style="font-size:16px; line-height:1.5;">Hi! I am Dilshad Alam, a passionate Web Developer who loves creating modern, responsive, and user-friendly websites.</p>
+	
+								<ul class="about-info mt-4 list-unstyled" style="padding-left:0; margin:0; list-style:none; font-size:14px;">
+									<li style="margin-bottom:0.5rem;"><span style="font-weight:bold;">Name:</span> Dilshad Alam</li>
+									<li style="margin-bottom:0.5rem;"><span style="font-weight:bold;">Date of birth:</span> July 10, 2006</li>
+									<li style="margin-bottom:0.5rem;"><span style="font-weight:bold;">Address:</span> Kushinagar, India</li>
+									<li style="margin-bottom:0.5rem;"><span style="font-weight:bold;">Zip code:</span> 274305</li>
+									<li style="margin-bottom:0.5rem;"><span style="font-weight:bold;">Email:</span> alam.techno.com@gmail.com</li>
+									<li style="margin-bottom:0.5rem;"><span style="font-weight:bold;">Phone:</span> +91 9793145874</li>
+								</ul>
+							</div>
+	
+							<div class="col-12 mt-3">
+								<div class="my-interest d-flex flex-wrap gap-2" style="display:flex; flex-wrap:wrap; gap:0.5rem;">
+									<div class="interest-wrap d-flex align-items-center" style="display:flex; align-items:center; gap:0.25rem;">
+										<div class="icon" style="width:24px; height:24px; display:flex; align-items:center; justify-content:center;"><span class="flaticon-listening"></span></div>
+										<div class="text" style="font-size:14px;">Music</div>
+									</div>
+									<div class="interest-wrap d-flex align-items-center" style="display:flex; align-items:center; gap:0.25rem;">
+										<div class="icon" style="width:24px; height:24px; display:flex; align-items:center; justify-content:center;"><span class="flaticon-suitcases"></span></div>
+										<div class="text" style="font-size:14px;">Travel</div>
+									</div>
+									<div class="interest-wrap d-flex align-items-center" style="display:flex; align-items:center; gap:0.25rem;">
+										<div class="icon" style="width:24px; height:24px; display:flex; align-items:center; justify-content:center;"><span class="flaticon-video-player"></span></div>
+										<div class="text" style="font-size:14px;">Movie</div>
+									</div>
+									<div class="interest-wrap d-flex align-items-center" style="display:flex; align-items:center; gap:0.25rem;">
+										<div class="icon" style="width:24px; height:24px; display:flex; align-items:center; justify-content:center;"><span class="flaticon-football"></span></div>
+										<div class="text" style="font-size:14px;">Sports</div>
+									</div>
+								</div>
+							</div>
+	
+						</div>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+	</section>
+	
 
 
 	<section class="ftco-section" id="services-section">
@@ -932,37 +988,38 @@
 
 //slider touch
 
-$('.home-slider').owlCarousel({
-    items: 1,
-    loop: true,
-    autoplay: true,
-    smartSpeed: 800,
-    touchDrag: true,  // ye ensure karo
-    mouseDrag: true,  // ye bhi
-    pullDrag: true,
-    nav: true,
-    dots: true
+$(document).ready(function(){
+    $('.home-slider').owlCarousel({
+        items: 1,
+        loop: true,
+        autoplay: true,
+        smartSpeed: 800,
+        touchDrag: true,
+        mouseDrag: true,
+        pullDrag: true,
+        nav: true,
+        dots: true
+    });
+
+    // Mobile vertical scroll fix
+    var startX, startY;
+    $('.home-slider').on('touchstart', function(e){
+        var touch = e.originalEvent.touches[0];
+        startX = touch.clientX;
+        startY = touch.clientY;
+    });
+
+    $('.home-slider').on('touchmove', function(e){
+        var touch = e.originalEvent.touches[0];
+        var deltaX = touch.clientX - startX;
+        var deltaY = touch.clientY - startY;
+        if(Math.abs(deltaY) > Math.abs(deltaX)){
+            e.stopPropagation(); // vertical swipe → allow page scroll
+        }
+    });
 });
 
 //slider touch
-var startX, startY;
-
-$('.home-slider').on('touchstart', function(e) {
-    var touch = e.originalEvent.touches[0];
-    startX = touch.clientX;
-    startY = touch.clientY;
-});
-
-$('.home-slider').on('touchmove', function(e) {
-    var touch = e.originalEvent.touches[0];
-    var deltaX = touch.clientX - startX;
-    var deltaY = touch.clientY - startY;
-
-    if (Math.abs(deltaY) > Math.abs(deltaX)) {
-        // Vertical swipe detected → allow page scroll
-        e.stopPropagation(); // slider ko horizontal swipe consider na karne do
-    }
-});
 
 
 	  </script>   
