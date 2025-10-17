@@ -26,13 +26,14 @@
 	
 <!-- Minimal CSS fix -->
 <style>
-.overlay, .overlay-1 {
-    pointer-events: none;
-}
-.overlay {
-    pointer-events: none;
-}
-
+	/* .hero,
+	.home-slider {
+		overflow: visible;
+		touch-action: pan-y;
+	}
+	.overlay, .overlay-1 {
+		pointer-events: none;
+	} */
 	</style>
 
 </head>
@@ -129,11 +130,8 @@
 				<div class="container-fluid px-md-0">
 					<div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end">
 						<div class="one-third order-md-last img" style="background-image:url(images/bg_1.jpg);">
-							<!-- <div class="overlay"></div>
-							<div class="overlay-1"></div> -->
-							<div class="overlay" style="pointer-events:none;"></div>
-							<div class="overlay-1" style="pointer-events:none;"></div>
-
+							<div class="overlay"></div>
+							<div class="overlay-1"></div>
 						</div>
 						<div class="one-forth d-flex align-items-center ftco-animate">
 							<div class="text">
@@ -989,19 +987,6 @@
 
 
 //slider touch
-// $('.home-slider').owlCarousel({
-//     items: 1,
-//     loop: true,
-//     autoplay: true,
-//     smartSpeed: 800,
-//     touchDrag: true,
-//     mouseDrag: true,
-//     pullDrag: true,
-//     nav: true,
-//     dots: true,
-//     navText: ["<"," >"] 
-// });
-
 $('.home-slider').owlCarousel({
     items: 1,
     loop: true,
@@ -1011,9 +996,9 @@ $('.home-slider').owlCarousel({
     mouseDrag: true,
     pullDrag: true,
     nav: true,
-    dots: true
+    dots: true,
+    navText: ["<"," >"] 
 });
-
 
     // Mobile vertical scroll fix
 //     var startX, startY;
@@ -1039,7 +1024,42 @@ $('.home-slider').owlCarousel({
 	  </script>   
 
 
-	
+	  <!-- <script>
+		document.querySelectorAll('#ftco-nav .nav-link').forEach(function(link){
+		  link.addEventListener('click', function(e){
+			e.preventDefault();
+		
+			var target = document.querySelector(this.getAttribute('href'));
+			var navbarCollapse = document.getElementById('ftco-nav');
+		
+			// Close menu first
+			if (navbarCollapse.classList.contains('show')){
+			  var bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+			  if(!bsCollapse){
+				bsCollapse = new bootstrap.Collapse(navbarCollapse, { toggle: false });
+			  }
+			  bsCollapse.hide();
+			}
+		
+			// Delay scroll to let collapse animation finish
+			setTimeout(function(){
+			  var navbarHeight = document.getElementById('ftco-navbar').offsetHeight;
+			  var elementPosition = target.offsetTop;
+		
+			  // Home section ke liye thoda offset
+			  if(target.id === "home-section"){
+				elementPosition = 1; // 1px scroll → collapse animation dikhe
+			  }
+		
+			  window.scrollTo({
+				top: elementPosition - navbarHeight,
+				behavior: 'smooth'
+			  });
+			}, 300); // 300ms delay
+		  });
+		});
+		</script> -->
+		
 	  <!----new code-->
 
 	  
