@@ -917,25 +917,19 @@
 		});
 
 
-		$('.home-slider').owlCarousel({
+//slider touch
+
+$('.home-slider').owlCarousel({
     items: 1,
     loop: true,
-    nav: true,
-    dots: true,
     autoplay: true,
-    margin: 0,
-    smartSpeed: 700,
-    mouseDrag: true,
-    touchDrag: true,
-    pullDrag: true, // allow drag
-    freeDrag: true, // allows touch scroll when not dragging
-    stagePadding: 0,
-    responsive: {
-        0: { items: 1 },
-        768: { items: 1 }
-    }
+    smartSpeed: 800,
+    touchDrag: true,  // ye ensure karo
+    mouseDrag: true,  // ye bhi
+    pullDrag: true,
+    nav: true,
+    dots: true
 });
-
 
 
 
