@@ -36,19 +36,6 @@
 				<span class="oi oi-menu"></span> Menu
 			</button>
 
-
-			
-			 <!-- <div class="collapse navbar-collapse" id="ftco-nav">
-				<ul class="navbar-nav nav ml-auto">
-					<li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-					<li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-					<li class="nav-item"><a href="#skills-section" class="nav-link"><span>Skills</span></a></li>
-					<li class="nav-item"><a href="#services-section" class="nav-link"><span>Services</span></a></li>
-					<li class="nav-item"><a href="#projects-section" class="nav-link"><span>Projects</span></a></li>
-					<li class="nav-item"><a href="#blog-section" class="nav-link"><span>Blog</span></a></li>
-					<li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
-				</ul>
-			</div>  -->
 			<div class="collapse navbar-collapse" id="ftco-nav">
 				<ul class="navbar-nav ms-auto"> 
 					<li class="nav-item"><a href="#home-section" class="nav-link">Home</a></li>
@@ -889,7 +876,7 @@
 			</div>
 		</div>
 	</footer>
-
+<!-- 
  <script>
 		// Select all nav links
 		document.querySelectorAll('#ftco-nav .nav-link').forEach(function (link) {
@@ -900,10 +887,10 @@
 				}
 			});
 		});
-	</script> 
+	</script>  -->
 
 
-	<!-- <script>
+  <script>
 		document.querySelectorAll('#ftco-nav .nav-link').forEach(function(link){
 		  link.addEventListener('click', function(e){
 			e.preventDefault();
@@ -928,7 +915,67 @@
 			}, 300); // 300ms delay (Bootstrap collapse default animation time)
 		  });
 		});
-	  </script> -->
+
+
+		$('.home-slider').owlCarousel({
+    items: 1,
+    loop: true,
+    nav: true,
+    dots: true,
+    autoplay: true,
+    margin: 0,
+    touchDrag: true,
+    mouseDrag: true,
+    smartSpeed: 700,
+    responsive: {
+        0: { items: 1 },
+        768: { items: 1 }
+    }
+});
+
+
+
+	  </script>   
+
+
+	  <!-- <script>
+		document.querySelectorAll('#ftco-nav .nav-link').forEach(function(link){
+		  link.addEventListener('click', function(e){
+			e.preventDefault();
+		
+			var target = document.querySelector(this.getAttribute('href'));
+			var navbarCollapse = document.getElementById('ftco-nav');
+		
+			// Close menu first
+			if (navbarCollapse.classList.contains('show')){
+			  var bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+			  if(!bsCollapse){
+				bsCollapse = new bootstrap.Collapse(navbarCollapse, { toggle: false });
+			  }
+			  bsCollapse.hide();
+			}
+		
+			// Delay scroll to let collapse animation finish
+			setTimeout(function(){
+			  var navbarHeight = document.getElementById('ftco-navbar').offsetHeight;
+			  var elementPosition = target.offsetTop;
+		
+			  // Home section ke liye thoda offset
+			  if(target.id === "home-section"){
+				elementPosition = 1; // 1px scroll → collapse animation dikhe
+			  }
+		
+			  window.scrollTo({
+				top: elementPosition - navbarHeight,
+				behavior: 'smooth'
+			  });
+			}, 300); // 300ms delay
+		  });
+		});
+		</script> -->
+		
+	  <!----new code-->
+
 	  
 
 
