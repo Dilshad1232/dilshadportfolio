@@ -9765,3 +9765,23 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
+
+
+
+    /* ========== MOBILE SWIPE + SCROLL FIX ========== */
+.hero,
+.home-slider {
+    overflow: visible !important;      /* ensure vertical scroll */
+    touch-action: pan-y !important;    /* allow vertical swipe */
+}
+
+.overlay,
+.overlay-1 {
+    pointer-events: none !important;   /* allow touch to pass through overlays */
+}
+
+.one-third.img,
+.one-forth {
+    overflow: visible !important;      /* ensure children do not block swipe */
+}
