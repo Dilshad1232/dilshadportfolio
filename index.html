@@ -26,14 +26,14 @@
 	
 <!-- Minimal CSS fix -->
 <style>
-	/* .hero,
+	.hero,
 	.home-slider {
 		overflow: visible;
 		touch-action: pan-y;
 	}
 	.overlay, .overlay-1 {
 		pointer-events: none;
-	} */
+	}
 	</style>
 
 </head>
@@ -122,10 +122,10 @@
 		</div>
 	</section> -->
 
-	<section id="home-section" class="hero">
+	<!-- <section id="home-section" class="hero">
 		<div class="home-slider owl-carousel">
 			<!-- Slide 1 -->
-			<div class="slider-item">
+			<!-- <div class="slider-item">
 				<div class="overlay"></div>
 				<div class="container-fluid px-md-0">
 					<div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end">
@@ -145,10 +145,10 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> -->
 	
 			<!-- Slide 2 -->
-			<div class="slider-item">
+			<!-- <div class="slider-item">
 				<div class="overlay"></div>
 				<div class="container-fluid px-md-0">
 					<div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end">
@@ -170,8 +170,87 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> -->
 	
+	<section id="home-section" class="hero">
+		<div id="heroSlider" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+		  <div class="carousel-inner">
+	  
+			<!-- Slide 1 -->
+			<div class="carousel-item active">
+			  <div class="row align-items-center">
+				<div class="col-md-6 ps-5">
+				  <span class="subheading">Hello! This is Dilshad Alam</span>
+				  <h1 class="mb-4 mt-3">Full <span>Stack</span> Developer</h1>
+				  <p>
+					<a href="#" class="btn btn-success me-2">Hire me</a>
+					<a href="#" class="btn btn-outline-success">Download CV</a>
+				  </p>
+				</div>
+				<div class="col-md-6 text-center">
+				  <img src="images/bg_1.jpg" class="img-fluid rounded shadow" alt="Slide 1">
+				</div>
+			  </div>
+			</div>
+	  
+			<!-- Slide 2 -->
+			<div class="carousel-item">
+			  <div class="row align-items-center">
+				<div class="col-md-6 ps-5">
+				  <span class="subheading">We Develop & Build Website</span>
+				  <h1 class="mb-4 mt-3">Hi, I am <span>Dilshad Alam</span></h1>
+				  <p>
+					<a href="#" class="btn btn-success me-2">Hire me</a>
+					<a href="#" class="btn btn-outline-success">Download CV</a>
+				  </p>
+				</div>
+				<div class="col-md-6 text-center">
+				  <img src="images/bg_2.jpg" class="img-fluid rounded shadow" alt="Slide 2">
+				</div>
+			  </div>
+			</div>
+	  
+		  </div>
+		</div>
+	  </section>
+	  
+	  
+	  
+	  <style>
+	#home-section {
+  background: #fff;
+  padding: 60px 0;
+}
+
+.subheading {
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #a1a18f;
+  text-transform: uppercase;
+}
+
+h1 span {
+  color: #a6b663;
+}
+
+.btn {
+  border-radius: 25px;
+  padding: 8px 20px;
+}
+
+.carousel-item {
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+	  </style>
+	  
+
+
+	
+
+
+
+
 
 
 	<section class="ftco-counter img bg-light" id="section-counter">
@@ -988,16 +1067,41 @@
 
 //slider touch
 $('.home-slider').owlCarousel({
+    items: 1,
     loop: true,
     autoplay: true,
-    autoplayTimeout: 4000,
-    autoplayHoverPause: false,
-    items: 1,
-    margin: 0,
-    animateOut: 'fadeOut',
+    smartSpeed: 800,
     touchDrag: true,
     mouseDrag: true,
-    smartSpeed: 800
+    pullDrag: true,
+    nav: true,
+    dots: true,
+    navText: ["<"," >"] 
+});
+
+// Slider JS
+const slides = document.querySelectorAll('.hero-slider .slide');
+let current = 0;
+let startX = 0;
+
+function showSlide(index){
+  slides.forEach((s,i)=> s.classList.toggle('active', i===index));
+  current = index;
+}
+
+function nextSlide(){
+  showSlide((current+1)%slides.length);
+}
+
+setInterval(nextSlide, 4000);
+
+/* Touch for mobile */
+const wrapper = document.querySelector('.hero-slider');
+wrapper.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+wrapper.addEventListener('touchend', e => {
+  let endX = e.changedTouches[0].clientX;
+  if(endX < startX - 50) nextSlide();
+  else if(endX > startX + 50) showSlide((current-1+slides.length)%slides.length);
 });
 
     // Mobile vertical scroll fix
@@ -1022,45 +1126,6 @@ $('.home-slider').owlCarousel({
 
 
 	  </script>   
-
-
-	  <!-- <script>
-		document.querySelectorAll('#ftco-nav .nav-link').forEach(function(link){
-		  link.addEventListener('click', function(e){
-			e.preventDefault();
-		
-			var target = document.querySelector(this.getAttribute('href'));
-			var navbarCollapse = document.getElementById('ftco-nav');
-		
-			// Close menu first
-			if (navbarCollapse.classList.contains('show')){
-			  var bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
-			  if(!bsCollapse){
-				bsCollapse = new bootstrap.Collapse(navbarCollapse, { toggle: false });
-			  }
-			  bsCollapse.hide();
-			}
-		
-			// Delay scroll to let collapse animation finish
-			setTimeout(function(){
-			  var navbarHeight = document.getElementById('ftco-navbar').offsetHeight;
-			  var elementPosition = target.offsetTop;
-		
-			  // Home section ke liye thoda offset
-			  if(target.id === "home-section"){
-				elementPosition = 1; // 1px scroll → collapse animation dikhe
-			  }
-		
-			  window.scrollTo({
-				top: elementPosition - navbarHeight,
-				behavior: 'smooth'
-			  });
-			}, 300); // 300ms delay
-		  });
-		});
-		</script> -->
-		
-	  <!----new code-->
 
 	  
 
