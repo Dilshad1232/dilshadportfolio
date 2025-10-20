@@ -23,18 +23,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 
-	
-<!-- Minimal CSS fix -->
-<style>
-	/* .hero,
-	.home-slider {
-		overflow: visible;
-		touch-action: pan-y;
-	}
-	.overlay, .overlay-1 {
-		pointer-events: none;
-	} */
-	</style>
+
 
 </head>
 
@@ -64,16 +53,8 @@
 		</div>
 	</nav>
 	
-	
-	  
-
-
-
-
-
-
-
-	 <!-- <section id="home-section" class="hero">
+	<!--slider start-->
+		<!-- <section id="home-section" class="hero">
 		<div class="home-slider owl-carousel">
 			<div class="slider-item">
 				<div class="overlay"></div>
@@ -113,58 +94,152 @@
 				</div>
 			</div>
 		</div>
-	</section>  -->
+	</section> -->
+	<!--end slider-->
 
-<section id="home-section" class="hero">
+	<section id="home-section" class="hero">
 		<div class="home-slider owl-carousel">
-			<!-- Slide 1 -->
-			<div class="slider-item">
-				<div class="overlay"></div>
-				<div class="container-fluid px-md-0">
-					<div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end">
-						<div class="one-third order-md-last img" style="background-image:url(images/bg_1.jpg);">
-							<div class="overlay"></div>
-							<div class="overlay-1"></div>
-						</div> 
-						<div class="one-forth d-flex align-items-center ftco-animate">
-							<div class="text">
-								<span class="subheading">Hello! This is Dilshad Alam</span>
-								<h1 class="mb-4 mt-3">Full <span>Stack</span> Developer</h1>
-								<p>
-									<a href="#" class="btn btn-primary">Hire me</a>
-									<a href="#" class="btn btn-primary btn-outline-primary">Download CV</a>
-								</p>
-							</div>
-						</div>
-					</div>
+		  <!-- Slide 1 -->
+		  <div class="slider-item">
+			<div class="overlay"></div>
+			<div class="container-fluid px-md-0">
+			  <div class="row d-md-flex no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+				<div class="one-third order-md-last img" style="background-image:url('images/bg_1.jpg');">
+				  <div class="overlay"></div>
 				</div>
-			</div> 
-	
-			<!-- Slide 2 -->
-			<div class="slider-item">
-				<div class="overlay"></div>
-				<div class="container-fluid px-md-0">
-					<div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end">
-						<div class="one-third order-md-last img" style="background-image:url(images/bg_2.jpg);">
-							<div class="overlay"></div>
-							<div class="overlay-1"></div>
-						</div>
-						<div class="one-forth d-flex align-items-center ftco-animate">
-							<div class="text">
-								<span class="subheading">We Develop &amp; Build Website</span>
-								<h1 class="mb-4 mt-3">Hi, I am <span>Dilshad Alam</span> This is my favorite work.</h1>
-								<p>
-									<a href="#" class="btn btn-primary">Hire me</a>
-									<a href="#" class="btn btn-primary btn-outline-primary">Download CV</a>
-								</p>
-							</div>
-						</div>
-					</div>
+				<div class="one-forth d-flex align-items-center ftco-animate">
+				  <div class="text">
+					<span class="subheading">HELLO! THIS IS DILSHAD ALAM</span>
+					<h1 class="mb-4 mt-3 fw-bold">
+					  Full <span>Stack</span> Developer
+					</h1>
+					<p>
+					  <a href="#contact" class="btn btn-primary me-2">Hire me</a>
+					  <a href="#" class="btn btn-primary btn-outline-primary">Download CV</a>
+					</p>
+				  </div>
 				</div>
+			  </div>
 			</div>
+		  </div>
+	  
+		  <!-- Slide 2 -->
+		  <div class="slider-item">
+			<div class="overlay"></div>
+			<div class="container-fluid px-md-0">
+			  <div class="row d-md-flex no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+				<div class="one-third order-md-last img" style="background-image:url('images/bg_2.jpg');">
+				  <div class="overlay"></div>
+				</div>
+				<div class="one-forth d-flex align-items-center ftco-animate">
+				  <div class="text">
+					<span class="subheading">WELCOME TO MY PORTFOLIO</span>
+					<h1 class="mb-4 mt-3 fw-bold">
+					  PHP <span>Laravel</span> Developer
+					</h1>
+					<p>
+					  <a href="#projects" class="btn btn-primary me-2">View Projects</a>
+					  <a href="#" class="btn btn-primary btn-outline-primary">Contact Me</a>
+					</p>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
 		</div>
-	</section>
-	
+	  </section>
+
+	  
+	  <style>
+		.hero .slider-item {
+  position: relative;
+  min-height: 100vh;
+  background: #fff;
+}
+
+.hero .img {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 100vh;
+  /* width: 100%; */
+}
+
+.hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.hero .text h1 span {
+  color: #8a944a;
+}
+
+.hero .btn-primary {
+  background: #8a944a;
+  border: none;
+}
+
+.hero .btn-outline-primary {
+  border: 1px solid #8a944a;
+  color: #8a944a;
+}
+
+.hero .btn-outline-primary:hover {
+  background: #8a944a;
+  color: #fff;
+}
+
+/* ---------- Mobile View ---------- */
+@media (max-width: 768px) {
+  .hero .img {
+    height: 100vh;
+    filter: brightness(0.7);
+  }
+
+  .hero .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+    color: #fff;
+  }
+
+  .hero .overlay {
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .hero .btn-primary,
+  .hero .btn-outline-primary {
+    background: #8a944a;
+    border: none;
+    color: #fff;
+  }
+}
+
+	  </style>
+<script>
+	$('.home-slider').owlCarousel({
+	  items: 1,
+	  loop: true,
+	  autoplay: true,       // ✅ Auto change
+	  autoplayTimeout: 4000, // 4 seconds delay
+	  autoplayHoverPause: false,
+	  animateOut: 'fadeOut', // ✅ Fade effect
+	  nav: false,           // ❌ No arrows
+	  dots: false,          // ❌ No dots
+	  smartSpeed: 1000      // Smooth transition
+	});
+  </script>
+  
+
+
+
 
 
 	<section class="ftco-counter img bg-light" id="section-counter">
