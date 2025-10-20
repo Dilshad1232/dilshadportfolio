@@ -54,7 +54,140 @@
 	</nav>
 	
 	<!--slider start-->
-
+<!-- Hero Slider Section -->
+<section id="home-section" class="hero position-relative overflow-hidden">
+	<!-- Slide 1 -->
+	<div class="slide active" style="background-image: url('images/bg_1.jpg');">
+	  <div class="container h-100">
+		<div class="row h-100 align-items-center">
+		  <div class="col-md-6 left-bg d-flex align-items-center">
+			<div class="text p-5">
+			  <span class="subheading">HELLO! THIS IS DILSHAD ALAM</span>
+			  <h1 class="mb-4 mt-3 fw-bold">Full <span>Stack</span> Developer</h1>
+			  <p>
+				<a href="#contact" class="btn btn-primary me-2">Hire me</a>
+				<a href="#" class="btn btn-outline-primary">Download CV</a>
+			  </p>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  
+	<!-- Slide 2 -->
+	<div class="slide" style="background-image: url('images/bg_2.jpg');">
+	  <div class="container h-100">
+		<div class="row h-100 align-items-center">
+		  <div class="col-md-6 left-bg d-flex align-items-center">
+			<div class="text p-5">
+			  <span class="subheading">WELCOME TO MY PORTFOLIO</span>
+			  <h1 class="mb-4 mt-3 fw-bold">PHP <span>Laravel</span> Developer</h1>
+			  <p>
+				<a href="#projects" class="btn btn-primary me-2">View Projects</a>
+				<a href="#contact" class="btn btn-outline-primary">Contact Me</a>
+			  </p>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  
+	<!-- Slide 3 -->
+	<div class="slide" style="background-image: url('images/bg_3.jpg');">
+	  <div class="container h-100">
+		<div class="row h-100 align-items-center">
+		  <div class="col-md-6 left-bg d-flex align-items-center">
+			<div class="text p-5">
+			  <span class="subheading">LET'S WORK TOGETHER</span>
+			  <h1 class="mb-4 mt-3 fw-bold">React <span>Frontend</span> Developer</h1>
+			  <p>
+				<a href="#contact" class="btn btn-primary me-2">Hire me</a>
+				<a href="#contact" class="btn btn-outline-primary">Contact Me</a>
+			  </p>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </section>
+  
+  <style>
+  .hero {
+	height: 100vh;
+	position: relative;
+  }
+  
+  .slide {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+	background-position: center;
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
+  }
+  
+  .slide.active {
+	opacity: 1;
+	z-index: 1;
+  }
+  
+  .left-bg {
+	background: rgba(0,0,0,0.5); /* desktop background */
+	color: #fff;
+	border-radius: 10px;
+  }
+  
+  /* Buttons */
+  .btn-primary {
+	background: #8a944a;
+	border: none;
+  }
+  .btn-outline-primary {
+	border: 1px solid #8a944a;
+	color: #8a944a;
+  }
+  .btn-outline-primary:hover {
+	background: #8a944a;
+	color: #fff;
+  }
+  
+  /* Mobile */
+  @media (max-width:768px){
+	.left-bg {
+	  background: transparent;
+	  width: 90%;
+	  margin: 0 auto;
+	  padding: 20px;
+	  text-align: center;
+	}
+  }
+  </style>
+  
+  <script>
+  // Pure JS slider (auto change)
+  const slides = document.querySelectorAll('.slide');
+  let current = 0;
+  
+  function showSlide(index){
+	slides.forEach(slide => slide.classList.remove('active'));
+	slides[index].classList.add('active');
+  }
+  
+  function nextSlide(){
+	current = (current + 1) % slides.length;
+	showSlide(current);
+  }
+  
+  // Initial
+  showSlide(current);
+  
+  // Auto change every 5s
+  setInterval(nextSlide, 5000);
+  </script>
+  
 	<!--end slider-->
 
 
