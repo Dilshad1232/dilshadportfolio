@@ -62,9 +62,9 @@
 			<div class="container-fluid h-100 px-0">
 			  <div class="row h-100 m-0">
 	  
-				<!-- Left content -->
-				<div class="col-md-6 left-bg d-flex align-items-center justify-content-center">
-				  <div class="text p-5">
+				<!-- Left content with bg-color -->
+				<div class="col-md-6 d-flex align-items-center justify-content-center">
+				  <div class="text content-bg p-5">
 					<span class="subheading">HELLO! THIS IS DILSHAD ALAM</span>
 					<h1 class="mb-4 mt-3 fw-bold">Full <span>Stack</span> Developer</h1>
 					<p>
@@ -75,7 +75,7 @@
 				</div>
 	  
 				<!-- Right image -->
-				<div class="col-md-6 p-0 right-img">
+				<div class="col-md-6 p-0">
 				  <div class="img" style="background-image: url('images/bg_1.jpg');"></div>
 				</div>
 	  
@@ -88,8 +88,8 @@
 			<div class="container-fluid h-100 px-0">
 			  <div class="row h-100 m-0">
 	  
-				<div class="col-md-6 left-bg d-flex align-items-center justify-content-center">
-				  <div class="text p-5">
+				<div class="col-md-6 d-flex align-items-center justify-content-center">
+				  <div class="text content-bg p-5">
 					<span class="subheading">WELCOME TO MY PORTFOLIO</span>
 					<h1 class="mb-4 mt-3 fw-bold">PHP <span>Laravel</span> Developer</h1>
 					<p>
@@ -99,7 +99,7 @@
 				  </div>
 				</div>
 	  
-				<div class="col-md-6 p-0 right-img">
+				<div class="col-md-6 p-0">
 				  <div class="img" style="background-image: url('images/bg_2.jpg');"></div>
 				</div>
 	  
@@ -112,25 +112,26 @@
 	  
 	  <style>
 	  .hero, .slider-item, .row, .col-md-6, .img {
-		height: 100vh;
+		height: 100vh; /* Full viewport height */
 	  }
 	  
-	  /* Left column background (desktop only) */
-	  .left-bg {
-		background: rgba(0,0,0,0.6); /* Desktop left column bg */
+	  .slider-item {
+		position: relative;
 	  }
 	  
-	  /* Image */
 	  .img {
 		background-size: cover;
 		background-position: center;
+		background-repeat: no-repeat;
 		width: 100%;
 		height: 100%;
 	  }
 	  
-	  /* Content text */
-	  .text {
+	  .content-bg {
+		background: rgba(0,0,0,0.5); /* Dark semi-transparent for content */
+		border-radius: 10px;
 		color: #fff;
+		box-shadow: 0 8px 20px rgba(0,0,0,0.5);
 	  }
 	  
 	  /* Buttons */
@@ -149,30 +150,21 @@
 		color: #fff;
 	  }
 	  
-	  /* ---------- Mobile ---------- */
+	  /* Mobile */
 	  @media (max-width: 768px) {
 		.row {
-		  flex-direction: column; /* content overlays image */
+		  flex-direction: column-reverse; /* Image on top, content overlay */
 		}
-		.right-img {
-		  width: 100%;
+		.img {
 		  height: 100vh;
 		}
-		.left-bg {
+		.content-bg {
 		  position: absolute;
 		  top: 50%;
 		  left: 50%;
 		  transform: translate(-50%, -50%);
 		  width: 90%;
-		  padding: 0; /* No background padding */
-		  background: transparent; /* No background color */
-		  color: #fff; /* text readable */
-		  z-index: 2;
-		  text-align: center;
-		}
-		.left-bg .text {
-		  padding: 20px;
-		  background: rgba(0,0,0,0); /* fully transparent */
+		  padding: 25px;
 		}
 	  }
 	  </style>
