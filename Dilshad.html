@@ -1,0 +1,2422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dilshad Alam | Full Stack Developer</title>
+
+    <meta name="description"
+          content="Dilshad Alam - Full Stack Developer specializing in PHP, Laravel, MySQL and modern frontend technologies.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"
+          rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        accent: "#E66A3C",
+                        dark: "#171717",
+                        cream: "#F7F5F0"
+                    },
+                    fontFamily: {
+                        sans: ["DM Sans", "sans-serif"],
+                        heading: ["Manrope", "sans-serif"]
+                    }
+                }
+            }
+        };
+    </script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            background: #F7F5F0;
+            color: #171717;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: "Manrope", sans-serif;
+        }
+
+        .grid-bg {
+            background-image:
+                linear-gradient(rgba(0, 0, 0, .035) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 0, 0, .035) 1px, transparent 1px);
+            background-size: 45px 45px;
+        }
+
+        .project-card {
+            transition: all .3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 45px rgba(0, 0, 0, .08);
+        }
+
+        .skill {
+            transition: .2s ease;
+        }
+
+        .skill:hover {
+            background: #171717;
+            color: white;
+        }
+
+        .mobile-menu {
+            display: none;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .modal {
+            display: none;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 0;
+            height: 2px;
+            background: #E66A3C;
+            transition: .25s;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .photo-wrap {
+            transition: .3s ease;
+        }
+
+        .photo-wrap:hover {
+            transform: translateY(-4px);
+        }
+    </style>
+</head>
+
+<body>
+
+
+<!-- =====================================================
+                         NAVBAR
+===================================================== -->
+
+<header class="fixed top-0 left-0 right-0 z-50">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4">
+
+        <nav class="bg-white border border-black/10
+                    h-16 px-5
+                    flex items-center justify-between
+                    shadow-sm">
+
+            <!-- Logo -->
+
+            <a href="#home" class="flex items-center gap-3">
+
+                <div class="w-9 h-9 bg-dark text-white
+                            flex items-center justify-center
+                            font-bold">
+                    DA
+                </div>
+
+                <div>
+                    <div class="font-bold text-sm">
+                        Dilshad Alam
+                    </div>
+
+                    <div class="text-[9px] uppercase
+                                tracking-widest
+                                text-gray-500">
+                        Full Stack Developer
+                    </div>
+                </div>
+
+            </a>
+
+
+            <!-- Desktop Menu -->
+
+            <div class="hidden md:flex items-center gap-7 text-sm">
+
+                <a href="#about" class="nav-link hover:text-accent">
+                    About
+                </a>
+
+                <a href="#skills" class="nav-link hover:text-accent">
+                    Skills
+                </a>
+
+                <a href="#experience" class="nav-link hover:text-accent">
+                    Experience
+                </a>
+
+                <a href="#projects" class="nav-link hover:text-accent">
+                    Projects
+                </a>
+
+                <a href="#education" class="nav-link hover:text-accent">
+                    Education
+                </a>
+
+            </div>
+
+
+            <a href="#contact"
+               class="hidden sm:block
+                      bg-dark text-white
+                      px-5 py-2.5
+                      text-sm font-semibold
+                      hover:bg-accent
+                      transition">
+
+                Contact Me
+
+            </a>
+
+
+            <!-- Mobile -->
+
+            <button id="menuButton"
+                    class="md:hidden text-2xl"
+                    aria-label="Open menu">
+
+                ☰
+
+            </button>
+
+        </nav>
+
+
+        <!-- Mobile Menu -->
+
+        <div id="mobileMenu"
+             class="mobile-menu
+                    bg-white border border-black/10
+                    mt-1 p-5 md:hidden
+                    shadow-sm">
+
+            <a href="#about" class="mobile-link block py-2">
+                About
+            </a>
+
+            <a href="#skills" class="mobile-link block py-2">
+                Skills
+            </a>
+
+            <a href="#experience" class="mobile-link block py-2">
+                Experience
+            </a>
+
+            <a href="#projects" class="mobile-link block py-2">
+                Projects
+            </a>
+
+            <a href="#education" class="mobile-link block py-2">
+                Education
+            </a>
+
+            <a href="#contact" class="mobile-link block py-2">
+                Contact
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+                          HERO
+===================================================== -->
+
+<section id="home"
+         class="min-h-screen pt-32 pb-20 grid-bg
+                flex items-center">
+
+    <div class="max-w-7xl mx-auto
+                px-5 sm:px-6 lg:px-8 w-full">
+
+        <div class="grid lg:grid-cols-2
+                    gap-14 items-center">
+
+
+            <!-- LEFT -->
+
+            <div>
+
+                <div class="flex items-center gap-3 mb-6">
+
+                    <span class="w-10 h-[2px] bg-accent"></span>
+
+                    <span class="text-xs uppercase
+                                 tracking-widest
+                                 font-bold text-gray-500">
+
+                        Full Stack Developer
+
+                    </span>
+
+                </div>
+
+
+                <p class="text-accent font-bold text-sm mb-3">
+                    HELLO, I'M
+                </p>
+
+
+                <h1 class="font-heading
+                           text-5xl sm:text-6xl
+                           lg:text-7xl
+                           font-extrabold
+                           leading-tight">
+
+                    Dilshad
+                    <span class="text-accent">
+                        Alam.
+                    </span>
+
+                </h1>
+
+
+                <h2 class="text-2xl sm:text-3xl
+                           font-bold mt-4">
+
+                    Building modern web applications.
+
+                </h2>
+
+
+                <p class="text-gray-600
+                          leading-8
+                          max-w-xl
+                          mt-6">
+
+                    Full Stack Developer specializing in
+                    PHP, Laravel, MySQL and modern frontend
+                    technologies. Currently pursuing B.Tech
+                    in Information Technology.
+
+                </p>
+
+
+                <!-- Buttons -->
+
+                <div class="flex flex-wrap gap-4 mt-8">
+
+                    <a href="#projects"
+                       class="bg-dark text-white
+                              px-7 py-3.5
+                              font-semibold
+                              hover:bg-accent
+                              transition">
+
+                        View Projects →
+
+                    </a>
+
+                    <a href="https://github.com/Dilshad1232"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="border border-black/20
+                              px-7 py-3.5
+                              font-semibold
+                              hover:border-accent
+                              hover:text-accent
+                              transition">
+
+                        GitHub ↗
+
+                    </a>
+
+                </div>
+
+
+                <!-- Contact Links -->
+
+                <div class="flex flex-wrap
+                            gap-6 mt-8
+                            text-sm">
+
+                    <a href="https://www.linkedin.com/in/dilshad-alam-575925283/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="hover:text-accent">
+
+                        LinkedIn ↗
+
+                    </a>
+
+                    <a href="mailto:alam.techno.com@gmail.com"
+                       class="hover:text-accent">
+
+                        Email ↗
+
+                    </a>
+
+                    <a href="tel:+919793145874"
+                       class="hover:text-accent">
+
+                        +91 9793145874
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT PHOTO -->
+
+            <div class="flex justify-center lg:justify-end">
+
+                <div class="relative w-72 sm:w-80 photo-wrap">
+
+
+                    <!-- Orange decoration -->
+
+                    <div class="absolute
+                                -top-5 -right-5
+                                w-24 h-24
+                                bg-accent">
+                    </div>
+
+
+                    <!-- Border decoration -->
+
+                    <div class="absolute
+                                -bottom-5 -left-5
+                                w-24 h-24
+                                border border-black/20">
+                    </div>
+
+
+                    <!-- PHOTO -->
+
+                    <div class="relative
+                                h-[390px]
+                                bg-white
+                                border border-black/10
+                                overflow-hidden
+                                shadow-xl">
+
+                        <img
+                            src="./Dillu.jpg"
+                            alt="Dilshad Alam - Full Stack Developer"
+                            class="w-full h-full
+                                   object-cover
+                                   object-top"
+                        >
+
+                    </div>
+
+
+                    <!-- Status Badge -->
+
+                    <div class="absolute
+                                -bottom-6 -left-5
+                                bg-white
+                                border border-black/10
+                                shadow-lg
+                                px-5 py-4">
+
+                        <div class="text-xs text-gray-500">
+                            CURRENTLY
+                        </div>
+
+                        <div class="font-bold text-sm mt-1">
+                            B.Tech · 7th Semester
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Bottom Info -->
+
+        <div class="border-t border-black/10
+                    mt-20 pt-5
+                    grid sm:grid-cols-3
+                    gap-3
+                    text-xs text-gray-500">
+
+            <span>
+                Information Technology
+            </span>
+
+            <span class="sm:text-center">
+                Sagar Institute of Technology & Management
+            </span>
+
+            <span class="sm:text-right">
+                Barabanki, Uttar Pradesh
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+                    TECHNOLOGY BAR
+===================================================== -->
+
+<section class="bg-dark text-white py-5">
+
+    <div class="max-w-7xl mx-auto
+                px-5 sm:px-6 lg:px-8">
+
+        <div class="flex flex-wrap
+                    justify-center
+                    gap-x-7 gap-y-3
+                    text-xs sm:text-sm
+                    font-semibold">
+
+            <span>PHP</span>
+            <span class="text-accent">•</span>
+
+            <span>Laravel</span>
+            <span class="text-accent">•</span>
+
+            <span>MySQL</span>
+            <span class="text-accent">•</span>
+
+            <span>JavaScript</span>
+            <span class="text-accent">•</span>
+
+            <span>Tailwind CSS</span>
+            <span class="text-accent">•</span>
+
+            <span>React</span>
+            <span class="text-accent">•</span>
+
+            <span>Bootstrap</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+                          ABOUT
+===================================================== -->
+
+<section id="about" class="py-24 bg-white">
+
+    <div class="max-w-7xl mx-auto
+                px-5 sm:px-6 lg:px-8">
+
+        <div class="grid lg:grid-cols-[250px_1fr]
+                    gap-10">
+
+            <div>
+
+                <p class="text-accent
+                          text-xs
+                          font-bold
+                          uppercase
+                          tracking-widest">
+
+                    01 — About Me
+
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h2 class="font-heading
+                           text-3xl sm:text-5xl
+                           font-extrabold
+                           leading-tight">
+
+                    Developer who enjoys turning
+                    ideas into
+                    <span class="text-accent">
+                        working products.
+                    </span>
+
+                </h2>
+
+
+                <div class="grid md:grid-cols-2
+                            gap-8 mt-8
+                            text-gray-600
+                            leading-7">
+
+                    <p>
+                        I'm Dilshad Alam, a Full Stack
+                        Developer with practical experience
+                        in PHP and Laravel development.
+                    </p>
+
+                    <p>
+                        I work across frontend and backend
+                        technologies and enjoy building
+                        responsive interfaces, APIs,
+                        authentication systems and
+                        database-driven applications.
+                    </p>
+
+                </div>
+
+
+                <!-- Stats -->
+
+                <div class="grid sm:grid-cols-3
+                            mt-12
+                            border-y border-black/10">
+
+                    <div class="py-7 sm:pr-7
+                                sm:border-r
+                                border-black/10">
+
+                        <div class="text-3xl font-bold">
+                            6+
+                        </div>
+
+                        <div class="text-sm
+                                    text-gray-500 mt-2">
+                            Months Laravel Experience
+                        </div>
+
+                    </div>
+
+
+                    <div class="py-7 sm:px-7
+                                sm:border-r
+                                border-black/10">
+
+                        <div class="text-3xl font-bold">
+                            78%
+                        </div>
+
+                        <div class="text-sm
+                                    text-gray-500 mt-2">
+                            Diploma Score
+                        </div>
+
+                    </div>
+
+
+                    <div class="py-7 sm:px-7">
+
+                        <div class="text-3xl font-bold">
+                            7th
+                        </div>
+
+                        <div class="text-sm
+                                    text-gray-500 mt-2">
+                            B.Tech Semester
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+                     WHAT I BUILD
+===================================================== -->
+
+<section class="py-24">
+
+    <div class="max-w-7xl mx-auto
+                px-5 sm:px-6 lg:px-8">
+
+        <div class="grid lg:grid-cols-[250px_1fr]
+                    gap-10">
+
+            <div>
+
+                <p class="text-accent
+                          text-xs
+                          font-bold
+                          uppercase
+                          tracking-widest">
+
+                    02 — What I Build
+
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h2 class="font-heading
+                           text-3xl sm:text-5xl
+                           font-extrabold">
+
+                    From backend logic
+                    to polished interfaces.
+
+                </h2>
+
+
+                <div class="grid md:grid-cols-2
+                            gap-5 mt-12">
+
+
+                    <div class="bg-white
+                                border border-black/10
+                                p-7
+                                hover:border-accent
+                                transition">
+
+                        <span class="text-accent font-bold">
+                            01
+                        </span>
+
+                        <h3 class="text-xl font-bold mt-5">
+                            Laravel Applications
+                        </h3>
+
+                        <p class="text-gray-500
+                                  leading-6
+                                  text-sm mt-3">
+
+                            Authentication, CRUD,
+                            dashboards, APIs,
+                            database logic and
+                            complete web applications.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="bg-white
+                                border border-black/10
+                                p-7
+                                hover:border-accent
+                                transition">
+
+                        <span class="text-accent font-bold">
+                            02
+                        </span>
+
+                        <h3 class="text-xl font-bold mt-5">
+                            Responsive Websites
+                        </h3>
+
+                        <p class="text-gray-500
+                                  leading-6
+                                  text-sm mt-3">
+
+                            Responsive websites using
+                            HTML, CSS, Bootstrap,
+                            Tailwind CSS and JavaScript.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="bg-white
+                                border border-black/10
+                                p-7
+                                hover:border-accent
+                                transition">
+
+                        <span class="text-accent font-bold">
+                            03
+                        </span>
+
+                        <h3 class="text-xl font-bold mt-5">
+                            REST APIs
+                        </h3>
+
+                        <p class="text-gray-500
+                                  leading-6
+                                  text-sm mt-3">
+
+                            API development,
+                            authentication,
+                            token-based access and
+                            frontend integration.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="bg-white
+                                border border-black/10
+                                p-7
+                                hover:border-accent
+                                transition">
+
+                        <span class="text-accent font-bold">
+                            04
+                        </span>
+
+                        <h3 class="text-xl font-bold mt-5">
+                            Admin Dashboards
+                        </h3>
+
+                        <p class="text-gray-500
+                                  leading-6
+                                  text-sm mt-3">
+
+                            Admin panels, forms,
+                            tables, data management
+                            and role-based features.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+                          SKILLS
+===================================================== -->
+
+<section id="skills" class="py-24 bg-white">
+
+    <div class="max-w-7xl mx-auto
+                px-5 sm:px-6 lg:px-8">
+
+        <div class="grid lg:grid-cols-[250px_1fr]
+                    gap-10">
+
+            <div>
+
+                <p class="text-accent
+                          text-xs
+                          font-bold
+                          uppercase
+                          tracking-widest">
+
+                    03 — Technical Skills
+
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h2 class="font-heading
+                           text-3xl sm:text-5xl
+                           font-extrabold">
+
+                    Technologies I work with.
+
+                </h2>
+
+
+                <div class="flex flex-wrap
+                            gap-3 mt-10">
+
+                    <span class="skill border border-black/10
+                                 px-5 py-3 text-sm">
+                        HTML5
+                    </span>
+
+                    <span class="skill border border-black/10
+                                 px-5 py-3 text-sm">
+                        CSS3
+                    </span>
+
+                    <span class="skill border border-black/10
+                                 px-5 py-3 text-sm">
+                        Bootstrap
+                    </span>
+
+                    <span class="skill border border-black/10
+                                 px-5 py-3 text-sm">
+                        JavaScript
+                    </span>
+
+                    <span class="skill border border-black/10
+                                 px-5 py-3 text-sm">
+                        jQuery
+                    </span>
+
+                    <span class="skill border border-black/10
+                                 px-5 py-3 text-sm">
+                        AJAX
+                    </span>
+
+                    <span class="skill border border-black/10
+                                 px-5 py-3 text-sm">
+                        Tailwind CSS
+                    </span>
+
+                    <span class="skill border border-black/10
+                                 px-5 py-3 text-sm">
+                        PHP
+                    </span>
+
+                    <span class="skill border-accent
+                                 border-2
+                                 px-5 py-3 text-sm
+                                 font-semibold">
+                        Laravel
+                    </span>
+
+                    <span class="skill border border-black/10
+                                 px-5 py-3 text-sm">
+                        MySQL
+                    </span>
+
+                    <span class="skill border border-black/10
+                                 px-5 py-3 text-sm">
+                        React — Basic
+                    </span>
+
+                    <span class="skill border border-black/10
+                                 px-5 py-3 text-sm">
+                        C Programming
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+                       EXPERIENCE
+===================================================== -->
+
+<section id="experience" class="py-24">
+
+    <div class="max-w-7xl mx-auto
+                px-5 sm:px-6 lg:px-8">
+
+        <div class="grid lg:grid-cols-[250px_1fr]
+                    gap-10">
+
+            <div>
+
+                <p class="text-accent
+                          text-xs
+                          font-bold
+                          uppercase
+                          tracking-widest">
+
+                    04 — Experience
+
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h2 class="font-heading
+                           text-3xl sm:text-5xl
+                           font-extrabold">
+
+                    Experience & training.
+
+                </h2>
+
+
+                <!-- Ekana -->
+
+                <div class="mt-12
+                            border-t border-black/10
+                            py-8">
+
+                    <div class="grid md:grid-cols-[160px_1fr]
+                                gap-6">
+
+                        <div>
+
+                            <div class="font-bold">
+                                6 MONTHS
+                            </div>
+
+                            <div class="text-xs
+                                        text-gray-500 mt-2">
+                                Internship
+                            </div>
+
+                        </div>
+
+
+                        <div>
+
+                            <h3 class="text-2xl font-bold">
+                                PHP Laravel Developer
+                            </h3>
+
+                            <p class="text-accent
+                                      font-semibold mt-2">
+
+                                Ekana Technologies Pvt Ltd
+                                · Lucknow
+
+                            </p>
+
+                            <p class="text-gray-600
+                                      leading-7 mt-4">
+
+                                Practical experience in PHP
+                                and Laravel development,
+                                backend functionality,
+                                database integration and
+                                web application development.
+
+                            </p>
+
+                            <div class="flex flex-wrap
+                                        gap-2 mt-5">
+
+                                <span class="bg-white
+                                             border
+                                             px-3 py-1.5
+                                             text-xs">
+                                    PHP
+                                </span>
+
+                                <span class="bg-white
+                                             border
+                                             px-3 py-1.5
+                                             text-xs">
+                                    Laravel
+                                </span>
+
+                                <span class="bg-white
+                                             border
+                                             px-3 py-1.5
+                                             text-xs">
+                                    MySQL
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Techpile -->
+
+                <div class="border-t
+                            border-black/10
+                            py-8">
+
+                    <div class="grid md:grid-cols-[160px_1fr]
+                                gap-6">
+
+                        <div>
+
+                            <div class="font-bold">
+                                2 MONTHS
+                            </div>
+
+                            <div class="text-xs
+                                        text-gray-500 mt-2">
+                                Summer Training
+                            </div>
+
+                        </div>
+
+
+                        <div>
+
+                            <h3 class="text-2xl font-bold">
+                                Summer Training
+                            </h3>
+
+                            <p class="text-accent
+                                      font-semibold mt-2">
+
+                                Techpile Technology Pvt Ltd
+                                · Lucknow
+
+                            </p>
+
+                            <p class="text-gray-600
+                                      leading-7 mt-4">
+
+                                Completed practical summer
+                                training focused on programming,
+                                software development and
+                                technical implementation.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+                         PROJECTS
+===================================================== -->
+
+<section id="projects" class="py-24 bg-white">
+
+    <div class="max-w-7xl mx-auto
+                px-5 sm:px-6 lg:px-8">
+
+        <div class="grid lg:grid-cols-[250px_1fr]
+                    gap-10">
+
+            <div>
+
+                <p class="text-accent
+                          text-xs
+                          font-bold
+                          uppercase
+                          tracking-widest">
+
+                    05 — Projects
+
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h2 class="font-heading
+                           text-3xl sm:text-5xl
+                           font-extrabold">
+
+                    Selected projects.
+
+                </h2>
+
+                <p class="text-gray-600
+                          max-w-2xl
+                          mt-5">
+
+                    Explore the projects below.
+                    Click "View Details" to see
+                    the complete project description.
+
+                </p>
+
+
+                <div class="grid md:grid-cols-2
+                            gap-6 mt-12">
+
+
+                    <!-- PROJECT 1 -->
+
+                    <div class="project-card
+                                bg-cream
+                                border border-black/10
+                                overflow-hidden">
+
+                        <div class="h-48
+                                    bg-[#E9E5DC]
+                                    flex items-center
+                                    justify-center
+                                    relative">
+
+                            <span class="text-8xl
+                                         font-extrabold
+                                         text-black/10">
+                                01
+                            </span>
+
+                            <span class="absolute
+                                         top-5 left-5
+                                         bg-accent
+                                         text-white
+                                         text-xs
+                                         font-bold
+                                         px-3 py-1">
+                                E-COMMERCE
+                            </span>
+
+                        </div>
+
+
+                        <div class="p-7">
+
+                            <h3 class="text-2xl font-bold">
+                                E-Commerce Website
+                            </h3>
+
+                            <p class="text-gray-500
+                                      text-sm
+                                      leading-6 mt-3">
+
+                                Full-stack shopping platform
+                                with authentication, cart
+                                system and admin dashboard.
+
+                            </p>
+
+
+                            <div class="flex flex-wrap
+                                        gap-2 mt-5">
+
+                                <span class="text-xs
+                                             bg-white border px-3 py-1">
+                                    Laravel
+                                </span>
+
+                                <span class="text-xs
+                                             bg-white border px-3 py-1">
+                                    PHP
+                                </span>
+
+                                <span class="text-xs
+                                             bg-white border px-3 py-1">
+                                    MySQL
+                                </span>
+
+                            </div>
+
+
+                            <button
+                                onclick="showProject('ecommerce')"
+                                class="mt-7
+                                       font-bold
+                                       text-sm
+                                       text-accent
+                                       hover:underline">
+
+                                View Details →
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PROJECT 2 -->
+
+                    <div class="project-card
+                                bg-cream
+                                border border-black/10
+                                overflow-hidden">
+
+                        <div class="h-48
+                                    bg-[#E4E1D9]
+                                    flex items-center
+                                    justify-center
+                                    relative">
+
+                            <span class="text-8xl
+                                         font-extrabold
+                                         text-black/10">
+                                02
+                            </span>
+
+                            <span class="absolute
+                                         top-5 left-5
+                                         bg-dark
+                                         text-white
+                                         text-xs
+                                         font-bold
+                                         px-3 py-1">
+                                MANAGEMENT
+                            </span>
+
+                        </div>
+
+
+                        <div class="p-7">
+
+                            <h3 class="text-2xl font-bold">
+                                Car Service Management System
+                            </h3>
+
+                            <p class="text-gray-500
+                                      text-sm
+                                      leading-6 mt-3">
+
+                                Platform for customers,
+                                bookings, service records
+                                and service tracking.
+
+                            </p>
+
+
+                            <div class="flex flex-wrap
+                                        gap-2 mt-5">
+
+                                <span class="text-xs
+                                             bg-white border px-3 py-1">
+                                    Laravel
+                                </span>
+
+                                <span class="text-xs
+                                             bg-white border px-3 py-1">
+                                    PHP
+                                </span>
+
+                                <span class="text-xs
+                                             bg-white border px-3 py-1">
+                                    MySQL
+                                </span>
+
+                            </div>
+
+
+                            <button
+                                onclick="showProject('ramotor')"
+                                class="mt-7
+                                       font-bold
+                                       text-sm
+                                       text-accent
+                                       hover:underline">
+
+                                View Details →
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PROJECT 3 -->
+
+                    <div class="project-card
+                                bg-cream
+                                border border-black/10
+                                overflow-hidden">
+
+                        <div class="h-48
+                                    bg-[#E8E4DB]
+                                    flex items-center
+                                    justify-center
+                                    relative">
+
+                            <span class="text-8xl
+                                         font-extrabold
+                                         text-black/10">
+                                03
+                            </span>
+
+                            <span class="absolute
+                                         top-5 left-5
+                                         bg-accent
+                                         text-white
+                                         text-xs
+                                         font-bold
+                                         px-3 py-1">
+                                JOB PORTAL
+                            </span>
+
+                        </div>
+
+
+                        <div class="p-7">
+
+                            <h3 class="text-2xl font-bold">
+                                KushinagarJobs
+                            </h3>
+
+                            <p class="text-gray-500
+                                      text-sm
+                                      leading-6 mt-3">
+
+                                Job portal with job listings,
+                                categories, employer dashboard
+                                and job posting functionality.
+
+                            </p>
+
+
+                            <div class="flex flex-wrap
+                                        gap-2 mt-5">
+
+                                <span class="text-xs
+                                             bg-white border px-3 py-1">
+                                    Laravel
+                                </span>
+
+                                <span class="text-xs
+                                             bg-white border px-3 py-1">
+                                    Bootstrap
+                                </span>
+
+                                <span class="text-xs
+                                             bg-white border px-3 py-1">
+                                    MySQL
+                                </span>
+
+                            </div>
+
+
+                            <button
+                                onclick="showProject('jobs')"
+                                class="mt-7
+                                       font-bold
+                                       text-sm
+                                       text-accent
+                                       hover:underline">
+
+                                View Details →
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PROJECT 4 -->
+
+                    <div class="project-card
+                                bg-cream
+                                border border-black/10
+                                overflow-hidden">
+
+                        <div class="h-48
+                                    bg-[#E4E1D9]
+                                    flex items-center
+                                    justify-center
+                                    relative">
+
+                            <span class="text-8xl
+                                         font-extrabold
+                                         text-black/10">
+                                04
+                            </span>
+
+                            <span class="absolute
+                                         top-5 left-5
+                                         bg-dark
+                                         text-white
+                                         text-xs
+                                         font-bold
+                                         px-3 py-1">
+                                REACT + API
+                            </span>
+
+                        </div>
+
+
+                        <div class="p-7">
+
+                            <h3 class="text-2xl font-bold">
+                                React + Laravel Authentication
+                            </h3>
+
+                            <p class="text-gray-500
+                                      text-sm
+                                      leading-6 mt-3">
+
+                                React frontend integrated
+                                with Laravel API,
+                                authentication and
+                                protected dashboard.
+
+                            </p>
+
+
+                            <div class="flex flex-wrap
+                                        gap-2 mt-5">
+
+                                <span class="text-xs
+                                             bg-white border px-3 py-1">
+                                    React
+                                </span>
+
+                                <span class="text-xs
+                                             bg-white border px-3 py-1">
+                                    Laravel
+                                </span>
+
+                                <span class="text-xs
+                                             bg-white border px-3 py-1">
+                                    Sanctum
+                                </span>
+
+                            </div>
+
+
+                            <button
+                                onclick="showProject('react')"
+                                class="mt-7
+                                       font-bold
+                                       text-sm
+                                       text-accent
+                                       hover:underline">
+
+                                View Details →
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+                         GITHUB
+===================================================== -->
+
+<section class="py-20">
+
+    <div class="max-w-7xl mx-auto
+                px-5 sm:px-6 lg:px-8">
+
+        <div class="bg-dark
+                    text-white
+                    p-8 sm:p-12
+                    flex flex-col
+                    md:flex-row
+                    justify-between
+                    gap-8
+                    items-start">
+
+            <div>
+
+                <p class="text-accent
+                          text-xs
+                          uppercase
+                          tracking-widest
+                          font-bold">
+                    GitHub
+                </p>
+
+                <h2 class="text-3xl
+                           sm:text-4xl
+                           font-bold mt-4">
+                    Explore my code.
+                </h2>
+
+                <p class="text-white/60
+                          mt-4
+                          max-w-xl">
+                    Check my repositories and development
+                    projects on GitHub.
+                </p>
+
+            </div>
+
+
+            <a href="https://github.com/Dilshad1232"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="bg-white
+                      text-dark
+                      px-6 py-3
+                      font-bold
+                      text-sm
+                      hover:bg-accent
+                      hover:text-white
+                      transition">
+
+                Visit GitHub ↗
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+                         EDUCATION
+===================================================== -->
+
+<section id="education"
+         class="py-24 bg-white">
+
+    <div class="max-w-7xl mx-auto
+                px-5 sm:px-6 lg:px-8">
+
+        <div class="grid lg:grid-cols-[250px_1fr]
+                    gap-10">
+
+            <div>
+
+                <p class="text-accent
+                          text-xs
+                          font-bold
+                          uppercase
+                          tracking-widest">
+
+                    06 — Education
+
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h2 class="font-heading
+                           text-3xl sm:text-5xl
+                           font-extrabold">
+
+                    Academic background.
+
+                </h2>
+
+
+                <!-- BTECH -->
+
+                <div class="border-t
+                            border-black/10
+                            mt-12 py-8">
+
+                    <div class="grid md:grid-cols-[160px_1fr]
+                                gap-6">
+
+                        <div>
+
+                            <div class="font-bold">
+                                2024 — 2027
+                            </div>
+
+                            <div class="text-xs
+                                        text-accent
+                                        font-bold mt-2">
+                                CURRENT
+                            </div>
+
+                        </div>
+
+
+                        <div>
+
+                            <h3 class="text-2xl font-bold">
+                                B.Tech — Information Technology
+                            </h3>
+
+                            <p class="text-accent
+                                      font-semibold mt-2">
+
+                                Sagar Institute of Technology
+                                and Management, Barabanki
+
+                            </p>
+
+                            <p class="text-gray-500 mt-3">
+                                Currently in 7th Semester
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DIPLOMA -->
+
+                <div class="border-t
+                            border-black/10
+                            py-8">
+
+                    <div class="grid md:grid-cols-[160px_1fr]
+                                gap-6">
+
+                        <div>
+
+                            <div class="font-bold">
+                                2024
+                            </div>
+
+                            <div class="text-xs
+                                        text-gray-500 mt-2">
+                                COMPLETED
+                            </div>
+
+                        </div>
+
+
+                        <div>
+
+                            <h3 class="text-2xl font-bold">
+                                Diploma — Computer Science
+                            </h3>
+
+                            <p class="text-accent
+                                      font-semibold mt-2">
+
+                                Government Polytechnic
+                                Adampur Tarabganj, Gonda
+
+                            </p>
+
+                            <p class="text-gray-500
+                                      text-sm mt-3">
+
+                                Board of Technical Education
+                                Uttar Pradesh, Lucknow
+
+                            </p>
+
+
+                            <div class="mt-5
+                                        inline-flex
+                                        items-center gap-3
+                                        bg-cream
+                                        border border-black/10
+                                        px-5 py-3">
+
+                                <span class="text-2xl font-bold">
+                                    78%
+                                </span>
+
+                                <span class="text-xs text-gray-500">
+                                    Diploma Score
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+                       CERTIFICATES
+===================================================== -->
+
+<section class="py-20">
+
+    <div class="max-w-7xl mx-auto
+                px-5 sm:px-6 lg:px-8">
+
+        <div class="border border-dashed
+                    border-black/20
+                    p-8 sm:p-10
+                    bg-white">
+
+            <p class="text-accent
+                      text-xs
+                      uppercase
+                      tracking-widest
+                      font-bold">
+
+                Certificates
+
+            </p>
+
+            <h2 class="text-2xl
+                       sm:text-3xl
+                       font-bold mt-3">
+
+                Certifications & achievements
+
+            </h2>
+
+            <p class="text-gray-500
+                      mt-3
+                      text-sm">
+
+                Certificates can be added here later.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+                         CONTACT
+===================================================== -->
+
+<section id="contact"
+         class="py-24 bg-accent">
+
+    <div class="max-w-7xl mx-auto
+                px-5 sm:px-6 lg:px-8">
+
+        <div class="grid lg:grid-cols-2
+                    gap-12 items-end">
+
+            <div>
+
+                <p class="text-white/70
+                          text-xs
+                          uppercase
+                          tracking-widest
+                          font-bold">
+
+                    07 — Contact
+
+                </p>
+
+
+                <h2 class="font-heading
+                           text-5xl sm:text-6xl
+                           font-extrabold
+                           text-white
+                           mt-5
+                           leading-tight">
+
+                    Let's work
+                    together.
+
+                </h2>
+
+
+                <p class="text-white/80
+                          mt-6
+                          max-w-lg
+                          leading-7">
+
+                    Looking for a developer for your
+                    next project or opportunity?
+                    Let's connect.
+
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <a href="mailto:alam.techno.com@gmail.com"
+                   class="flex justify-between
+                          items-center
+                          py-5
+                          border-b
+                          border-white/30
+                          text-white
+                          hover:pl-2
+                          transition">
+
+                    <span>
+                        alam.techno.com@gmail.com
+                    </span>
+
+                    <span>↗</span>
+
+                </a>
+
+
+                <a href="tel:+919793145874"
+                   class="flex justify-between
+                          items-center
+                          py-5
+                          border-b
+                          border-white/30
+                          text-white
+                          hover:pl-2
+                          transition">
+
+                    <span>
+                        +91 9793145874
+                    </span>
+
+                    <span>↗</span>
+
+                </a>
+
+
+                <a href="https://www.linkedin.com/in/dilshad-alam-575925283/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="flex justify-between
+                          items-center
+                          py-5
+                          border-b
+                          border-white/30
+                          text-white
+                          hover:pl-2
+                          transition">
+
+                    <span>
+                        LinkedIn
+                    </span>
+
+                    <span>↗</span>
+
+                </a>
+
+
+                <a href="https://github.com/Dilshad1232"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="flex justify-between
+                          items-center
+                          py-5
+                          border-b
+                          border-white/30
+                          text-white
+                          hover:pl-2
+                          transition">
+
+                    <span>
+                        GitHub
+                    </span>
+
+                    <span>↗</span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+                          FOOTER
+===================================================== -->
+
+<footer class="bg-dark text-white">
+
+    <div class="max-w-7xl mx-auto
+                px-5 sm:px-6 lg:px-8
+                py-8
+                flex flex-col
+                sm:flex-row
+                justify-between
+                gap-4">
+
+        <div class="font-bold">
+            Dilshad Alam
+        </div>
+
+        <div class="text-white/50 text-sm">
+            Full Stack Developer
+        </div>
+
+        <div class="text-white/50 text-sm">
+            © 2026 Dilshad Alam
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =====================================================
+                      PROJECT MODAL
+===================================================== -->
+
+<div id="projectModal"
+     class="modal fixed inset-0
+            z-[100]
+            bg-black/50
+            items-center
+            justify-center
+            p-4">
+
+    <div class="bg-white
+                max-w-3xl
+                w-full
+                max-h-[90vh]
+                overflow-y-auto
+                shadow-2xl">
+
+
+        <!-- Modal Header -->
+
+        <div class="flex justify-between
+                    items-start
+                    gap-5
+                    p-6 sm:p-8
+                    border-b border-black/10">
+
+            <div>
+
+                <div id="modalCategory"
+                     class="text-accent
+                            text-xs
+                            font-bold
+                            uppercase
+                            tracking-widest">
+                </div>
+
+                <h2 id="modalTitle"
+                    class="text-3xl
+                           sm:text-4xl
+                           font-bold mt-2">
+                </h2>
+
+            </div>
+
+
+            <button onclick="closeProject()"
+                    class="w-10 h-10
+                           bg-dark
+                           text-white
+                           text-xl
+                           hover:bg-accent">
+
+                ×
+
+            </button>
+
+        </div>
+
+
+        <!-- Modal Body -->
+
+        <div class="p-6 sm:p-8">
+
+            <p id="modalDescription"
+               class="text-gray-600
+                      leading-7">
+            </p>
+
+
+            <div class="grid sm:grid-cols-2
+                        gap-10 mt-10">
+
+
+                <!-- Features -->
+
+                <div>
+
+                    <h3 class="font-bold text-lg">
+                        Key Features
+                    </h3>
+
+                    <ul id="modalFeatures"
+                        class="mt-4 space-y-3">
+                    </ul>
+
+                </div>
+
+
+                <!-- Technologies -->
+
+                <div>
+
+                    <h3 class="font-bold text-lg">
+                        Technologies
+                    </h3>
+
+                    <div id="modalTech"
+                         class="flex flex-wrap
+                                gap-2 mt-4">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <a id="modalGithub"
+               href="#"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="inline-block
+                      bg-dark
+                      text-white
+                      px-6 py-3
+                      text-sm
+                      font-bold
+                      mt-10
+                      hover:bg-accent">
+
+                View GitHub ↗
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+                       JAVASCRIPT
+===================================================== -->
+
+<script>
+
+    /* =====================================
+                MOBILE MENU
+    ===================================== */
+
+    const menuButton = document.getElementById("menuButton");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    menuButton.addEventListener("click", function () {
+        mobileMenu.classList.toggle("active");
+    });
+
+
+    document.querySelectorAll(".mobile-link").forEach(function (link) {
+
+        link.addEventListener("click", function () {
+            mobileMenu.classList.remove("active");
+        });
+
+    });
+
+
+    /* =====================================
+                PROJECT DATA
+    ===================================== */
+
+    const projectData = {
+
+        ecommerce: {
+
+            category: "Project 01 · E-Commerce",
+
+            title: "E-Commerce Website",
+
+            description:
+                "A full-stack e-commerce website developed using PHP and Laravel. The project includes authentication, shopping cart functionality, product management, admin functionality and MySQL database integration.",
+
+            features: [
+                "User authentication",
+                "Product management",
+                "Shopping cart system",
+                "Admin dashboard",
+                "Database integration",
+                "Responsive user interface"
+            ],
+
+            tech: [
+                "PHP",
+                "Laravel",
+                "MySQL",
+                "JavaScript",
+                "Bootstrap"
+            ],
+
+            github:
+                "https://github.com/Dilshad1232"
+
+        },
+
+
+        ramotor: {
+
+            category: "Project 02 · Management System",
+
+            title: "Car Service Management System",
+
+            description:
+                "A car service management system designed for handling customers, service bookings, service records and service tracking. The RAMotor project repository is available on GitHub.",
+
+            features: [
+                "Customer management",
+                "Service booking",
+                "Service records",
+                "Service tracking",
+                "Admin management",
+                "Database integration"
+            ],
+
+            tech: [
+                "PHP",
+                "Laravel",
+                "MySQL",
+                "Bootstrap",
+                "JavaScript"
+            ],
+
+            github:
+                "https://github.com/Dilshad1232/ramotor"
+
+        },
+
+
+        jobs: {
+
+            category: "Project 03 · Job Portal",
+
+            title: "KushinagarJobs",
+
+            description:
+                "A job portal application with job listings, categories, employer dashboard and job posting functionality.",
+
+            features: [
+                "Job listings",
+                "Job categories",
+                "Employer dashboard",
+                "Job posting",
+                "Search functionality",
+                "Application workflow"
+            ],
+
+            tech: [
+                "PHP",
+                "Laravel",
+                "MySQL",
+                "Bootstrap",
+                "JavaScript"
+            ],
+
+            github:
+                "https://github.com/Dilshad1232"
+
+        },
+
+
+        react: {
+
+            category: "Project 04 · React + Laravel",
+
+            title: "React + Laravel Authentication",
+
+            description:
+                "A React frontend connected with Laravel APIs. The project includes registration, login, token authentication, protected routes and a dashboard.",
+
+            features: [
+                "Registration",
+                "Login",
+                "Laravel REST API",
+                "Token authentication",
+                "Protected routes",
+                "Dashboard"
+            ],
+
+            tech: [
+                "React",
+                "Laravel",
+                "Sanctum",
+                "REST API",
+                "MySQL"
+            ],
+
+            github:
+                "https://github.com/Dilshad1232"
+
+        }
+
+    };
+
+
+    /* =====================================
+                SHOW PROJECT
+    ===================================== */
+
+    function showProject(projectName) {
+
+        const project = projectData[projectName];
+
+        if (!project) {
+            return;
+        }
+
+
+        document.getElementById("modalCategory").textContent =
+            project.category;
+
+
+        document.getElementById("modalTitle").textContent =
+            project.title;
+
+
+        document.getElementById("modalDescription").textContent =
+            project.description;
+
+
+        /* Features */
+
+        const features =
+            document.getElementById("modalFeatures");
+
+        features.innerHTML = "";
+
+
+        project.features.forEach(function (feature) {
+
+            const li = document.createElement("li");
+
+            li.className =
+                "flex items-start gap-3 text-sm text-gray-600";
+
+            const icon = document.createElement("span");
+
+            icon.className =
+                "text-accent font-bold";
+
+            icon.textContent = "✓";
+
+
+            const text = document.createElement("span");
+
+            text.textContent = feature;
+
+
+            li.appendChild(icon);
+            li.appendChild(text);
+
+            features.appendChild(li);
+
+        });
+
+
+        /* Technologies */
+
+        const tech =
+            document.getElementById("modalTech");
+
+        tech.innerHTML = "";
+
+
+        project.tech.forEach(function (technology) {
+
+            const span = document.createElement("span");
+
+            span.className =
+                "bg-dark text-white px-3 py-2 text-xs";
+
+            span.textContent = technology;
+
+            tech.appendChild(span);
+
+        });
+
+
+        /* GitHub */
+
+        document.getElementById("modalGithub").href =
+            project.github;
+
+
+        /* Open */
+
+        document.getElementById("projectModal")
+            .classList.add("active");
+
+        document.body.style.overflow = "hidden";
+
+    }
+
+
+    /* =====================================
+                CLOSE PROJECT
+    ===================================== */
+
+    function closeProject() {
+
+        document.getElementById("projectModal")
+            .classList.remove("active");
+
+        document.body.style.overflow = "";
+
+    }
+
+
+    /* Close by clicking outside */
+
+    document.getElementById("projectModal")
+        .addEventListener("click", function (event) {
+
+            if (event.target === this) {
+                closeProject();
+            }
+
+        });
+
+
+    /* Escape */
+
+    document.addEventListener("keydown", function (event) {
+
+        if (event.key === "Escape") {
+            closeProject();
+        }
+
+    });
+
+</script>
+
+</body>
+</html>
