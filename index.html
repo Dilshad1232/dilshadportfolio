@@ -2,250 +2,1891 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Dilshad Alam | Full Stack Developer</title>
+    <title>Dilshad Alam | Full Stack Developer & Affordable Website Developer</title>
 
     <meta name="description"
-          content="Dilshad Alam - Full Stack Developer specializing in PHP, Laravel, MySQL and modern frontend technologies.">
+          content="Dilshad Alam is a Full Stack Developer building premium, responsive and affordable portfolio, business, landing page and e-commerce websites starting from ₹299.">
 
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="keywords"
+          content="Dilshad Alam, Full Stack Developer, PHP Laravel Developer, Website Developer India, affordable website development, portfolio website, business website, landing page, responsive website, Laravel developer">
+
+    <meta name="author" content="Dilshad Alam">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://dilshadportfoliocom.netlify.app/">
+
+    <meta property="og:title"
+          content="Dilshad Alam | Full Stack Developer">
+    <meta property="og:description"
+          content="Premium and affordable websites starting from ₹299.">
+    <meta property="og:type" content="website">
+    <meta property="og:url"
+          content="https://dilshadportfoliocom.netlify.app/">
+
+    <meta name="theme-color" content="#050816">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
           rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
 
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: {
-                        accent: "#E66A3C",
-                        dark: "#171717",
-                        cream: "#F7F5F0"
-                    },
                     fontFamily: {
-                        sans: ["DM Sans", "sans-serif"],
-                        heading: ["Manrope", "sans-serif"]
+                        sans: ['DM Sans', 'sans-serif'],
+                        manrope: ['Manrope', 'sans-serif']
                     }
                 }
             }
-        };
+        }
     </script>
 
     <style>
-        html {
-            scroll-behavior: smooth;
+
+/* =========================================================
+   PREMIUM CONTACT FORM
+========================================================= */
+
+        /* =========================
+           SCROLL BAR
+        ========================= */
+
+        ::-webkit-scrollbar {
+            width: 8px;
         }
 
-        body {
-            font-family: "DM Sans", sans-serif;
-            background: #F7F5F0;
-            color: #171717;
+        ::-webkit-scrollbar-track {
+            background: #020617;
         }
 
-        h1,
-        h2,
-        h3,
-        h4 {
-            font-family: "Manrope", sans-serif;
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(#3b82f6, #8b5cf6);
+            border-radius: 50px;
         }
+
+        /* =========================
+           BACKGROUND
+        ========================= */
 
         .grid-bg {
+            position: fixed;
+            inset: 0;
+            z-index: -5;
+            pointer-events: none;
+
             background-image:
-                linear-gradient(rgba(0, 0, 0, .035) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0, 0, 0, .035) 1px, transparent 1px);
-            background-size: 45px 45px;
+                linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+
+            background-size: 55px 55px;
+
+            mask-image: linear-gradient(
+                to bottom,
+                black 0%,
+                rgba(0,0,0,.6) 60%,
+                transparent 100%
+            );
         }
 
-        .project-card {
-            transition: all .3s ease;
+        .noise {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: .025;
+
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E");
         }
 
-        .project-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 20px 45px rgba(0, 0, 0, .08);
+        .aurora {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: .25;
+            pointer-events: none;
+            animation: aurora 12s ease-in-out infinite alternate;
         }
 
-        .skill {
-            transition: .2s ease;
+        .aurora.one {
+            background: #2563eb;
+            top: -200px;
+            left: -150px;
         }
 
-        .skill:hover {
-            background: #171717;
-            color: white;
+        .aurora.two {
+            background: #7c3aed;
+            right: -180px;
+            top: 250px;
+            animation-delay: -4s;
         }
 
-        .mobile-menu {
-            display: none;
+        .aurora.three {
+            background: #06b6d4;
+            left: 35%;
+            bottom: -300px;
+            animation-delay: -7s;
         }
 
-        .mobile-menu.active {
-            display: block;
+        @keyframes aurora {
+            0% {
+                transform: translate(0,0) scale(1);
+            }
+
+            50% {
+                transform: translate(80px,40px) scale(1.15);
+            }
+
+            100% {
+                transform: translate(-50px,100px) scale(.9);
+            }
         }
 
-        .modal {
-            display: none;
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        .nav-glass {
+            background: rgba(5, 8, 22, .68);
+            backdrop-filter: blur(22px);
+            -webkit-backdrop-filter: blur(22px);
+            border-bottom: 1px solid rgba(255,255,255,.06);
         }
 
-        .modal.active {
-            display: flex;
+        .logo-mark {
+            width: 42px;
+            height: 42px;
+            display: grid;
+            place-items: center;
+            border-radius: 14px;
+
+            background:
+                linear-gradient(135deg,#2563eb,#7c3aed);
+
+            box-shadow:
+                0 0 30px rgba(59,130,246,.35);
+
+            font-family: Manrope;
+            font-weight: 800;
         }
 
         .nav-link {
             position: relative;
+            color: #94a3b8;
+            transition: .3s ease;
+        }
+
+        .nav-link:hover {
+            color: white;
         }
 
         .nav-link::after {
             content: "";
             position: absolute;
-            left: 0;
-            bottom: -5px;
+            left: 50%;
+            bottom: -8px;
             width: 0;
             height: 2px;
-            background: #E66A3C;
-            transition: .25s;
-        }
-
-        .nav-link:hover::after {
-            width: 100%;
-        }
-
-        .photo-wrap {
+            border-radius: 50px;
+            background: linear-gradient(90deg,#60a5fa,#a78bfa);
+            transform: translateX(-50%);
             transition: .3s ease;
         }
 
-        .photo-wrap:hover {
-            transform: translateY(-4px);
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 24px;
         }
+
+        /* =========================
+           BUTTONS
+        ========================= */
+
+        .btn-primary {
+            position: relative;
+            overflow: hidden;
+
+            background: linear-gradient(
+                135deg,
+                #2563eb,
+                #7c3aed
+            );
+
+            box-shadow:
+                0 15px 40px rgba(37,99,235,.22);
+
+            transition: .35s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow:
+                0 20px 60px rgba(59,130,246,.38);
+        }
+
+        .btn-primary::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 70%;
+            height: 100%;
+            transform: skewX(-20deg);
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255,255,255,.25),
+                transparent
+            );
+            transition: .7s ease;
+        }
+
+        .btn-primary:hover::before {
+            left: 130%;
+        }
+
+        .btn-secondary {
+            border: 1px solid rgba(148,163,184,.18);
+            background: rgba(255,255,255,.035);
+            backdrop-filter: blur(15px);
+            transition: .35s ease;
+        }
+
+        .btn-secondary:hover {
+            border-color: rgba(96,165,250,.5);
+            background: rgba(96,165,250,.08);
+            transform: translateY(-3px);
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 900px;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+
+            padding: 9px 14px;
+            border-radius: 999px;
+
+            border: 1px solid rgba(96,165,250,.2);
+            background: rgba(59,130,246,.07);
+
+            color: #bfdbfe;
+            font-size: 13px;
+
+            box-shadow:
+                0 0 30px rgba(59,130,246,.08);
+        }
+
+        .live-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #22c55e;
+            box-shadow: 0 0 12px #22c55e;
+            animation: live 1.8s infinite;
+        }
+
+        @keyframes live {
+            0%,100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(1.7);
+                opacity: .5;
+            }
+        }
+
+        .hero-title {
+            font-family: Manrope;
+            font-weight: 800;
+            letter-spacing: -0.055em;
+            line-height: .98;
+        }
+
+        .gradient-text {
+            background: linear-gradient(
+                100deg,
+                #60a5fa 0%,
+                #22d3ee 35%,
+                #a78bfa 70%,
+                #f0abfc 100%
+            );
+
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+
+            background-size: 200% auto;
+            animation: gradientMove 5s linear infinite;
+        }
+
+        @keyframes gradientMove {
+            to {
+                background-position: 200% center;
+            }
+        }
+
+        /* =========================
+           HERO VISUAL
+        ========================= */
+
+        .hero-visual {
+            position: relative;
+            perspective: 1000px;
+        }
+
+        .browser {
+            position: relative;
+
+            border-radius: 24px;
+            padding: 1px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(96,165,250,.5),
+                    rgba(167,139,250,.25),
+                    rgba(34,211,238,.2)
+                );
+
+            box-shadow:
+                0 50px 100px rgba(0,0,0,.45),
+                0 0 80px rgba(59,130,246,.12);
+
+            transform:
+                rotateY(-8deg)
+                rotateX(4deg);
+
+            transition: .5s ease;
+        }
+
+        .browser:hover {
+            transform:
+                rotateY(0)
+                rotateX(0)
+                translateY(-8px);
+        }
+
+        .browser-inner {
+            border-radius: 23px;
+            overflow: hidden;
+            background: #080d1d;
+        }
+
+        .browser-bar {
+            height: 45px;
+            padding: 0 15px;
+
+            display: flex;
+            align-items: center;
+            gap: 7px;
+
+            background: rgba(15,23,42,.9);
+            border-bottom: 1px solid rgba(255,255,255,.06);
+        }
+
+        .browser-dot {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: #334155;
+        }
+
+        .browser-address {
+            margin-left: 12px;
+            height: 25px;
+            flex: 1;
+            border-radius: 8px;
+            background: rgba(255,255,255,.04);
+            color: #475569;
+            font-size: 10px;
+            display: flex;
+            align-items: center;
+            padding: 0 10px;
+        }
+
+        .portfolio-screen {
+            min-height: 430px;
+            padding: 25px;
+            position: relative;
+
+            background:
+                radial-gradient(
+                    circle at 70% 10%,
+                    rgba(59,130,246,.2),
+                    transparent 35%
+                ),
+                linear-gradient(145deg,#0b1225,#050816);
+        }
+
+        .mini-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        .mini-logo {
+            font-family: Manrope;
+            font-weight: 800;
+        }
+
+        .mini-pill {
+            font-size: 9px;
+            padding: 6px 10px;
+            border: 1px solid rgba(255,255,255,.08);
+            border-radius: 999px;
+            color: #94a3b8;
+        }
+
+        .mini-title {
+            font-family: Manrope;
+            font-weight: 800;
+            font-size: 34px;
+            line-height: 1;
+            letter-spacing: -.05em;
+        }
+
+        .mini-line {
+            width: 80px;
+            height: 3px;
+            border-radius: 20px;
+            background: linear-gradient(90deg,#60a5fa,#a78bfa);
+            margin: 15px 0;
+        }
+
+        .mini-card {
+            margin-top: 35px;
+            padding: 16px;
+            border: 1px solid rgba(255,255,255,.07);
+            border-radius: 17px;
+            background: rgba(255,255,255,.035);
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            display: grid;
+            place-items: center;
+            font-family: Manrope;
+            font-weight: 800;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #2563eb,
+                    #7c3aed
+                );
+        }
+
+        .mini-service {
+            flex: 1;
+        }
+
+        .mini-service-title {
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .mini-service-sub {
+            font-size: 9px;
+            color: #64748b;
+            margin-top: 4px;
+        }
+
+        .price-mini {
+            font-size: 15px;
+            font-weight: 800;
+            color: #60a5fa;
+        }
+
+        .floating-card {
+            position: absolute;
+            border: 1px solid rgba(255,255,255,.1);
+            background: rgba(15,23,42,.72);
+            backdrop-filter: blur(18px);
+            border-radius: 16px;
+            padding: 13px 15px;
+            box-shadow: 0 20px 50px rgba(0,0,0,.3);
+            animation: floating 4s ease-in-out infinite;
+        }
+
+        .floating-card.one {
+            left: -55px;
+            top: 110px;
+        }
+
+        .floating-card.two {
+            right: -40px;
+            bottom: 75px;
+            animation-delay: -2s;
+        }
+
+        @keyframes floating {
+            0%,100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-12px);
+            }
+        }
+
+        /* =========================
+           MARQUEE
+        ========================= */
+
+        .marquee-wrap {
+            overflow: hidden;
+            border-top: 1px solid rgba(255,255,255,.06);
+            border-bottom: 1px solid rgba(255,255,255,.06);
+            background: rgba(255,255,255,.015);
+        }
+
+        .marquee {
+            display: flex;
+            width: max-content;
+            animation: marquee 25s linear infinite;
+        }
+
+        .marquee span {
+            font-family: Manrope;
+            font-weight: 800;
+            font-size: 13px;
+            letter-spacing: .16em;
+            color: #64748b;
+            padding: 23px 35px;
+            white-space: nowrap;
+        }
+
+        .marquee span b {
+            color: #3b82f6;
+            margin-right: 35px;
+        }
+
+        @keyframes marquee {
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* =========================
+           SECTIONS
+        ========================= */
+
+        section {
+            position: relative;
+        }
+
+        .section-label {
+            color: #60a5fa;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: .16em;
+            text-transform: uppercase;
+        }
+
+        .section-title {
+            font-family: Manrope;
+            font-weight: 800;
+            letter-spacing: -.045em;
+        }
+
+        .glass {
+            background: rgba(15,23,42,.52);
+            border: 1px solid rgba(148,163,184,.11);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+        }
+
+        /* =========================
+           SERVICE CARDS
+        ========================= */
+
+        .service-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 24px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(15,23,42,.85),
+                    rgba(15,23,42,.48)
+                );
+
+            border: 1px solid rgba(148,163,184,.11);
+
+            transition:
+                transform .45s cubic-bezier(.2,.8,.2,1),
+                border-color .35s ease,
+                box-shadow .35s ease;
+        }
+
+        .service-card::before {
+            content: "";
+            position: absolute;
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            top: -80px;
+            right: -70px;
+
+            background: #3b82f6;
+            filter: blur(70px);
+            opacity: 0;
+            transition: .5s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(96,165,250,.28);
+            box-shadow:
+                0 30px 70px rgba(0,0,0,.25),
+                0 0 50px rgba(59,130,246,.07);
+        }
+
+        .service-card:hover::before {
+            opacity: .18;
+        }
+
+        .featured {
+            border-color: rgba(96,165,250,.3);
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(37,99,235,.13),
+                    rgba(124,58,237,.07),
+                    rgba(15,23,42,.8)
+                );
+        }
+
+        .featured-badge {
+            position: absolute;
+            top: 18px;
+            right: 18px;
+
+            font-size: 9px;
+            font-weight: 800;
+            letter-spacing: .1em;
+
+            padding: 7px 10px;
+            border-radius: 999px;
+
+            color: #dbeafe;
+            background: rgba(59,130,246,.14);
+            border: 1px solid rgba(96,165,250,.2);
+        }
+
+        .service-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 15px;
+
+            display: grid;
+            place-items: center;
+
+            background: rgba(59,130,246,.1);
+            color: #60a5fa;
+
+            border: 1px solid rgba(96,165,250,.12);
+
+            transition: .4s ease;
+        }
+
+        .service-card:hover .service-icon {
+            transform: rotate(-6deg) scale(1.08);
+            background: rgba(59,130,246,.18);
+        }
+
+        .price {
+            font-family: Manrope;
+            font-size: 40px;
+            font-weight: 800;
+            letter-spacing: -.05em;
+        }
+
+        .price small {
+            font-family: "DM Sans";
+            font-size: 12px;
+            font-weight: 500;
+            color: #64748b;
+            letter-spacing: 0;
+        }
+
+        .check {
+            color: #60a5fa;
+        }
+
+        /* =========================
+           QUICK SERVICES
+        ========================= */
+
+        .quick-service {
+            padding: 17px;
+            border-radius: 17px;
+            background: rgba(255,255,255,.025);
+            border: 1px solid rgba(255,255,255,.07);
+            transition: .3s ease;
+        }
+
+        .quick-service:hover {
+            transform: translateY(-5px);
+            border-color: rgba(96,165,250,.25);
+            background: rgba(59,130,246,.05);
+        }
+
+        /* =========================
+           PROCESS
+        ========================= */
+
+        .process-line {
+            position: absolute;
+            left: 24px;
+            top: 48px;
+            bottom: 48px;
+            width: 1px;
+            background:
+                linear-gradient(
+                    to bottom,
+                    rgba(96,165,250,.5),
+                    rgba(167,139,250,.05)
+                );
+        }
+
+        .process-number {
+            position: relative;
+            z-index: 2;
+
+            width: 48px;
+            height: 48px;
+
+            display: grid;
+            place-items: center;
+
+            border-radius: 15px;
+
+            background: #080d1d;
+            border: 1px solid rgba(96,165,250,.25);
+
+            color: #60a5fa;
+
+            font-family: Manrope;
+            font-weight: 800;
+
+            box-shadow:
+                0 0 30px rgba(59,130,246,.1);
+        }
+
+        /* =========================
+           PROJECT CARDS
+        ========================= */
+
+        .project-card {
+            overflow: hidden;
+            border-radius: 25px;
+            border: 1px solid rgba(148,163,184,.11);
+            background: rgba(15,23,42,.5);
+            transition: .45s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(96,165,250,.3);
+            box-shadow: 0 35px 80px rgba(0,0,0,.25);
+        }
+
+        .project-preview {
+            height: 230px;
+            position: relative;
+            overflow: hidden;
+
+            background:
+                radial-gradient(
+                    circle at 75% 20%,
+                    rgba(59,130,246,.22),
+                    transparent 30%
+                ),
+                linear-gradient(145deg,#111827,#060912);
+        }
+
+        .project-window {
+            position: absolute;
+            left: 10%;
+            right: 10%;
+            top: 15%;
+            bottom: -15%;
+
+            border: 1px solid rgba(255,255,255,.1);
+            border-radius: 14px 14px 0 0;
+
+            background: #0b1220;
+
+            box-shadow:
+                0 25px 60px rgba(0,0,0,.5);
+
+            transform: perspective(700px) rotateX(12deg);
+
+            transition: .5s ease;
+        }
+
+        .project-card:hover .project-window {
+            transform:
+                perspective(700px)
+                rotateX(0)
+                translateY(-5px);
+        }
+
+        .project-top {
+            height: 27px;
+            padding: 0 8px;
+
+            display: flex;
+            align-items: center;
+            gap: 4px;
+
+            border-bottom: 1px solid rgba(255,255,255,.05);
+        }
+
+        .project-top i {
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: #334155;
+        }
+
+        .project-content {
+            padding: 18px;
+        }
+
+        .project-heading {
+            height: 12px;
+            width: 45%;
+            border-radius: 10px;
+            background: #1e40af;
+            opacity: .8;
+        }
+
+        .project-lines {
+            margin-top: 15px;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 8px;
+        }
+
+        .project-lines span {
+            height: 50px;
+            border-radius: 9px;
+            background: rgba(255,255,255,.05);
+        }
+
+        .tech {
+            padding: 6px 9px;
+            border-radius: 8px;
+            font-size: 9px;
+            color: #94a3b8;
+            border: 1px solid rgba(255,255,255,.07);
+            background: rgba(255,255,255,.025);
+        }
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .skill-card {
+            min-height: 135px;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,.07);
+            background: rgba(255,255,255,.025);
+            transition: .35s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-7px);
+            border-color: rgba(96,165,250,.25);
+            background: rgba(59,130,246,.045);
+        }
+
+        .skill-icon {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .profile-frame {
+            position: relative;
+            border-radius: 30px;
+            padding: 1px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(96,165,250,.5),
+                    rgba(167,139,250,.1)
+                );
+        }
+
+        .profile-inner {
+            min-height: 470px;
+            border-radius: 29px;
+            background:
+                radial-gradient(
+                    circle at 50% 25%,
+                    rgba(59,130,246,.16),
+                    transparent 30%
+                ),
+                #080d1d;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            position: relative;
+            overflow: hidden;
+        }
+
+        .profile-avatar {
+            width: 190px;
+            height: 190px;
+            border-radius: 55px;
+
+            display: grid;
+            place-items: center;
+
+            font-family: Manrope;
+            font-size: 62px;
+            font-weight: 800;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #2563eb,
+                    #7c3aed
+                );
+
+            box-shadow:
+                0 30px 100px rgba(37,99,235,.35);
+
+            animation: profileFloat 5s ease-in-out infinite;
+        }
+
+        @keyframes profileFloat {
+            0%,100% {
+                transform: translateY(0) rotate(-2deg);
+            }
+
+            50% {
+                transform: translateY(-15px) rotate(2deg);
+            }
+        }
+
+        .orbit {
+            position: absolute;
+            border: 1px dashed rgba(96,165,250,.18);
+            border-radius: 50%;
+            animation: spin 20s linear infinite;
+        }
+
+        .orbit.one {
+            width: 270px;
+            height: 270px;
+        }
+
+        .orbit.two {
+            width: 370px;
+            height: 370px;
+            animation-duration: 30s;
+            animation-direction: reverse;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* =========================
+           FAQ
+        ========================= */
+
+        .faq-item {
+            border: 1px solid rgba(255,255,255,.08);
+            background: rgba(255,255,255,.025);
+            border-radius: 18px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 21px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: left;
+            font-weight: 700;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: .4s ease;
+            color: #94a3b8;
+            line-height: 1.7;
+        }
+
+        .faq-item.open .faq-answer {
+            max-height: 300px;
+            padding: 0 21px 21px;
+        }
+
+        .faq-item.open .faq-plus {
+            transform: rotate(45deg);
+        }
+
+        .faq-plus {
+            transition: .3s ease;
+            color: #60a5fa;
+            font-size: 20px;
+        }
+
+        /* =========================
+           CTA
+        ========================= */
+
+        .cta-box {
+            position: relative;
+            overflow: hidden;
+
+            border-radius: 30px;
+            border: 1px solid rgba(96,165,250,.2);
+
+            background:
+                radial-gradient(
+                    circle at 20% 50%,
+                    rgba(37,99,235,.2),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 80% 20%,
+                    rgba(124,58,237,.18),
+                    transparent 30%
+                ),
+                rgba(15,23,42,.6);
+
+            box-shadow:
+                0 30px 100px rgba(0,0,0,.25);
+        }
+
+        .cta-box::after {
+            content: "";
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            right: -150px;
+            bottom: -180px;
+            background: #2563eb;
+            filter: blur(100px);
+            opacity: .15;
+        }
+
+        /* =========================
+           REVEAL
+        ========================= */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(35px);
+            transition:
+                opacity .8s ease,
+                transform .8s cubic-bezier(.2,.8,.2,1);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-delay-1 {
+            transition-delay: .08s;
+        }
+
+        .reveal-delay-2 {
+            transition-delay: .16s;
+        }
+
+        .reveal-delay-3 {
+            transition-delay: .24s;
+        }
+
+        /* =========================
+           SCROLL PROGRESS
+        ========================= */
+
+        #progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 2px;
+            width: 0;
+            z-index: 10000;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #60a5fa,
+                    #22d3ee,
+                    #a78bfa
+                );
+
+            box-shadow:
+                0 0 15px rgba(96,165,250,.7);
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media(max-width: 1024px) {
+
+            .hero {
+                min-height: auto;
+                padding-top: 130px;
+                padding-bottom: 100px;
+            }
+
+            .floating-card.one {
+                left: -20px;
+            }
+
+            .floating-card.two {
+                right: -20px;
+            }
+        }
+
+        @media(max-width: 768px) {
+
+            .hero {
+                padding-top: 120px;
+            }
+
+            .hero-title {
+                font-size: 48px !important;
+            }
+
+            .browser {
+                transform: none;
+            }
+
+            .browser:hover {
+                transform: translateY(-5px);
+            }
+
+            .floating-card {
+                display: none;
+            }
+
+            .portfolio-screen {
+                min-height: 370px;
+            }
+
+            .mini-title {
+                font-size: 27px;
+            }
+
+            .process-line {
+                display: none;
+            }
+
+            .profile-inner {
+                min-height: 360px;
+            }
+
+            .profile-avatar {
+                width: 145px;
+                height: 145px;
+                font-size: 48px;
+            }
+
+            .orbit.one {
+                width: 210px;
+                height: 210px;
+            }
+
+            .orbit.two {
+                width: 280px;
+                height: 280px;
+            }
+        }
+
+        @media(max-width: 480px) {
+
+            .hero-title {
+                font-size: 40px !important;
+            }
+
+            .price {
+                font-size: 34px;
+            }
+
+            .browser {
+                border-radius: 18px;
+            }
+
+            .browser-inner {
+                border-radius: 17px;
+            }
+
+            .portfolio-screen {
+                padding: 18px;
+            }
+        }
+
+        @media(prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: .01ms !important;
+                animation-iteration-count: 1 !important;
+                scroll-behavior: auto !important;
+                transition-duration: .01ms !important;
+            }
+        }
+
+
+
+
+        
+.contact-info-card,
+.contact-form-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-info-card {
+    padding: 34px;
+    min-height: 100%;
+}
+
+.contact-form-card {
+    padding: 30px;
+}
+
+.contact-orb {
+    position: absolute;
+    border-radius: 999px;
+    filter: blur(70px);
+    pointer-events: none;
+}
+
+.orb-one {
+    width: 220px;
+    height: 220px;
+    top: -100px;
+    right: -80px;
+    background: rgba(59, 130, 246, 0.12);
+}
+
+.orb-two {
+    width: 180px;
+    height: 180px;
+    bottom: -90px;
+    left: -80px;
+    background: rgba(168, 85, 247, 0.10);
+}
+
+.contact-icon-main {
+    width: 58px;
+    height: 58px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 22px;
+    background: linear-gradient(
+        135deg,
+        rgba(59,130,246,.18),
+        rgba(168,85,247,.18)
+    );
+    border: 1px solid rgba(147,197,253,.16);
+    color: #93c5fd;
+    font-size: 21px;
+    box-shadow: 0 12px 40px rgba(37,99,235,.12);
+}
+
+.contact-detail {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 14px;
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,.055);
+    background: rgba(255,255,255,.025);
+    transition: .3s ease;
+}
+
+.contact-detail:hover {
+    transform: translateY(-2px);
+    background: rgba(255,255,255,.045);
+    border-color: rgba(96,165,250,.18);
+}
+
+.contact-detail-icon {
+    flex: 0 0 40px;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(59,130,246,.10);
+    color: #93c5fd;
+}
+
+.contact-detail div:nth-child(2) {
+    min-width: 0;
+    flex: 1;
+}
+
+.contact-detail span {
+    display: block;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: .13em;
+    color: #64748b;
+    font-weight: 800;
+    margin-bottom: 3px;
+}
+
+.contact-detail strong {
+    display: block;
+    color: #e2e8f0;
+    font-size: 13px;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+.contact-arrow {
+    font-size: 10px;
+    color: #475569;
+}
+
+.contact-social {
+    width: 43px;
+    height: 43px;
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #94a3b8;
+    background: rgba(255,255,255,.035);
+    border: 1px solid rgba(255,255,255,.07);
+    transition: .3s ease;
+}
+
+.contact-social:hover {
+    color: white;
+    transform: translateY(-3px);
+    border-color: rgba(96,165,250,.35);
+    background: rgba(59,130,246,.12);
+    box-shadow: 0 12px 30px rgba(37,99,235,.15);
+}
+
+.form-secure-badge {
+    align-items: center;
+    gap: 7px;
+    padding: 8px 11px;
+    border-radius: 999px;
+    font-size: 10px;
+    font-weight: 800;
+    color: #86efac;
+    background: rgba(34,197,94,.07);
+    border: 1px solid rgba(34,197,94,.13);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #cbd5e1;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .01em;
+}
+
+.form-group label span {
+    color: #60a5fa;
+}
+
+.input-wrap {
+    position: relative;
+}
+
+.input-wrap > i:first-child {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #475569;
+    font-size: 13px;
+    pointer-events: none;
+    transition: .25s ease;
+}
+
+.input-wrap input,
+.input-wrap select,
+.input-wrap textarea {
+    width: 100%;
+    border: 1px solid rgba(255,255,255,.07);
+    outline: none;
+    color: #e2e8f0;
+    background: rgba(255,255,255,.025);
+    border-radius: 14px;
+    transition: .25s ease;
+    font-family: inherit;
+}
+
+.input-wrap input,
+.input-wrap select {
+    height: 50px;
+    padding: 0 15px 0 43px;
+}
+
+.input-wrap textarea {
+    min-height: 130px;
+    padding: 14px 15px 14px 43px;
+    resize: vertical;
+    line-height: 1.6;
+}
+
+.input-wrap input::placeholder,
+.input-wrap textarea::placeholder {
+    color: #475569;
+}
+
+.input-wrap input:focus,
+.input-wrap select:focus,
+.input-wrap textarea:focus {
+    border-color: rgba(96,165,250,.38);
+    background: rgba(255,255,255,.04);
+    box-shadow: 0 0 0 4px rgba(59,130,246,.07);
+}
+
+.input-wrap:focus-within > i:first-child {
+    color: #60a5fa;
+}
+
+.select-wrap select {
+    appearance: none;
+    cursor: pointer;
+}
+
+.select-wrap select option {
+    background: #0b1220;
+    color: #e2e8f0;
+}
+
+.select-arrow {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #475569;
+    font-size: 10px;
+    pointer-events: none;
+}
+
+.textarea-wrap > i:first-child {
+    top: 18px;
+    transform: none;
+}
+
+.budget-options {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+.budget-option {
+    position: relative;
+    margin: 0 !important;
+    cursor: pointer;
+}
+
+.budget-option input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.budget-option span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 43px;
+    padding: 7px 8px;
+    text-align: center;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,.065);
+    background: rgba(255,255,255,.025);
+    color: #94a3b8;
+    font-size: 11px;
+    font-weight: 800;
+    transition: .25s ease;
+}
+
+.budget-option:hover span {
+    border-color: rgba(96,165,250,.22);
+    color: #cbd5e1;
+}
+
+.budget-option input:checked + span {
+    color: #dbeafe;
+    border-color: rgba(96,165,250,.45);
+    background: rgba(59,130,246,.11);
+    box-shadow: 0 0 0 3px rgba(59,130,246,.05);
+}
+
+.contact-submit {
+    position: relative;
+    width: 100%;
+    min-height: 54px;
+    border: 0;
+    border-radius: 15px;
+    cursor: pointer;
+    color: white;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: .01em;
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #7c3aed
+    );
+    box-shadow:
+        0 14px 35px rgba(37,99,235,.20),
+        inset 0 1px rgba(255,255,255,.15);
+    transition: .3s ease;
+    overflow: hidden;
+}
+
+.contact-submit::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        100deg,
+        transparent 20%,
+        rgba(255,255,255,.14) 50%,
+        transparent 80%
+    );
+    transform: translateX(-100%);
+    transition: .7s ease;
+}
+
+.contact-submit:hover::before {
+    transform: translateX(100%);
+}
+
+.contact-submit:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        0 18px 45px rgba(37,99,235,.28),
+        inset 0 1px rgba(255,255,255,.2);
+}
+
+.contact-submit:active {
+    transform: translateY(0);
+}
+
+.submit-normal,
+.submit-loading {
+    position: relative;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.contact-success {
+    text-align: center;
+    padding: 45px 15px;
+}
+
+.success-icon {
+    width: 74px;
+    height: 74px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #86efac;
+    background: rgba(34,197,94,.10);
+    border: 1px solid rgba(34,197,94,.2);
+    box-shadow: 0 0 0 10px rgba(34,197,94,.025);
+    font-size: 27px;
+    animation: successPop .5s ease;
+}
+
+@keyframes successPop {
+    0% {
+        opacity: 0;
+        transform: scale(.6);
+    }
+    70% {
+        transform: scale(1.08);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.contact-success h3 {
+    font-size: 25px;
+    font-weight: 900;
+    color: #f8fafc;
+}
+
+.contact-success p {
+    max-width: 440px;
+    margin: 10px auto 22px;
+    color: #94a3b8;
+    line-height: 1.7;
+    font-size: 13px;
+}
+
+.success-back {
+    border: 1px solid rgba(255,255,255,.08);
+    background: rgba(255,255,255,.035);
+    color: #cbd5e1;
+    padding: 10px 15px;
+    border-radius: 11px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 800;
+    transition: .25s ease;
+}
+
+.success-back:hover {
+    background: rgba(255,255,255,.07);
+    color: white;
+}
+
+.contact-error {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    margin-top: 16px;
+    padding: 13px 15px;
+    border-radius: 13px;
+    background: rgba(239,68,68,.07);
+    border: 1px solid rgba(239,68,68,.14);
+    color: #fca5a5;
+}
+
+.contact-error > i {
+    margin-top: 2px;
+}
+
+.contact-error strong {
+    display: block;
+    font-size: 12px;
+}
+
+.contact-error p {
+    margin-top: 3px;
+    font-size: 11px;
+    color: #94a3b8;
+}
+
+
+
+
+/* Mobile */
+@media (max-width: 640px) {
+
+    .contact-info-card {
+        padding: 25px;
+    }
+
+    .contact-form-card {
+        padding: 22px 18px;
+    }
+
+    .budget-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-detail strong {
+        font-size: 12px;
+    }
+
+    .contact-success {
+        padding: 30px 5px;
+    }
+
+}
+        :root {
+            --bg: #050816;
+            --card: rgba(15, 23, 42, .65);
+            --border: rgba(148, 163, 184, .14);
+            --text: #f8fafc;
+            --muted: #94a3b8;
+            --blue: #60a5fa;
+            --cyan: #22d3ee;
+            --purple: #a78bfa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            background:
+                radial-gradient(circle at 10% 10%, rgba(59,130,246,.12), transparent 30%),
+                radial-gradient(circle at 90% 20%, rgba(168,85,247,.12), transparent 30%),
+                #050816;
+            color: var(--text);
+            overflow-x: hidden;
+        }
+
+        ::selection {
+            background: #60a5fa;
+            color: #020617;
+        }
+
     </style>
 </head>
 
+
 <body>
 
+<div id="progress"></div>
 
-<!-- =====================================================
-                         NAVBAR
-===================================================== -->
+<div class="grid-bg"></div>
+<div class="noise"></div>
 
-<header class="fixed top-0 left-0 right-0 z-50">
+<!-- =========================
+     NAVBAR
+========================= -->
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4">
+<header class="fixed top-0 left-0 right-0 z-50 nav-glass">
 
-        <nav class="bg-white border border-black/10
-                    h-16 px-5
-                    flex items-center justify-between
-                    shadow-sm">
+    <nav class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between">
 
-            <!-- Logo -->
+        <a href="#home" class="flex items-center gap-3">
 
-            <a href="#home" class="flex items-center gap-3">
-
-                <div class="w-9 h-9 bg-dark text-white
-                            flex items-center justify-center
-                            font-bold">
-                    DA
-                </div>
-
-                <div>
-                    <div class="font-bold text-sm">
-                        Dilshad Alam
-                    </div>
-
-                    <div class="text-[9px] uppercase
-                                tracking-widest
-                                text-gray-500">
-                        Full Stack Developer
-                    </div>
-                </div>
-
-            </a>
-
-
-            <!-- Desktop Menu -->
-
-            <div class="hidden md:flex items-center gap-7 text-sm">
-
-                <a href="#about" class="nav-link hover:text-accent">
-                    About
-                </a>
-
-                <a href="#skills" class="nav-link hover:text-accent">
-                    Skills
-                </a>
-
-                <a href="#experience" class="nav-link hover:text-accent">
-                    Experience
-                </a>
-
-                <a href="#projects" class="nav-link hover:text-accent">
-                    Projects
-                </a>
-
-                <a href="#education" class="nav-link hover:text-accent">
-                    Education
-                </a>
-
+            <div class="logo-mark">
+                DA
             </div>
 
+            <div>
+                <div class="font-extrabold font-manrope tracking-tight">
+                    Dilshad Alam
+                </div>
+
+                <div class="text-[10px] text-slate-500 tracking-[.18em] uppercase">
+                    Full Stack Developer
+                </div>
+            </div>
+
+        </a>
+
+
+        <div class="hidden lg:flex items-center gap-8 text-sm">
+
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#services" class="nav-link">Services</a>
+            <a href="#work" class="nav-link">Work</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#contact" class="nav-link">Contact</a>
+
+        </div>
+
+
+        <div class="hidden lg:block">
 
             <a href="#contact"
-               class="hidden sm:block
-                      bg-dark text-white
-                      px-5 py-2.5
-                      text-sm font-semibold
-                      hover:bg-accent
-                      transition">
-
-                Contact Me
-
+               class="btn-primary px-5 py-3 rounded-xl text-sm font-bold inline-flex">
+                Start a Project
             </a>
 
-
-            <!-- Mobile -->
-
-            <button id="menuButton"
-                    class="md:hidden text-2xl"
-                    aria-label="Open menu">
-
-                ☰
-
-            </button>
-
-        </nav>
+        </div>
 
 
-        <!-- Mobile Menu -->
+        <button id="mobileBtn"
+                class="lg:hidden w-11 h-11 rounded-xl border border-white/10 bg-white/5">
 
-        <div id="mobileMenu"
-             class="mobile-menu
-                    bg-white border border-black/10
-                    mt-1 p-5 md:hidden
-                    shadow-sm">
+            <i class="fa-solid fa-bars"></i>
 
-            <a href="#about" class="mobile-link block py-2">
-                About
+        </button>
+
+    </nav>
+
+
+    <div id="mobileMenu"
+         class="hidden lg:hidden border-t border-white/5 bg-[#050816]/95 backdrop-blur-xl">
+
+        <div class="px-5 py-5 space-y-2">
+
+            <a href="#home" class="mobile-link block p-3 rounded-xl">
+                Home
             </a>
 
-            <a href="#skills" class="mobile-link block py-2">
+            <a href="#services" class="mobile-link block p-3 rounded-xl">
+                Services
+            </a>
+
+            <a href="#work" class="mobile-link block p-3 rounded-xl">
+                Work
+            </a>
+
+            <a href="#skills" class="mobile-link block p-3 rounded-xl">
                 Skills
             </a>
 
-            <a href="#experience" class="mobile-link block py-2">
-                Experience
+            <a href="#about" class="mobile-link block p-3 rounded-xl">
+                About
             </a>
 
-            <a href="#projects" class="mobile-link block py-2">
-                Projects
-            </a>
-
-            <a href="#education" class="mobile-link block py-2">
-                Education
-            </a>
-
-            <a href="#contact" class="mobile-link block py-2">
+            <a href="#contact" class="mobile-link block p-3 rounded-xl">
                 Contact
             </a>
 
@@ -256,800 +1897,230 @@
 </header>
 
 
-<!-- =====================================================
-                          HERO
-===================================================== -->
+<!-- =========================
+     HERO
+========================= -->
 
-<section id="home"
-         class="min-h-screen pt-32 pb-20 grid-bg
-                flex items-center">
+<main>
 
-    <div class="max-w-7xl mx-auto
-                px-5 sm:px-6 lg:px-8 w-full">
+<section id="home" class="hero overflow-hidden">
 
-        <div class="grid lg:grid-cols-2
-                    gap-14 items-center">
+    <div class="aurora one"></div>
+    <div class="aurora two"></div>
+    <div class="aurora three"></div>
+
+
+    <div class="max-w-7xl mx-auto px-5 lg:px-8 w-full">
+
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
 
 
             <!-- LEFT -->
 
-            <div>
+            <div class="reveal">
 
-                <div class="flex items-center gap-3 mb-6">
+                <div class="hero-badge mb-7">
 
-                    <span class="w-10 h-[2px] bg-accent"></span>
+                    <span class="live-dot"></span>
 
-                    <span class="text-xs uppercase
-                                 tracking-widest
-                                 font-bold text-gray-500">
-
-                        Full Stack Developer
-
-                    </span>
+                    Available for website projects
 
                 </div>
 
 
-                <p class="text-accent font-bold text-sm mb-3">
-                    HELLO, I'M
-                </p>
+                <h1 class="hero-title text-6xl md:text-7xl lg:text-[78px]">
 
+                    Build a website
 
-                <h1 class="font-heading
-                           text-5xl sm:text-6xl
-                           lg:text-7xl
-                           font-extrabold
-                           leading-tight">
+                    <br>
 
-                    Dilshad
-                    <span class="text-accent">
-                        Alam.
+                    that looks
+
+                    <span class="gradient-text">
+                        premium.
                     </span>
 
                 </h1>
 
 
-                <h2 class="text-2xl sm:text-3xl
-                           font-bold mt-4">
+                <p class="mt-7 text-lg text-slate-400 max-w-xl leading-8">
 
-                    Building modern web applications.
-
-                </h2>
-
-
-                <p class="text-gray-600
-                          leading-8
-                          max-w-xl
-                          mt-6">
-
-                    Full Stack Developer specializing in
-                    PHP, Laravel, MySQL and modern frontend
-                    technologies. Currently pursuing B.Tech
-                    in Information Technology.
+                    Premium, responsive and modern websites for
+                    portfolios, businesses, landing pages and small
+                    online stores — without the agency-level price tag.
 
                 </p>
 
 
-                <!-- Buttons -->
+                <div class="flex flex-wrap gap-4 mt-9">
 
-                <div class="flex flex-wrap gap-4 mt-8">
+                    <a href="#services"
+                       class="btn-primary px-6 py-4 rounded-xl font-bold inline-flex items-center gap-2">
 
-                    <a href="#projects"
-                       class="bg-dark text-white
-                              px-7 py-3.5
-                              font-semibold
-                              hover:bg-accent
-                              transition">
+                        Explore Packages
 
-                        View Projects →
+                        <i class="fa-solid fa-arrow-right text-sm"></i>
 
                     </a>
 
-                    <a href="https://github.com/Dilshad1232"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="border border-black/20
-                              px-7 py-3.5
-                              font-semibold
-                              hover:border-accent
-                              hover:text-accent
-                              transition">
 
-                        GitHub ↗
+                    <a href="#work"
+                       class="btn-secondary px-6 py-4 rounded-xl font-bold inline-flex items-center gap-2">
+
+                        View My Work
+
+                        <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
 
                     </a>
 
                 </div>
 
 
-                <!-- Contact Links -->
+                <div class="flex flex-wrap items-center gap-x-6 gap-y-3 mt-8 text-xs text-slate-500">
 
-                <div class="flex flex-wrap
-                            gap-6 mt-8
-                            text-sm">
+                    <span>
+                        <i class="fa-solid fa-check text-blue-400 mr-1"></i>
+                        Mobile Responsive
+                    </span>
 
-                    <a href="https://www.linkedin.com/in/dilshad-alam-575925283/"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="hover:text-accent">
+                    <span>
+                        <i class="fa-solid fa-check text-blue-400 mr-1"></i>
+                        Modern UI
+                    </span>
 
-                        LinkedIn ↗
+                    <span>
+                        <i class="fa-solid fa-check text-blue-400 mr-1"></i>
+                        SEO Ready
+                    </span>
 
-                    </a>
+                </div>
 
-                    <a href="mailto:alam.techno.com@gmail.com"
-                       class="hover:text-accent">
 
-                        Email ↗
+                <div class="flex flex-wrap gap-2 mt-7">
 
-                    </a>
-
-                    <a href="tel:+919793145874"
-                       class="hover:text-accent">
-
-                        +91 9793145874
-
-                    </a>
+                    <span class="tech">PHP</span>
+                    <span class="tech">Laravel</span>
+                    <span class="tech">Tailwind</span>
+                    <span class="tech">JavaScript</span>
+                    <span class="tech">React</span>
+                    <span class="tech">MySQL</span>
 
                 </div>
 
             </div>
 
 
-            <!-- RIGHT PHOTO -->
+            <!-- RIGHT -->
 
-            <div class="flex justify-center lg:justify-end">
+            <div class="hero-visual reveal reveal-delay-2">
 
-                <div class="relative w-72 sm:w-80 photo-wrap">
+                <div class="browser">
 
+                    <div class="browser-inner">
 
-                    <!-- Orange decoration -->
+                        <div class="browser-bar">
 
-                    <div class="absolute
-                                -top-5 -right-5
-                                w-24 h-24
-                                bg-accent">
-                    </div>
+                            <span class="browser-dot"></span>
+                            <span class="browser-dot"></span>
+                            <span class="browser-dot"></span>
 
+                            <div class="browser-address">
+                                dilshadportfoliocom.netlify.app
+                            </div>
 
-                    <!-- Border decoration -->
-
-                    <div class="absolute
-                                -bottom-5 -left-5
-                                w-24 h-24
-                                border border-black/20">
-                    </div>
-
-
-                    <!-- PHOTO -->
-
-                    <div class="relative
-                                h-[390px]
-                                bg-white
-                                border border-black/10
-                                overflow-hidden
-                                shadow-xl">
-
-                        <img
-                            src="./Dillu.jpg"
-                            alt="Dilshad Alam - Full Stack Developer"
-                            class="w-full h-full
-                                   object-cover
-                                   object-top"
-                        >
-
-                    </div>
-
-
-                    <!-- Status Badge -->
-
-                    <div class="absolute
-                                -bottom-6 -left-5
-                                bg-white
-                                border border-black/10
-                                shadow-lg
-                                px-5 py-4">
-
-                        <div class="text-xs text-gray-500">
-                            CURRENTLY
                         </div>
 
-                        <div class="font-bold text-sm mt-1">
-                            B.Tech · 7th Semester
-                        </div>
 
-                    </div>
+                        <div class="portfolio-screen">
 
-                </div>
+                            <div class="mini-nav">
 
-            </div>
+                                <div class="mini-logo">
+                                    DILSHAD<span class="text-blue-400">.</span>
+                                </div>
 
-        </div>
+                                <div class="mini-pill">
+                                    FULL STACK
+                                </div>
 
+                            </div>
 
-        <!-- Bottom Info -->
 
-        <div class="border-t border-black/10
-                    mt-20 pt-5
-                    grid sm:grid-cols-3
-                    gap-3
-                    text-xs text-gray-500">
+                            <div class="text-slate-500 text-[10px] tracking-widest uppercase">
+                                Creative Developer
+                            </div>
 
-            <span>
-                Information Technology
-            </span>
 
-            <span class="sm:text-center">
-                Sagar Institute of Technology & Management
-            </span>
+                            <div class="mini-title mt-3">
+                                Digital experiences
+                                <br>
+                                <span class="gradient-text">
+                                    made better.
+                                </span>
+                            </div>
 
-            <span class="sm:text-right">
-                Barabanki, Uttar Pradesh
-            </span>
 
-        </div>
+                            <div class="mini-line"></div>
 
-    </div>
 
-</section>
+                            <div class="text-[10px] text-slate-500 max-w-xs leading-5">
+                                Premium websites, clean interfaces
+                                and modern development.
+                            </div>
 
 
-<!-- =====================================================
-                    TECHNOLOGY BAR
-===================================================== -->
+                            <div class="mini-card">
 
-<section class="bg-dark text-white py-5">
+                                <div class="avatar">
+                                    DA
+                                </div>
 
-    <div class="max-w-7xl mx-auto
-                px-5 sm:px-6 lg:px-8">
+                                <div class="mini-service">
 
-        <div class="flex flex-wrap
-                    justify-center
-                    gap-x-7 gap-y-3
-                    text-xs sm:text-sm
-                    font-semibold">
+                                    <div class="mini-service-title">
+                                        Website Development
+                                    </div>
 
-            <span>PHP</span>
-            <span class="text-accent">•</span>
+                                    <div class="mini-service-sub">
+                                        Responsive • Modern • Fast
+                                    </div>
 
-            <span>Laravel</span>
-            <span class="text-accent">•</span>
+                                </div>
 
-            <span>MySQL</span>
-            <span class="text-accent">•</span>
+                                <div class="price-mini">
+                                    ₹299+
+                                </div>
 
-            <span>JavaScript</span>
-            <span class="text-accent">•</span>
+                            </div>
 
-            <span>Tailwind CSS</span>
-            <span class="text-accent">•</span>
-
-            <span>React</span>
-            <span class="text-accent">•</span>
-
-            <span>Bootstrap</span>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-                          ABOUT
-===================================================== -->
-
-<section id="about" class="py-24 bg-white">
-
-    <div class="max-w-7xl mx-auto
-                px-5 sm:px-6 lg:px-8">
-
-        <div class="grid lg:grid-cols-[250px_1fr]
-                    gap-10">
-
-            <div>
-
-                <p class="text-accent
-                          text-xs
-                          font-bold
-                          uppercase
-                          tracking-widest">
-
-                    01 — About Me
-
-                </p>
-
-            </div>
-
-
-            <div>
-
-                <h2 class="font-heading
-                           text-3xl sm:text-5xl
-                           font-extrabold
-                           leading-tight">
-
-                    Developer who enjoys turning
-                    ideas into
-                    <span class="text-accent">
-                        working products.
-                    </span>
-
-                </h2>
-
-
-                <div class="grid md:grid-cols-2
-                            gap-8 mt-8
-                            text-gray-600
-                            leading-7">
-
-                    <p>
-                        I'm Dilshad Alam, a Full Stack
-                        Developer with practical experience
-                        in PHP and Laravel development.
-                    </p>
-
-                    <p>
-                        I work across frontend and backend
-                        technologies and enjoy building
-                        responsive interfaces, APIs,
-                        authentication systems and
-                        database-driven applications.
-                    </p>
-
-                </div>
-
-
-                <!-- Stats -->
-
-                <div class="grid sm:grid-cols-3
-                            mt-12
-                            border-y border-black/10">
-
-                    <div class="py-7 sm:pr-7
-                                sm:border-r
-                                border-black/10">
-
-                        <div class="text-3xl font-bold">
-                            6+
-                        </div>
-
-                        <div class="text-sm
-                                    text-gray-500 mt-2">
-                            Months Laravel Experience
-                        </div>
-
-                    </div>
-
-
-                    <div class="py-7 sm:px-7
-                                sm:border-r
-                                border-black/10">
-
-                        <div class="text-3xl font-bold">
-                            78%
-                        </div>
-
-                        <div class="text-sm
-                                    text-gray-500 mt-2">
-                            Diploma Score
-                        </div>
-
-                    </div>
-
-
-                    <div class="py-7 sm:px-7">
-
-                        <div class="text-3xl font-bold">
-                            7th
-                        </div>
-
-                        <div class="text-sm
-                                    text-gray-500 mt-2">
-                            B.Tech Semester
                         </div>
 
                     </div>
 
                 </div>
 
-            </div>
 
-        </div>
+                <div class="floating-card one">
 
-    </div>
+                    <div class="flex items-center gap-3">
 
-</section>
+                        <div class="w-9 h-9 rounded-xl bg-blue-500/10
+                                    border border-blue-400/10
+                                    flex items-center justify-center
+                                    text-blue-400">
 
+                            <i class="fa-solid fa-bolt"></i>
 
-<!-- =====================================================
-                     WHAT I BUILD
-===================================================== -->
-
-<section class="py-24">
-
-    <div class="max-w-7xl mx-auto
-                px-5 sm:px-6 lg:px-8">
-
-        <div class="grid lg:grid-cols-[250px_1fr]
-                    gap-10">
-
-            <div>
-
-                <p class="text-accent
-                          text-xs
-                          font-bold
-                          uppercase
-                          tracking-widest">
-
-                    02 — What I Build
-
-                </p>
-
-            </div>
-
-
-            <div>
-
-                <h2 class="font-heading
-                           text-3xl sm:text-5xl
-                           font-extrabold">
-
-                    From backend logic
-                    to polished interfaces.
-
-                </h2>
-
-
-                <div class="grid md:grid-cols-2
-                            gap-5 mt-12">
-
-
-                    <div class="bg-white
-                                border border-black/10
-                                p-7
-                                hover:border-accent
-                                transition">
-
-                        <span class="text-accent font-bold">
-                            01
-                        </span>
-
-                        <h3 class="text-xl font-bold mt-5">
-                            Laravel Applications
-                        </h3>
-
-                        <p class="text-gray-500
-                                  leading-6
-                                  text-sm mt-3">
-
-                            Authentication, CRUD,
-                            dashboards, APIs,
-                            database logic and
-                            complete web applications.
-
-                        </p>
-
-                    </div>
-
-
-                    <div class="bg-white
-                                border border-black/10
-                                p-7
-                                hover:border-accent
-                                transition">
-
-                        <span class="text-accent font-bold">
-                            02
-                        </span>
-
-                        <h3 class="text-xl font-bold mt-5">
-                            Responsive Websites
-                        </h3>
-
-                        <p class="text-gray-500
-                                  leading-6
-                                  text-sm mt-3">
-
-                            Responsive websites using
-                            HTML, CSS, Bootstrap,
-                            Tailwind CSS and JavaScript.
-
-                        </p>
-
-                    </div>
-
-
-                    <div class="bg-white
-                                border border-black/10
-                                p-7
-                                hover:border-accent
-                                transition">
-
-                        <span class="text-accent font-bold">
-                            03
-                        </span>
-
-                        <h3 class="text-xl font-bold mt-5">
-                            REST APIs
-                        </h3>
-
-                        <p class="text-gray-500
-                                  leading-6
-                                  text-sm mt-3">
-
-                            API development,
-                            authentication,
-                            token-based access and
-                            frontend integration.
-
-                        </p>
-
-                    </div>
-
-
-                    <div class="bg-white
-                                border border-black/10
-                                p-7
-                                hover:border-accent
-                                transition">
-
-                        <span class="text-accent font-bold">
-                            04
-                        </span>
-
-                        <h3 class="text-xl font-bold mt-5">
-                            Admin Dashboards
-                        </h3>
-
-                        <p class="text-gray-500
-                                  leading-6
-                                  text-sm mt-3">
-
-                            Admin panels, forms,
-                            tables, data management
-                            and role-based features.
-
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-                          SKILLS
-===================================================== -->
-
-<section id="skills" class="py-24 bg-white">
-
-    <div class="max-w-7xl mx-auto
-                px-5 sm:px-6 lg:px-8">
-
-        <div class="grid lg:grid-cols-[250px_1fr]
-                    gap-10">
-
-            <div>
-
-                <p class="text-accent
-                          text-xs
-                          font-bold
-                          uppercase
-                          tracking-widest">
-
-                    03 — Technical Skills
-
-                </p>
-
-            </div>
-
-
-            <div>
-
-                <h2 class="font-heading
-                           text-3xl sm:text-5xl
-                           font-extrabold">
-
-                    Technologies I work with.
-
-                </h2>
-
-
-                <div class="flex flex-wrap
-                            gap-3 mt-10">
-
-                    <span class="skill border border-black/10
-                                 px-5 py-3 text-sm">
-                        HTML5
-                    </span>
-
-                    <span class="skill border border-black/10
-                                 px-5 py-3 text-sm">
-                        CSS3
-                    </span>
-
-                    <span class="skill border border-black/10
-                                 px-5 py-3 text-sm">
-                        Bootstrap
-                    </span>
-
-                    <span class="skill border border-black/10
-                                 px-5 py-3 text-sm">
-                        JavaScript
-                    </span>
-
-                    <span class="skill border border-black/10
-                                 px-5 py-3 text-sm">
-                        jQuery
-                    </span>
-
-                    <span class="skill border border-black/10
-                                 px-5 py-3 text-sm">
-                        AJAX
-                    </span>
-
-                    <span class="skill border border-black/10
-                                 px-5 py-3 text-sm">
-                        Tailwind CSS
-                    </span>
-
-                    <span class="skill border border-black/10
-                                 px-5 py-3 text-sm">
-                        PHP
-                    </span>
-
-                    <span class="skill border-accent
-                                 border-2
-                                 px-5 py-3 text-sm
-                                 font-semibold">
-                        Laravel
-                    </span>
-
-                    <span class="skill border border-black/10
-                                 px-5 py-3 text-sm">
-                        MySQL
-                    </span>
-
-                    <span class="skill border border-black/10
-                                 px-5 py-3 text-sm">
-                        React — Basic
-                    </span>
-
-                    <span class="skill border border-black/10
-                                 px-5 py-3 text-sm">
-                        C Programming
-                    </span>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-                       EXPERIENCE
-===================================================== -->
-
-<section id="experience" class="py-24">
-
-    <div class="max-w-7xl mx-auto
-                px-5 sm:px-6 lg:px-8">
-
-        <div class="grid lg:grid-cols-[250px_1fr]
-                    gap-10">
-
-            <div>
-
-                <p class="text-accent
-                          text-xs
-                          font-bold
-                          uppercase
-                          tracking-widest">
-
-                    04 — Experience
-
-                </p>
-
-            </div>
-
-
-            <div>
-
-                <h2 class="font-heading
-                           text-3xl sm:text-5xl
-                           font-extrabold">
-
-                    Experience & training.
-
-                </h2>
-
-
-                <!-- Ekana -->
-
-                <div class="mt-12
-                            border-t border-black/10
-                            py-8">
-
-                    <div class="grid md:grid-cols-[160px_1fr]
-                                gap-6">
+                        </div>
 
                         <div>
 
-                            <div class="font-bold">
-                                6 MONTHS
+                            <div class="text-xs font-bold">
+                                Fast & Responsive
                             </div>
 
-                            <div class="text-xs
-                                        text-gray-500 mt-2">
-                                Internship
-                            </div>
-
-                        </div>
-
-
-                        <div>
-
-                            <h3 class="text-2xl font-bold">
-                                PHP Laravel Developer
-                            </h3>
-
-                            <p class="text-accent
-                                      font-semibold mt-2">
-
-                                Ekana Technologies Pvt Ltd
-                                · Lucknow
-
-                            </p>
-
-                            <p class="text-gray-600
-                                      leading-7 mt-4">
-
-                                Practical experience in PHP
-                                and Laravel development,
-                                backend functionality,
-                                database integration and
-                                web application development.
-
-                            </p>
-
-                            <div class="flex flex-wrap
-                                        gap-2 mt-5">
-
-                                <span class="bg-white
-                                             border
-                                             px-3 py-1.5
-                                             text-xs">
-                                    PHP
-                                </span>
-
-                                <span class="bg-white
-                                             border
-                                             px-3 py-1.5
-                                             text-xs">
-                                    Laravel
-                                </span>
-
-                                <span class="bg-white
-                                             border
-                                             px-3 py-1.5
-                                             text-xs">
-                                    MySQL
-                                </span>
-
+                            <div class="text-[9px] text-slate-500">
+                                Desktop + Mobile
                             </div>
 
                         </div>
@@ -1059,695 +2130,22 @@
                 </div>
 
 
-                <!-- Techpile -->
+                <div class="floating-card two">
 
-                <div class="border-t
-                            border-black/10
-                            py-8">
+                    <div class="flex items-center gap-3">
 
-                    <div class="grid md:grid-cols-[160px_1fr]
-                                gap-6">
+                        <div class="text-green-400">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
 
                         <div>
 
-                            <div class="font-bold">
-                                2 MONTHS
+                            <div class="text-xs font-bold">
+                                Starting ₹299
                             </div>
 
-                            <div class="text-xs
-                                        text-gray-500 mt-2">
-                                Summer Training
-                            </div>
-
-                        </div>
-
-
-                        <div>
-
-                            <h3 class="text-2xl font-bold">
-                                Summer Training
-                            </h3>
-
-                            <p class="text-accent
-                                      font-semibold mt-2">
-
-                                Techpile Technology Pvt Ltd
-                                · Lucknow
-
-                            </p>
-
-                            <p class="text-gray-600
-                                      leading-7 mt-4">
-
-                                Completed practical summer
-                                training focused on programming,
-                                software development and
-                                technical implementation.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-                         PROJECTS
-===================================================== -->
-
-<section id="projects" class="py-24 bg-white">
-
-    <div class="max-w-7xl mx-auto
-                px-5 sm:px-6 lg:px-8">
-
-        <div class="grid lg:grid-cols-[250px_1fr]
-                    gap-10">
-
-            <div>
-
-                <p class="text-accent
-                          text-xs
-                          font-bold
-                          uppercase
-                          tracking-widest">
-
-                    05 — Projects
-
-                </p>
-
-            </div>
-
-
-            <div>
-
-                <h2 class="font-heading
-                           text-3xl sm:text-5xl
-                           font-extrabold">
-
-                    Selected projects.
-
-                </h2>
-
-                <p class="text-gray-600
-                          max-w-2xl
-                          mt-5">
-
-                    Explore the projects below.
-                    Click "View Details" to see
-                    the complete project description.
-
-                </p>
-
-
-                <div class="grid md:grid-cols-2
-                            gap-6 mt-12">
-
-
-                    <!-- PROJECT 1 -->
-
-                    <div class="project-card
-                                bg-cream
-                                border border-black/10
-                                overflow-hidden">
-
-                        <div class="h-48
-                                    bg-[#E9E5DC]
-                                    flex items-center
-                                    justify-center
-                                    relative">
-
-                            <span class="text-8xl
-                                         font-extrabold
-                                         text-black/10">
-                                01
-                            </span>
-
-                            <span class="absolute
-                                         top-5 left-5
-                                         bg-accent
-                                         text-white
-                                         text-xs
-                                         font-bold
-                                         px-3 py-1">
-                                E-COMMERCE
-                            </span>
-
-                        </div>
-
-
-                        <div class="p-7">
-
-                            <h3 class="text-2xl font-bold">
-                                E-Commerce Website
-                            </h3>
-
-                            <p class="text-gray-500
-                                      text-sm
-                                      leading-6 mt-3">
-
-                                Full-stack shopping platform
-                                with authentication, cart
-                                system and admin dashboard.
-
-                            </p>
-
-
-                            <div class="flex flex-wrap
-                                        gap-2 mt-5">
-
-                                <span class="text-xs
-                                             bg-white border px-3 py-1">
-                                    Laravel
-                                </span>
-
-                                <span class="text-xs
-                                             bg-white border px-3 py-1">
-                                    PHP
-                                </span>
-
-                                <span class="text-xs
-                                             bg-white border px-3 py-1">
-                                    MySQL
-                                </span>
-
-                            </div>
-
-
-                            <button
-                                onclick="showProject('ecommerce')"
-                                class="mt-7
-                                       font-bold
-                                       text-sm
-                                       text-accent
-                                       hover:underline">
-
-                                View Details →
-
-                            </button>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- PROJECT 2 -->
-
-                    <div class="project-card
-                                bg-cream
-                                border border-black/10
-                                overflow-hidden">
-
-                        <div class="h-48
-                                    bg-[#E4E1D9]
-                                    flex items-center
-                                    justify-center
-                                    relative">
-
-                            <span class="text-8xl
-                                         font-extrabold
-                                         text-black/10">
-                                02
-                            </span>
-
-                            <span class="absolute
-                                         top-5 left-5
-                                         bg-dark
-                                         text-white
-                                         text-xs
-                                         font-bold
-                                         px-3 py-1">
-                                MANAGEMENT
-                            </span>
-
-                        </div>
-
-
-                        <div class="p-7">
-
-                            <h3 class="text-2xl font-bold">
-                                Car Service Management System
-                            </h3>
-
-                            <p class="text-gray-500
-                                      text-sm
-                                      leading-6 mt-3">
-
-                                Platform for customers,
-                                bookings, service records
-                                and service tracking.
-
-                            </p>
-
-
-                            <div class="flex flex-wrap
-                                        gap-2 mt-5">
-
-                                <span class="text-xs
-                                             bg-white border px-3 py-1">
-                                    Laravel
-                                </span>
-
-                                <span class="text-xs
-                                             bg-white border px-3 py-1">
-                                    PHP
-                                </span>
-
-                                <span class="text-xs
-                                             bg-white border px-3 py-1">
-                                    MySQL
-                                </span>
-
-                            </div>
-
-
-                            <button
-                                onclick="showProject('ramotor')"
-                                class="mt-7
-                                       font-bold
-                                       text-sm
-                                       text-accent
-                                       hover:underline">
-
-                                View Details →
-
-                            </button>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- PROJECT 3 -->
-
-                    <div class="project-card
-                                bg-cream
-                                border border-black/10
-                                overflow-hidden">
-
-                        <div class="h-48
-                                    bg-[#E8E4DB]
-                                    flex items-center
-                                    justify-center
-                                    relative">
-
-                            <span class="text-8xl
-                                         font-extrabold
-                                         text-black/10">
-                                03
-                            </span>
-
-                            <span class="absolute
-                                         top-5 left-5
-                                         bg-accent
-                                         text-white
-                                         text-xs
-                                         font-bold
-                                         px-3 py-1">
-                                JOB PORTAL
-                            </span>
-
-                        </div>
-
-
-                        <div class="p-7">
-
-                            <h3 class="text-2xl font-bold">
-                                KushinagarJobs
-                            </h3>
-
-                            <p class="text-gray-500
-                                      text-sm
-                                      leading-6 mt-3">
-
-                                Job portal with job listings,
-                                categories, employer dashboard
-                                and job posting functionality.
-
-                            </p>
-
-
-                            <div class="flex flex-wrap
-                                        gap-2 mt-5">
-
-                                <span class="text-xs
-                                             bg-white border px-3 py-1">
-                                    Laravel
-                                </span>
-
-                                <span class="text-xs
-                                             bg-white border px-3 py-1">
-                                    Bootstrap
-                                </span>
-
-                                <span class="text-xs
-                                             bg-white border px-3 py-1">
-                                    MySQL
-                                </span>
-
-                            </div>
-
-
-                            <button
-                                onclick="showProject('jobs')"
-                                class="mt-7
-                                       font-bold
-                                       text-sm
-                                       text-accent
-                                       hover:underline">
-
-                                View Details →
-
-                            </button>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- PROJECT 4 -->
-
-                    <div class="project-card
-                                bg-cream
-                                border border-black/10
-                                overflow-hidden">
-
-                        <div class="h-48
-                                    bg-[#E4E1D9]
-                                    flex items-center
-                                    justify-center
-                                    relative">
-
-                            <span class="text-8xl
-                                         font-extrabold
-                                         text-black/10">
-                                04
-                            </span>
-
-                            <span class="absolute
-                                         top-5 left-5
-                                         bg-dark
-                                         text-white
-                                         text-xs
-                                         font-bold
-                                         px-3 py-1">
-                                REACT + API
-                            </span>
-
-                        </div>
-
-
-                        <div class="p-7">
-
-                            <h3 class="text-2xl font-bold">
-                                React + Laravel Authentication
-                            </h3>
-
-                            <p class="text-gray-500
-                                      text-sm
-                                      leading-6 mt-3">
-
-                                React frontend integrated
-                                with Laravel API,
-                                authentication and
-                                protected dashboard.
-
-                            </p>
-
-
-                            <div class="flex flex-wrap
-                                        gap-2 mt-5">
-
-                                <span class="text-xs
-                                             bg-white border px-3 py-1">
-                                    React
-                                </span>
-
-                                <span class="text-xs
-                                             bg-white border px-3 py-1">
-                                    Laravel
-                                </span>
-
-                                <span class="text-xs
-                                             bg-white border px-3 py-1">
-                                    Sanctum
-                                </span>
-
-                            </div>
-
-
-                            <button
-                                onclick="showProject('react')"
-                                class="mt-7
-                                       font-bold
-                                       text-sm
-                                       text-accent
-                                       hover:underline">
-
-                                View Details →
-
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-                         GITHUB
-===================================================== -->
-
-<section class="py-20">
-
-    <div class="max-w-7xl mx-auto
-                px-5 sm:px-6 lg:px-8">
-
-        <div class="bg-dark
-                    text-white
-                    p-8 sm:p-12
-                    flex flex-col
-                    md:flex-row
-                    justify-between
-                    gap-8
-                    items-start">
-
-            <div>
-
-                <p class="text-accent
-                          text-xs
-                          uppercase
-                          tracking-widest
-                          font-bold">
-                    GitHub
-                </p>
-
-                <h2 class="text-3xl
-                           sm:text-4xl
-                           font-bold mt-4">
-                    Explore my code.
-                </h2>
-
-                <p class="text-white/60
-                          mt-4
-                          max-w-xl">
-                    Check my repositories and development
-                    projects on GitHub.
-                </p>
-
-            </div>
-
-
-            <a href="https://github.com/Dilshad1232"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="bg-white
-                      text-dark
-                      px-6 py-3
-                      font-bold
-                      text-sm
-                      hover:bg-accent
-                      hover:text-white
-                      transition">
-
-                Visit GitHub ↗
-
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-                         EDUCATION
-===================================================== -->
-
-<section id="education"
-         class="py-24 bg-white">
-
-    <div class="max-w-7xl mx-auto
-                px-5 sm:px-6 lg:px-8">
-
-        <div class="grid lg:grid-cols-[250px_1fr]
-                    gap-10">
-
-            <div>
-
-                <p class="text-accent
-                          text-xs
-                          font-bold
-                          uppercase
-                          tracking-widest">
-
-                    06 — Education
-
-                </p>
-
-            </div>
-
-
-            <div>
-
-                <h2 class="font-heading
-                           text-3xl sm:text-5xl
-                           font-extrabold">
-
-                    Academic background.
-
-                </h2>
-
-
-                <!-- BTECH -->
-
-                <div class="border-t
-                            border-black/10
-                            mt-12 py-8">
-
-                    <div class="grid md:grid-cols-[160px_1fr]
-                                gap-6">
-
-                        <div>
-
-                            <div class="font-bold">
-                                2024 — 2027
-                            </div>
-
-                            <div class="text-xs
-                                        text-accent
-                                        font-bold mt-2">
-                                CURRENT
-                            </div>
-
-                        </div>
-
-
-                        <div>
-
-                            <h3 class="text-2xl font-bold">
-                                B.Tech — Information Technology
-                            </h3>
-
-                            <p class="text-accent
-                                      font-semibold mt-2">
-
-                                Sagar Institute of Technology
-                                and Management, Barabanki
-
-                            </p>
-
-                            <p class="text-gray-500 mt-3">
-                                Currently in 7th Semester
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- DIPLOMA -->
-
-                <div class="border-t
-                            border-black/10
-                            py-8">
-
-                    <div class="grid md:grid-cols-[160px_1fr]
-                                gap-6">
-
-                        <div>
-
-                            <div class="font-bold">
-                                2024
-                            </div>
-
-                            <div class="text-xs
-                                        text-gray-500 mt-2">
-                                COMPLETED
-                            </div>
-
-                        </div>
-
-
-                        <div>
-
-                            <h3 class="text-2xl font-bold">
-                                Diploma — Computer Science
-                            </h3>
-
-                            <p class="text-accent
-                                      font-semibold mt-2">
-
-                                Government Polytechnic
-                                Adampur Tarabganj, Gonda
-
-                            </p>
-
-                            <p class="text-gray-500
-                                      text-sm mt-3">
-
-                                Board of Technical Education
-                                Uttar Pradesh, Lucknow
-
-                            </p>
-
-
-                            <div class="mt-5
-                                        inline-flex
-                                        items-center gap-3
-                                        bg-cream
-                                        border border-black/10
-                                        px-5 py-3">
-
-                                <span class="text-2xl font-bold">
-                                    78%
-                                </span>
-
-                                <span class="text-xs text-gray-500">
-                                    Diploma Score
-                                </span>
-
+                            <div class="text-[9px] text-slate-500">
+                                Affordable packages
                             </div>
 
                         </div>
@@ -1765,186 +2163,1082 @@
 </section>
 
 
-<!-- =====================================================
-                       CERTIFICATES
-===================================================== -->
+<!-- =========================
+     MARQUEE
+========================= -->
 
-<section class="py-20">
+<div class="marquee-wrap">
 
-    <div class="max-w-7xl mx-auto
-                px-5 sm:px-6 lg:px-8">
+    <div class="marquee">
 
-        <div class="border border-dashed
-                    border-black/20
-                    p-8 sm:p-10
-                    bg-white">
+        <span><b>✦</b> WEBSITE DEVELOPMENT</span>
+        <span><b>✦</b> LANDING PAGES</span>
+        <span><b>✦</b> PORTFOLIO WEBSITES</span>
+        <span><b>✦</b> BUSINESS WEBSITES</span>
+        <span><b>✦</b> RESPONSIVE DESIGN</span>
+        <span><b>✦</b> LARAVEL DEVELOPMENT</span>
 
-            <p class="text-accent
-                      text-xs
-                      uppercase
-                      tracking-widest
-                      font-bold">
+        <span><b>✦</b> WEBSITE DEVELOPMENT</span>
+        <span><b>✦</b> LANDING PAGES</span>
+        <span><b>✦</b> PORTFOLIO WEBSITES</span>
+        <span><b>✦</b> BUSINESS WEBSITES</span>
+        <span><b>✦</b> RESPONSIVE DESIGN</span>
+        <span><b>✦</b> LARAVEL DEVELOPMENT</span>
 
-                Certificates
+    </div>
 
-            </p>
+</div>
 
-            <h2 class="text-2xl
-                       sm:text-3xl
-                       font-bold mt-3">
 
-                Certifications & achievements
+<!-- =========================
+     SERVICES
+========================= -->
 
+<section id="services" class="py-28">
+
+    <div class="max-w-7xl mx-auto px-5 lg:px-8">
+
+        <div class="max-w-2xl reveal">
+
+            <div class="section-label">
+                Services & Pricing
+            </div>
+
+            <h2 class="section-title text-4xl md:text-5xl mt-3">
+                Premium websites.
+                <span class="text-slate-500">
+                    Sensible pricing.
+                </span>
             </h2>
 
-            <p class="text-gray-500
-                      mt-3
-                      text-sm">
-
-                Certificates can be added here later.
-
+            <p class="text-slate-400 mt-5 leading-7">
+                Choose a package according to your requirement.
+                Every website is designed with responsiveness,
+                clean UI and a professional experience in mind.
             </p>
 
         </div>
 
+
+        <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-5 mt-14">
+
+
+            <!-- STARTER -->
+
+            <div class="service-card p-7 reveal">
+
+                <div class="service-icon">
+                    <i class="fa-solid fa-rocket"></i>
+                </div>
+
+                <div class="mt-7">
+
+                    <div class="text-sm text-slate-400">
+                        STARTER
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-2">
+                        Landing Page
+                    </h3>
+
+                    <div class="price mt-6">
+                        ₹299
+                        <small>starting</small>
+                    </div>
+
+                </div>
+
+                <div class="h-px bg-white/5 my-6"></div>
+
+                <ul class="space-y-3 text-sm text-slate-400">
+
+                    <li>
+                        <i class="fa-solid fa-check check mr-2"></i>
+                        Modern landing page
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check check mr-2"></i>
+                        Mobile responsive
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check check mr-2"></i>
+                        Smooth animations
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check check mr-2"></i>
+                        Contact CTA
+                    </li>
+
+                </ul>
+
+                <a href="#contact"
+                   class="btn-secondary w-full mt-7 py-3 rounded-xl
+                          text-sm font-bold flex justify-center">
+                    Choose Starter
+                </a>
+
+            </div>
+
+
+            <!-- PERSONAL -->
+
+            <div class="service-card featured p-7 reveal reveal-delay-1">
+
+                <div class="featured-badge">
+                    POPULAR
+                </div>
+
+                <div class="service-icon">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+                <div class="mt-7">
+
+                    <div class="text-sm text-slate-400">
+                        PERSONAL
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-2">
+                        Portfolio Website
+                    </h3>
+
+                    <div class="price mt-6">
+                        ₹499
+                        <small>starting</small>
+                    </div>
+
+                </div>
+
+                <div class="h-px bg-white/5 my-6"></div>
+
+                <ul class="space-y-3 text-sm text-slate-400">
+
+                    <li>
+                        <i class="fa-solid fa-check check mr-2"></i>
+                        Premium portfolio
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check check mr-2"></i>
+                        About + Skills
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check check mr-2"></i>
+                        Projects section
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check check mr-2"></i>
+                        Contact section
+                    </li>
+
+                </ul>
+
+                <a href="#contact"
+                   class="btn-primary w-full mt-7 py-3 rounded-xl
+                          text-sm font-bold flex justify-center">
+                    Choose Personal
+                </a>
+
+            </div>
+
+
+            <!-- BUSINESS -->
+
+            <div class="service-card p-7 reveal reveal-delay-2">
+
+                <div class="service-icon">
+                    <i class="fa-solid fa-building"></i>
+                </div>
+
+                <div class="mt-7">
+
+                    <div class="text-sm text-slate-400">
+                        BUSINESS
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-2">
+                        Business Website
+                    </h3>
+
+                    <div class="price mt-6">
+                        ₹799
+                        <small>starting</small>
+                    </div>
+
+                </div>
+
+                <div class="h-px bg-white/5 my-6"></div>
+
+                <ul class="space-y-3 text-sm text-slate-400">
+
+                    <li>
+                        <i class="fa-solid fa-check check mr-2"></i>
+                        Multi-section website
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check check mr-2"></i>
+                        Services showcase
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check check mr-2"></i>
+                        Premium UI
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check check mr-2"></i>
+                        SEO-ready structure
+                    </li>
+
+                </ul>
+
+                <a href="#contact"
+                   class="btn-secondary w-full mt-7 py-3 rounded-xl
+                          text-sm font-bold flex justify-center">
+                    Choose Business
+                </a>
+
+            </div>
+
+
+            <!-- PRO -->
+
+            <div class="service-card p-7 reveal reveal-delay-3">
+
+                <div class="service-icon">
+                    <i class="fa-solid fa-store"></i>
+                </div>
+
+                <div class="mt-7">
+
+                    <div class="text-sm text-slate-400">
+                        PRO
+                    </div>
+
+                    <h3 class="text-xl font-bold mt-2">
+                        Small Store
+                    </h3>
+
+                    <div class="price mt-6">
+                        ₹999+
+                        <small>starting</small>
+                    </div>
+
+                </div>
+
+                <div class="h-px bg-white/5 my-6"></div>
+
+                <ul class="space-y-3 text-sm text-slate-400">
+
+                    <li>
+                        <i class="fa-solid fa-check check mr-2"></i>
+                        Product showcase
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check check mr-2"></i>
+                        Responsive UI
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check check mr-2"></i>
+                        Cart-ready structure
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check check mr-2"></i>
+                        Scalable design
+                    </li>
+
+                </ul>
+
+                <a href="#contact"
+                   class="btn-secondary w-full mt-7 py-3 rounded-xl
+                          text-sm font-bold flex justify-center">
+                    Choose Pro
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- QUICK SERVICES -->
+
+        <div class="mt-12 reveal">
+
+            <div class="text-sm font-bold text-slate-300 mb-5">
+                Quick Services
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3">
+
+                <div class="quick-service">
+                    <div class="text-xs text-slate-400">
+                        Bug Fix
+                    </div>
+
+                    <div class="font-bold mt-1">
+                        ₹99+
+                    </div>
+                </div>
+
+                <div class="quick-service">
+                    <div class="text-xs text-slate-400">
+                        Visiting Card
+                    </div>
+
+                    <div class="font-bold mt-1">
+                        ₹149
+                    </div>
+                </div>
+
+                <div class="quick-service">
+                    <div class="text-xs text-slate-400">
+                        Resume Website
+                    </div>
+
+                    <div class="font-bold mt-1">
+                        ₹199
+                    </div>
+                </div>
+
+                <div class="quick-service">
+                    <div class="text-xs text-slate-400">
+                        Biodata Website
+                    </div>
+
+                    <div class="font-bold mt-1">
+                        ₹199
+                    </div>
+                </div>
+
+                <div class="quick-service">
+                    <div class="text-xs text-slate-400">
+                        Basic SEO
+                    </div>
+
+                    <div class="font-bold mt-1">
+                        ₹199
+                    </div>
+                </div>
+
+                <div class="quick-service">
+                    <div class="text-xs text-slate-400">
+                        Deployment
+                    </div>
+
+                    <div class="font-bold mt-1">
+                        ₹99+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
     </div>
 
 </section>
 
 
-<!-- =====================================================
-                         CONTACT
-===================================================== -->
+<!-- =========================
+     PROCESS
+========================= -->
 
-<section id="contact"
-         class="py-24 bg-accent">
+<section class="py-28 bg-white/[.015]">
 
-    <div class="max-w-7xl mx-auto
-                px-5 sm:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto px-5 lg:px-8">
 
-        <div class="grid lg:grid-cols-2
-                    gap-12 items-end">
+        <div class="text-center reveal">
+
+            <div class="section-label">
+                Simple Process
+            </div>
+
+            <h2 class="section-title text-4xl md:text-5xl mt-3">
+                From idea to
+                <span class="gradient-text">
+                    live website.
+                </span>
+            </h2>
+
+            <p class="text-slate-400 mt-5 max-w-xl mx-auto">
+                No complicated process. Tell me what you need,
+                choose a package and we build it step by step.
+            </p>
+
+        </div>
+
+
+        <div class="relative mt-16 space-y-10">
+
+            <div class="process-line"></div>
+
+
+            <div class="flex gap-6 reveal">
+
+                <div class="process-number">
+                    01
+                </div>
+
+                <div class="pt-2">
+
+                    <h3 class="font-bold text-xl">
+                        Choose your package
+                    </h3>
+
+                    <p class="text-slate-500 mt-2 max-w-xl">
+                        Select a package based on your website
+                        requirement and budget.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="flex gap-6 reveal reveal-delay-1">
+
+                <div class="process-number">
+                    02
+                </div>
+
+                <div class="pt-2">
+
+                    <h3 class="font-bold text-xl">
+                        Share your requirements
+                    </h3>
+
+                    <p class="text-slate-500 mt-2 max-w-xl">
+                        Share your content, images, business details
+                        and design preferences.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="flex gap-6 reveal reveal-delay-2">
+
+                <div class="process-number">
+                    03
+                </div>
+
+                <div class="pt-2">
+
+                    <h3 class="font-bold text-xl">
+                        Design & Development
+                    </h3>
+
+                    <p class="text-slate-500 mt-2 max-w-xl">
+                        The website is designed and developed with
+                        responsive layouts and modern UI.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="flex gap-6 reveal reveal-delay-3">
+
+                <div class="process-number">
+                    04
+                </div>
+
+                <div class="pt-2">
+
+                    <h3 class="font-bold text-xl">
+                        Launch
+                    </h3>
+
+                    <p class="text-slate-500 mt-2 max-w-xl">
+                        After final checks, the website can be
+                        deployed and made ready for visitors.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     WORK
+========================= -->
+
+<section id="work" class="py-28">
+
+    <div class="max-w-7xl mx-auto px-5 lg:px-8">
+
+        <div class="flex flex-col md:flex-row md:items-end
+                    justify-between gap-5 reveal">
 
             <div>
 
-                <p class="text-white/70
-                          text-xs
-                          uppercase
-                          tracking-widest
-                          font-bold">
+                <div class="section-label">
+                    Selected Work
+                </div>
 
-                    07 — Contact
-
-                </p>
-
-
-                <h2 class="font-heading
-                           text-5xl sm:text-6xl
-                           font-extrabold
-                           text-white
-                           mt-5
-                           leading-tight">
-
-                    Let's work
-                    together.
-
+                <h2 class="section-title text-4xl md:text-5xl mt-3">
+                    Projects built with
+                    <span class="gradient-text">
+                        purpose.
+                    </span>
                 </h2>
 
+            </div>
 
-                <p class="text-white/80
-                          mt-6
-                          max-w-lg
-                          leading-7">
+            <p class="text-slate-500 max-w-md leading-7">
+                A selection of web projects covering business,
+                e-commerce, job portals and modern authentication.
+            </p>
 
-                    Looking for a developer for your
-                    next project or opportunity?
-                    Let's connect.
+        </div>
 
-                </p>
+
+        <div class="grid md:grid-cols-2 gap-6 mt-14">
+
+
+            <!-- PROJECT 1 -->
+
+            <article class="project-card reveal">
+
+                <div class="project-preview">
+
+                    <div class="project-window">
+
+                        <div class="project-top">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </div>
+
+                        <div class="project-content">
+
+                            <div class="project-heading"></div>
+
+                            <div class="project-lines">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="p-7">
+
+                    <div class="text-xs text-blue-400 font-bold uppercase tracking-widest">
+                        E-Commerce
+                    </div>
+
+                    <h3 class="text-2xl font-bold mt-2">
+                        E-Commerce Website
+                    </h3>
+
+                    <p class="text-slate-500 mt-3 leading-7">
+                        A modern online shopping experience with
+                        structured product presentation and responsive UI.
+                    </p>
+
+                    <div class="flex flex-wrap gap-2 mt-5">
+
+                        <span class="tech">PHP</span>
+                        <span class="tech">Laravel</span>
+                        <span class="tech">MySQL</span>
+                        <span class="tech">Bootstrap</span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJECT 2 -->
+
+            <article class="project-card reveal reveal-delay-1">
+
+                <div class="project-preview">
+
+                    <div class="project-window">
+
+                        <div class="project-top">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </div>
+
+                        <div class="project-content">
+
+                            <div class="project-heading"></div>
+
+                            <div class="project-lines">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="p-7">
+
+                    <div class="text-xs text-purple-400 font-bold uppercase tracking-widest">
+                        Job Portal
+                    </div>
+
+                    <h3 class="text-2xl font-bold mt-2">
+                        KushinagarJobs
+                    </h3>
+
+                    <p class="text-slate-500 mt-3 leading-7">
+                        Job discovery platform with employer-side
+                        functionality and structured job listings.
+                    </p>
+
+                    <div class="flex flex-wrap gap-2 mt-5">
+
+                        <span class="tech">Laravel</span>
+                        <span class="tech">PHP</span>
+                        <span class="tech">MySQL</span>
+                        <span class="tech">Tailwind</span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJECT 3 -->
+
+            <article class="project-card reveal">
+
+                <div class="project-preview">
+
+                    <div class="project-window">
+
+                        <div class="project-top">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </div>
+
+                        <div class="project-content">
+
+                            <div class="project-heading"></div>
+
+                            <div class="project-lines">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="p-7">
+
+                    <div class="text-xs text-cyan-400 font-bold uppercase tracking-widest">
+                        Management System
+                    </div>
+
+                    <h3 class="text-2xl font-bold mt-2">
+                        Car Service Management
+                    </h3>
+
+                    <p class="text-slate-500 mt-3 leading-7">
+                        A structured web application designed to
+                        manage service-related business operations.
+                    </p>
+
+                    <div class="flex flex-wrap gap-2 mt-5">
+
+                        <span class="tech">PHP</span>
+                        <span class="tech">Laravel</span>
+                        <span class="tech">MySQL</span>
+                        <span class="tech">JavaScript</span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJECT 4 -->
+
+            <article class="project-card reveal reveal-delay-1">
+
+                <div class="project-preview">
+
+                    <div class="project-window">
+
+                        <div class="project-top">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </div>
+
+                        <div class="project-content">
+
+                            <div class="project-heading"></div>
+
+                            <div class="project-lines">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="p-7">
+
+                    <div class="text-xs text-green-400 font-bold uppercase tracking-widest">
+                        Full Stack
+                    </div>
+
+                    <h3 class="text-2xl font-bold mt-2">
+                        React + Laravel Authentication
+                    </h3>
+
+                    <p class="text-slate-500 mt-3 leading-7">
+                        Modern authentication flow connecting a
+                        React frontend with a Laravel backend API.
+                    </p>
+
+                    <div class="flex flex-wrap gap-2 mt-5">
+
+                        <span class="tech">React</span>
+                        <span class="tech">Laravel</span>
+                        <span class="tech">Sanctum</span>
+                        <span class="tech">API</span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SKILLS
+========================= -->
+
+<section id="skills" class="py-28 bg-white/[.015]">
+
+    <div class="max-w-7xl mx-auto px-5 lg:px-8">
+
+        <div class="text-center reveal">
+
+            <div class="section-label">
+                Technology
+            </div>
+
+            <h2 class="section-title text-4xl md:text-5xl mt-3">
+                Built with the
+                <span class="gradient-text">
+                    right stack.
+                </span>
+            </h2>
+
+        </div>
+
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6
+                    gap-4 mt-14">
+
+
+            <div class="skill-card p-6 reveal">
+                <div class="skill-icon text-indigo-400">
+                    <i class="fa-brands fa-php"></i>
+                </div>
+
+                <div class="font-bold">
+                    PHP
+                </div>
+
+                <div class="text-xs text-slate-500 mt-1">
+                    Backend
+                </div>
+            </div>
+
+
+            <div class="skill-card p-6 reveal reveal-delay-1">
+                <div class="skill-icon text-red-400">
+                    <i class="fa-solid fa-fire"></i>
+                </div>
+
+                <div class="font-bold">
+                    Laravel
+                </div>
+
+                <div class="text-xs text-slate-500 mt-1">
+                    Framework
+                </div>
+            </div>
+
+
+            <div class="skill-card p-6 reveal reveal-delay-2">
+                <div class="skill-icon text-cyan-400">
+                    <i class="fa-brands fa-js"></i>
+                </div>
+
+                <div class="font-bold">
+                    JavaScript
+                </div>
+
+                <div class="text-xs text-slate-500 mt-1">
+                    Frontend
+                </div>
+            </div>
+
+
+            <div class="skill-card p-6 reveal reveal-delay-3">
+                <div class="skill-icon text-sky-400">
+                    <i class="fa-brands fa-react"></i>
+                </div>
+
+                <div class="font-bold">
+                    React
+                </div>
+
+                <div class="text-xs text-slate-500 mt-1">
+                    UI
+                </div>
+            </div>
+
+
+            <div class="skill-card p-6 reveal">
+                <div class="skill-icon text-blue-400">
+                    <i class="fa-solid fa-wind"></i>
+                </div>
+
+                <div class="font-bold">
+                    Tailwind
+                </div>
+
+                <div class="text-xs text-slate-500 mt-1">
+                    Styling
+                </div>
+            </div>
+
+
+            <div class="skill-card p-6 reveal reveal-delay-1">
+                <div class="skill-icon text-orange-400">
+                    <i class="fa-solid fa-database"></i>
+                </div>
+
+                <div class="font-bold">
+                    MySQL
+                </div>
+
+                <div class="text-xs text-slate-500 mt-1">
+                    Database
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about" class="py-28">
+
+    <div class="max-w-7xl mx-auto px-5 lg:px-8">
+
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+
+            <div class="profile-frame reveal">
+
+                <div class="profile-inner">
+
+                    <div class="orbit one"></div>
+                    <div class="orbit two"></div>
+
+                    <!-- <div class="profile-avatar">
+                        DA
+                    </div> -->
+                    <div class="profile-avatar">
+                        <img
+                            src="Dillu.jpg"
+                            alt="Dilshad Alam - Full Stack Developer"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <style>
+                        /* ============================================================
+   ABOUT PROFILE IMAGE
+============================================================ */
+
+.profile-avatar {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(135deg, #2563eb, #7c3aed);
+
+    border: 4px solid rgba(255, 255, 255, 0.12);
+
+    box-shadow:
+        0 0 0 8px rgba(59, 130, 246, 0.08),
+        0 25px 70px rgba(37, 99, 235, 0.25);
+
+    z-index: 5;
+}
+
+
+.profile-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    /* Head ko upar visible rakhega */
+    object-position: center 15%;
+
+    display: block;
+
+    transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+.profile-avatar:hover img {
+    transform: scale(1.06);
+    filter: brightness(1.05);
+}
+
+
+/* Mobile */
+@media (max-width: 640px) {
+
+    .profile-avatar {
+        width: 180px;
+        height: 180px;
+    }
+
+}
+                    </style>
+
+                </div>
 
             </div>
 
 
-            <div>
+            <div class="reveal reveal-delay-1">
 
-                <a href="mailto:alam.techno.com@gmail.com"
-                   class="flex justify-between
-                          items-center
-                          py-5
-                          border-b
-                          border-white/30
-                          text-white
-                          hover:pl-2
-                          transition">
+                <div class="section-label">
+                    About Me
+                </div>
 
-                    <span>
-                        alam.techno.com@gmail.com
+                <h2 class="section-title text-4xl md:text-5xl mt-3">
+                    Developer who cares about
+                    <span class="gradient-text">
+                        details.
                     </span>
+                </h2>
 
-                    <span>↗</span>
+                <p class="text-slate-400 leading-8 mt-7">
+                    I'm Dilshad Alam, a Full Stack Developer focused
+                    on building modern web experiences using PHP,
+                    Laravel, JavaScript, Tailwind CSS, React and MySQL.
+                </p>
 
-                </a>
-
-
-                <a href="tel:+919793145874"
-                   class="flex justify-between
-                          items-center
-                          py-5
-                          border-b
-                          border-white/30
-                          text-white
-                          hover:pl-2
-                          transition">
-
-                    <span>
-                        +91 9793145874
-                    </span>
-
-                    <span>↗</span>
-
-                </a>
+                <p class="text-slate-500 leading-8 mt-4">
+                    My focus is simple: create websites that look
+                    professional, work smoothly on mobile and desktop,
+                    and give businesses and individuals a strong
+                    online presence.
+                </p>
 
 
-                <a href="https://www.linkedin.com/in/dilshad-alam-575925283/"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="flex justify-between
-                          items-center
-                          py-5
-                          border-b
-                          border-white/30
-                          text-white
-                          hover:pl-2
-                          transition">
+                <div class="grid sm:grid-cols-2 gap-4 mt-8">
 
-                    <span>
-                        LinkedIn
-                    </span>
+                    <div class="glass rounded-2xl p-5">
 
-                    <span>↗</span>
+                        <div class="text-blue-400 mb-3">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
 
-                </a>
+                        <div class="font-bold">
+                            Clean Development
+                        </div>
+
+                        <div class="text-xs text-slate-500 mt-2">
+                            Structured and maintainable code.
+                        </div>
+
+                    </div>
 
 
-                <a href="https://github.com/Dilshad1232"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="flex justify-between
-                          items-center
-                          py-5
-                          border-b
-                          border-white/30
-                          text-white
-                          hover:pl-2
-                          transition">
+                    <div class="glass rounded-2xl p-5">
 
-                    <span>
-                        GitHub
-                    </span>
+                        <div class="text-purple-400 mb-3">
+                            <i class="fa-solid fa-mobile-screen"></i>
+                        </div>
 
-                    <span>↗</span>
+                        <div class="font-bold">
+                            Responsive First
+                        </div>
 
-                </a>
+                        <div class="text-xs text-slate-500 mt-2">
+                            Designed for every screen.
+                        </div>
+
+                    </div>
+
+                </div>
 
             </div>
 
@@ -1955,30 +3249,788 @@
 </section>
 
 
-<!-- =====================================================
-                          FOOTER
-===================================================== -->
+<!-- =========================
+     SEO CONTENT
+========================= -->
 
-<footer class="bg-dark text-white">
+<section class="py-24 bg-white/[.015]">
 
-    <div class="max-w-7xl mx-auto
-                px-5 sm:px-6 lg:px-8
-                py-8
-                flex flex-col
-                sm:flex-row
-                justify-between
-                gap-4">
+    <div class="max-w-5xl mx-auto px-5 lg:px-8">
 
-        <div class="font-bold">
-            Dilshad Alam
+        <div class="glass rounded-3xl p-7 md:p-12 reveal">
+
+            <div class="section-label">
+                Website Development in India
+            </div>
+
+            <h2 class="section-title text-3xl md:text-4xl mt-3">
+                Affordable Website Developer for
+                Personal & Business Websites
+            </h2>
+
+            <div class="space-y-5 mt-7 text-slate-400 leading-8">
+
+                <p>
+                    Looking for an affordable website developer in India?
+                    I build modern responsive websites for individuals,
+                    students, professionals, creators and small businesses.
+                </p>
+
+                <p>
+                    Services include portfolio website development,
+                    landing page development, business websites,
+                    responsive website design, resume websites,
+                    personal websites and small product-store websites.
+                </p>
+
+                <p>
+                    For web applications, I work with PHP and Laravel,
+                    along with MySQL, JavaScript, Tailwind CSS and React.
+                    Websites can be structured with SEO-friendly headings,
+                    metadata and responsive layouts.
+                </p>
+
+            </div>
+
         </div>
 
-        <div class="text-white/50 text-sm">
-            Full Stack Developer
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FAQ
+========================= -->
+
+<section class="py-28">
+
+    <div class="max-w-4xl mx-auto px-5 lg:px-8">
+
+        <div class="text-center reveal">
+
+            <div class="section-label">
+                FAQ
+            </div>
+
+            <h2 class="section-title text-4xl md:text-5xl mt-3">
+                Questions,
+                <span class="gradient-text">
+                    answered.
+                </span>
+            </h2>
+
         </div>
 
-        <div class="text-white/50 text-sm">
-            © 2026 Dilshad Alam
+
+        <div class="space-y-3 mt-12">
+
+
+            <div class="faq-item reveal">
+
+                <button class="faq-question">
+
+                    <span>
+                        Website development kitne se start hoti hai?
+                    </span>
+
+                    <span class="faq-plus">
+                        +
+                    </span>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    Basic landing page packages ₹299 se start hote hain.
+                    Final price website ki requirements aur features
+                    par depend karega.
+
+                </div>
+
+            </div>
+
+
+            <div class="faq-item reveal">
+
+                <button class="faq-question">
+
+                    <span>
+                        Kya website mobile responsive hogi?
+                    </span>
+
+                    <span class="faq-plus">
+                        +
+                    </span>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    Haan. Website ko mobile, tablet aur desktop screens
+                    ke liye responsive design ke saath develop kiya jayega.
+
+                </div>
+
+            </div>
+
+
+            <div class="faq-item reveal">
+
+                <button class="faq-question">
+
+                    <span>
+                        Kya SEO bhi milega?
+                    </span>
+
+                    <span class="faq-plus">
+                        +
+                    </span>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    Basic SEO structure, metadata, semantic headings,
+                    responsive structure aur other technical basics
+                    include kiye ja sakte hain. Google ranking guaranteed
+                    nahi hoti aur indexing/ranking time leti hai.
+
+                </div>
+
+            </div>
+
+
+            <div class="faq-item reveal">
+
+                <button class="faq-question">
+
+                    <span>
+                        Kya existing website redesign kar sakte ho?
+                    </span>
+
+                    <span class="faq-plus">
+                        +
+                    </span>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    Haan. Existing website ko modern UI, responsive
+                    layout, improved sections aur better user experience
+                    ke saath redesign kiya ja sakta hai.
+
+                </div>
+
+            </div>
+
+
+            <div class="faq-item reveal">
+
+                <button class="faq-question">
+
+                    <span>
+                        Website deploy bhi kar sakte ho?
+                    </span>
+
+                    <span class="faq-plus">
+                        +
+                    </span>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    Haan. Static websites ko suitable hosting platforms
+                    par deploy karne mein help di ja sakti hai.
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CTA
+========================= -->
+
+<!-- =========================================================
+     PREMIUM CONTACT SECTION
+========================================================= -->
+<section id="contact" class="relative py-24 sm:py-28 overflow-hidden">
+
+    <!-- Ambient Glow -->
+    <div class="absolute -top-32 left-1/4 w-96 h-96 bg-blue-600/10 blur-[120px] rounded-full pointer-events-none"></div>
+    <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-600/10 blur-[120px] rounded-full pointer-events-none"></div>
+
+    <div class="relative max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+
+        <!-- Heading -->
+        <div class="max-w-3xl mx-auto text-center reveal">
+
+            <div class="section-kicker justify-center">
+                <span></span>
+                CONTACT
+                <span></span>
+            </div>
+
+            <h2 class="section-title mt-4">
+                Let's Build Something
+                <span class="gradient-text">Great Together.</span>
+            </h2>
+
+            <p class="section-desc mx-auto mt-5">
+                Have a website idea, business project, portfolio or need help
+                fixing an existing website? Tell me what you need.
+            </p>
+
+        </div>
+
+
+        <!-- Contact Grid -->
+        <div class="grid lg:grid-cols-[0.85fr_1.15fr] gap-7 lg:gap-10 mt-14 items-stretch">
+
+
+            <!-- =================================================
+                 LEFT — CONTACT INFO
+            ================================================== -->
+            <div class="glass-card contact-info-card reveal">
+
+                <div class="contact-orb orb-one"></div>
+                <div class="contact-orb orb-two"></div>
+
+                <div class="relative z-10">
+
+                    <div class="contact-icon-main">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </div>
+
+                    <span class="text-xs font-bold tracking-[0.2em] text-blue-300 uppercase">
+                        Available for work
+                    </span>
+
+                    <h3 class="text-3xl sm:text-4xl font-black mt-3 leading-tight">
+                        Have a project
+                        <span class="gradient-text">in mind?</span>
+                    </h3>
+
+                    <p class="text-slate-400 leading-7 mt-5">
+                        Whether you need a landing page, portfolio, business
+                        website, redesign or bug fixing — send me your requirements
+                        and I'll get back to you.
+                    </p>
+
+
+                    <!-- Contact Items -->
+                    <div class="space-y-3 mt-8">
+
+                        <!-- Email -->
+                        <a
+                            href="mailto:alam.techno.com@gmail.com"
+                            class="contact-detail"
+                        >
+                            <div class="contact-detail-icon">
+                                <i class="fa-regular fa-envelope"></i>
+                            </div>
+
+                            <div>
+                                <span>Email</span>
+                                <strong>alam.techno.com@gmail.com</strong>
+                            </div>
+
+                            <i class="fa-solid fa-arrow-up-right-from-square contact-arrow"></i>
+                        </a>
+
+
+                        <!-- Phone -->
+                        <a
+                            href="tel:+919793145874"
+                            class="contact-detail"
+                        >
+                            <div class="contact-detail-icon">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+
+                            <div>
+                                <span>Phone</span>
+                                <strong>+91 9793145874</strong>
+                            </div>
+
+                            <i class="fa-solid fa-arrow-up-right-from-square contact-arrow"></i>
+                        </a>
+
+
+                        <!-- Location -->
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+
+                            <div>
+                                <span>Location</span>
+                                <strong>Meerut, Uttar Pradesh, India</strong>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Social -->
+                    <div class="mt-8 pt-7 border-t border-white/[0.07]">
+
+                        <p class="text-xs uppercase tracking-[0.18em] text-slate-500 font-bold mb-4">
+                            Connect with me
+                        </p>
+
+                        <div class="flex gap-3">
+
+                            <a
+                                href="https://github.com/Dilshad1232"
+                                target="_blank"
+                                rel="noopener"
+                                class="contact-social"
+                                aria-label="GitHub"
+                            >
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+
+                            <a
+                                href="https://www.linkedin.com/in/dilshad-alam-575925283/"
+                                target="_blank"
+                                rel="noopener"
+                                class="contact-social"
+                                aria-label="LinkedIn"
+                            >
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+
+                            <a
+                                href="mailto:alam.techno.com@gmail.com"
+                                class="contact-social"
+                                aria-label="Email"
+                            >
+                                <i class="fa-solid fa-envelope"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <!-- =================================================
+                 RIGHT — CONTACT FORM
+            ================================================== -->
+            <div class="glass-card contact-form-card reveal">
+
+                <!-- Top -->
+                <div class="flex items-start justify-between gap-4 mb-7">
+
+                    <div>
+                        <span class="text-xs font-bold tracking-[0.18em] uppercase text-blue-300">
+                            Project Enquiry
+                        </span>
+
+                        <h3 class="text-2xl sm:text-3xl font-black mt-2">
+                            Tell me about your project
+                        </h3>
+                    </div>
+
+                    <div class="hidden sm:flex form-secure-badge">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        Secure
+                    </div>
+
+                </div>
+
+
+                <!--
+                    NETLIFY FORM
+                    Important:
+                    data-netlify="true"
+                    name="contact"
+                    hidden form-name
+                -->
+                <form
+                    name="contact"
+                    method="POST"
+                    data-netlify="true"
+                    netlify-honeypot="bot-field"
+                    id="contactForm"
+                    class="space-y-5"
+                >
+
+                    <!-- Netlify -->
+                    <input type="hidden" name="form-name" value="contact">
+
+                    <!-- Honeypot -->
+                    <div hidden>
+                        <label>
+                            Don't fill this out:
+                            <input name="bot-field">
+                        </label>
+                    </div>
+
+
+                    <!-- Name + Email -->
+                    <div class="grid sm:grid-cols-2 gap-4">
+
+                        <div class="form-group">
+                            <label for="name">
+                                Your Name
+                                <span>*</span>
+                            </label>
+
+                            <div class="input-wrap">
+                                <i class="fa-regular fa-user"></i>
+
+                                <input
+                                    id="name"
+                                    type="text"
+                                    name="name"
+                                    placeholder="Enter your name"
+                                    autocomplete="name"
+                                    required
+                                >
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="email">
+                                Email Address
+                                <span>*</span>
+                            </label>
+
+                            <div class="input-wrap">
+                                <i class="fa-regular fa-envelope"></i>
+
+                                <input
+                                    id="email"
+                                    type="email"
+                                    name="email"
+                                    placeholder="you@example.com"
+                                    autocomplete="email"
+                                    required
+                                >
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Phone + Service -->
+                    <div class="grid sm:grid-cols-2 gap-4">
+
+                        <div class="form-group">
+                            <label for="phone">
+                                Phone Number
+                            </label>
+
+                            <div class="input-wrap">
+                                <i class="fa-solid fa-phone"></i>
+
+                                <input
+                                    id="phone"
+                                    type="tel"
+                                    name="phone"
+                                    placeholder="+91 XXXXX XXXXX"
+                                    autocomplete="tel"
+                                >
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="service">
+                                Service
+                                <span>*</span>
+                            </label>
+
+                            <div class="input-wrap select-wrap">
+                                <i class="fa-solid fa-layer-group"></i>
+
+                                <select
+                                    id="service"
+                                    name="service"
+                                    required
+                                >
+                                    <option value="" selected disabled>
+                                        Select a service
+                                    </option>
+
+                                    <option value="Landing Page">
+                                        Landing Page
+                                    </option>
+
+                                    <option value="Portfolio Website">
+                                        Portfolio Website
+                                    </option>
+
+                                    <option value="Business Website">
+                                        Business Website
+                                    </option>
+
+                                    <option value="Small Store">
+                                        Small Store / E-commerce
+                                    </option>
+
+                                    <option value="Website Redesign">
+                                        Website Redesign
+                                    </option>
+
+                                    <option value="Bug Fix">
+                                        Website Bug Fix
+                                    </option>
+
+                                    <option value="SEO">
+                                        Basic SEO Setup
+                                    </option>
+
+                                    <option value="Other">
+                                        Other
+                                    </option>
+                                </select>
+
+                                <i class="fa-solid fa-chevron-down select-arrow"></i>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Budget -->
+                    <div class="form-group">
+
+                        <label for="budget">
+                            Approximate Budget
+                        </label>
+
+                        <div class="budget-options">
+
+                            <label class="budget-option">
+                                <input
+                                    type="radio"
+                                    name="budget"
+                                    value="₹99 - ₹199"
+                                >
+                                <span>₹99–₹199</span>
+                            </label>
+
+                            <label class="budget-option">
+                                <input
+                                    type="radio"
+                                    name="budget"
+                                    value="₹299 - ₹499"
+                                >
+                                <span>₹299–₹499</span>
+                            </label>
+
+                            <label class="budget-option">
+                                <input
+                                    type="radio"
+                                    name="budget"
+                                    value="₹799 - ₹999"
+                                >
+                                <span>₹799–₹999</span>
+                            </label>
+
+                            <label class="budget-option">
+                                <input
+                                    type="radio"
+                                    name="budget"
+                                    value="₹1000+"
+                                >
+                                <span>₹1000+</span>
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Message -->
+                    <div class="form-group">
+
+                        <label for="message">
+                            Project Requirements
+                            <span>*</span>
+                        </label>
+
+                        <div class="input-wrap textarea-wrap">
+                            <i class="fa-regular fa-message"></i>
+
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows="5"
+                                maxlength="1200"
+                                placeholder="Tell me about your project, required pages, features, deadline etc..."
+                                required
+                            ></textarea>
+                        </div>
+
+                        <div class="flex justify-between mt-2">
+                            <span class="text-[11px] text-slate-600">
+                                Please provide as much detail as possible.
+                            </span>
+
+                            <span
+                                id="charCount"
+                                class="text-[11px] text-slate-500"
+                            >
+                                0 / 1200
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Submit -->
+                    <button
+                        type="submit"
+                        id="contactSubmit"
+                        class="contact-submit"
+                    >
+
+                        <span class="submit-normal">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            Send Project Enquiry
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+
+                        <span class="submit-loading hidden">
+                            <i class="fa-solid fa-circle-notch fa-spin"></i>
+                            Sending...
+                        </span>
+
+                    </button>
+
+
+                    <!-- Privacy -->
+                    <p class="text-center text-[11px] text-slate-500 leading-5">
+                        <i class="fa-solid fa-lock mr-1"></i>
+                        Your information is only used to respond to your enquiry.
+                    </p>
+
+                </form>
+
+
+                <!-- Success -->
+                <div
+                    id="contactSuccess"
+                    class="contact-success hidden"
+                >
+                    <div class="success-icon">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+
+                    <h3>Enquiry Sent Successfully!</h3>
+
+                    <p>
+                        Thanks for reaching out. I'll review your requirements
+                        and get back to you soon.
+                    </p>
+
+                    <button
+                        type="button"
+                        id="sendAnother"
+                        class="success-back"
+                    >
+                        <i class="fa-solid fa-rotate-left"></i>
+                        Send Another Enquiry
+                    </button>
+                </div>
+
+
+                <!-- Error -->
+                <div
+                    id="contactError"
+                    class="contact-error hidden"
+                >
+                    <i class="fa-solid fa-circle-exclamation"></i>
+
+                    <div>
+                        <strong>Something went wrong.</strong>
+
+                        <p>
+                            Please try again or contact me directly by email.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="border-t border-white/5">
+
+    <div class="max-w-7xl mx-auto px-5 lg:px-8 py-10">
+
+        <div class="flex flex-col md:flex-row
+                    justify-between gap-6">
+
+            <div>
+
+                <div class="flex items-center gap-3">
+
+                    <div class="logo-mark">
+                        DA
+                    </div>
+
+                    <div>
+
+                        <div class="font-bold">
+                            Dilshad Alam
+                        </div>
+
+                        <div class="text-xs text-slate-500">
+                            Full Stack Developer
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <p class="text-xs text-slate-600 mt-4">
+                    Building modern digital experiences.
+                </p>
+
+            </div>
+
+
+            <div class="text-xs text-slate-600 md:text-right">
+
+                <div>
+                    © <span id="year"></span> Dilshad Alam.
+                    All rights reserved.
+                </div>
+
+                <div class="mt-2">
+                    PHP • Laravel • React • Tailwind • MySQL
+                </div>
+
+            </div>
+
         </div>
 
     </div>
@@ -1986,437 +4038,417 @@
 </footer>
 
 
-<!-- =====================================================
-                      PROJECT MODAL
-===================================================== -->
+<!-- =========================
+     FONT AWESOME
+========================= -->
 
-<div id="projectModal"
-     class="modal fixed inset-0
-            z-[100]
-            bg-black/50
-            items-center
-            justify-center
-            p-4">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"></script>
 
-    <div class="bg-white
-                max-w-3xl
-                w-full
-                max-h-[90vh]
-                overflow-y-auto
-                shadow-2xl">
-
-
-        <!-- Modal Header -->
-
-        <div class="flex justify-between
-                    items-start
-                    gap-5
-                    p-6 sm:p-8
-                    border-b border-black/10">
-
-            <div>
-
-                <div id="modalCategory"
-                     class="text-accent
-                            text-xs
-                            font-bold
-                            uppercase
-                            tracking-widest">
-                </div>
-
-                <h2 id="modalTitle"
-                    class="text-3xl
-                           sm:text-4xl
-                           font-bold mt-2">
-                </h2>
-
-            </div>
-
-
-            <button onclick="closeProject()"
-                    class="w-10 h-10
-                           bg-dark
-                           text-white
-                           text-xl
-                           hover:bg-accent">
-
-                ×
-
-            </button>
-
-        </div>
-
-
-        <!-- Modal Body -->
-
-        <div class="p-6 sm:p-8">
-
-            <p id="modalDescription"
-               class="text-gray-600
-                      leading-7">
-            </p>
-
-
-            <div class="grid sm:grid-cols-2
-                        gap-10 mt-10">
-
-
-                <!-- Features -->
-
-                <div>
-
-                    <h3 class="font-bold text-lg">
-                        Key Features
-                    </h3>
-
-                    <ul id="modalFeatures"
-                        class="mt-4 space-y-3">
-                    </ul>
-
-                </div>
-
-
-                <!-- Technologies -->
-
-                <div>
-
-                    <h3 class="font-bold text-lg">
-                        Technologies
-                    </h3>
-
-                    <div id="modalTech"
-                         class="flex flex-wrap
-                                gap-2 mt-4">
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <a id="modalGithub"
-               href="#"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="inline-block
-                      bg-dark
-                      text-white
-                      px-6 py-3
-                      text-sm
-                      font-bold
-                      mt-10
-                      hover:bg-accent">
-
-                View GitHub ↗
-
-            </a>
-
-        </div>
-
-    </div>
-
-</div>
-
-
-<!-- =====================================================
-                       JAVASCRIPT
-===================================================== -->
 
 <script>
 
-    /* =====================================
-                MOBILE MENU
-    ===================================== */
+    /* =========================
+       MOBILE MENU
+    ========================= */
 
-    const menuButton = document.getElementById("menuButton");
+    const mobileBtn = document.getElementById("mobileBtn");
     const mobileMenu = document.getElementById("mobileMenu");
 
-    menuButton.addEventListener("click", function () {
-        mobileMenu.classList.toggle("active");
+    mobileBtn.addEventListener("click", () => {
+
+        mobileMenu.classList.toggle("hidden");
+
+        const icon = mobileBtn.querySelector("i");
+
+        if (mobileMenu.classList.contains("hidden")) {
+            icon.className = "fa-solid fa-bars";
+        } else {
+            icon.className = "fa-solid fa-xmark";
+        }
+
     });
 
 
-    document.querySelectorAll(".mobile-link").forEach(function (link) {
+    document.querySelectorAll(".mobile-link").forEach(link => {
 
-        link.addEventListener("click", function () {
-            mobileMenu.classList.remove("active");
+        link.addEventListener("click", () => {
+
+            mobileMenu.classList.add("hidden");
+
+            const icon = mobileBtn.querySelector("i");
+
+            icon.className = "fa-solid fa-bars";
+
         });
 
     });
 
 
-    /* =====================================
-                PROJECT DATA
-    ===================================== */
+    /* =========================
+       SCROLL PROGRESS
+    ========================= */
 
-    const projectData = {
+    const progress = document.getElementById("progress");
 
-        ecommerce: {
+    window.addEventListener("scroll", () => {
 
-            category: "Project 01 · E-Commerce",
+        const scrollTop = window.scrollY;
 
-            title: "E-Commerce Website",
+        const height =
+            document.documentElement.scrollHeight -
+            document.documentElement.clientHeight;
 
-            description:
-                "A full-stack e-commerce website developed using PHP and Laravel. The project includes authentication, shopping cart functionality, product management, admin functionality and MySQL database integration.",
+        const percentage =
+            height > 0
+                ? (scrollTop / height) * 100
+                : 0;
 
-            features: [
-                "User authentication",
-                "Product management",
-                "Shopping cart system",
-                "Admin dashboard",
-                "Database integration",
-                "Responsive user interface"
-            ],
+        progress.style.width = percentage + "%";
 
-            tech: [
-                "PHP",
-                "Laravel",
-                "MySQL",
-                "JavaScript",
-                "Bootstrap"
-            ],
+    });
 
-            github:
-                "https://github.com/Dilshad1232"
 
-        },
+    /* =========================
+       REVEAL ANIMATION
+    ========================= */
 
+    const revealElements =
+        document.querySelectorAll(".reveal");
 
-        ramotor: {
+    const observer =
+        new IntersectionObserver(
+            entries => {
 
-            category: "Project 02 · Management System",
+                entries.forEach(entry => {
 
-            title: "Car Service Management System",
+                    if (entry.isIntersecting) {
 
-            description:
-                "A car service management system designed for handling customers, service bookings, service records and service tracking. The RAMotor project repository is available on GitHub.",
+                        entry.target.classList.add("visible");
 
-            features: [
-                "Customer management",
-                "Service booking",
-                "Service records",
-                "Service tracking",
-                "Admin management",
-                "Database integration"
-            ],
+                        observer.unobserve(entry.target);
 
-            tech: [
-                "PHP",
-                "Laravel",
-                "MySQL",
-                "Bootstrap",
-                "JavaScript"
-            ],
+                    }
 
-            github:
-                "https://github.com/Dilshad1232/ramotor"
+                });
 
-        },
-
-
-        jobs: {
-
-            category: "Project 03 · Job Portal",
-
-            title: "KushinagarJobs",
-
-            description:
-                "A job portal application with job listings, categories, employer dashboard and job posting functionality.",
-
-            features: [
-                "Job listings",
-                "Job categories",
-                "Employer dashboard",
-                "Job posting",
-                "Search functionality",
-                "Application workflow"
-            ],
-
-            tech: [
-                "PHP",
-                "Laravel",
-                "MySQL",
-                "Bootstrap",
-                "JavaScript"
-            ],
-
-            github:
-                "https://github.com/Dilshad1232"
-
-        },
-
-
-        react: {
-
-            category: "Project 04 · React + Laravel",
-
-            title: "React + Laravel Authentication",
-
-            description:
-                "A React frontend connected with Laravel APIs. The project includes registration, login, token authentication, protected routes and a dashboard.",
-
-            features: [
-                "Registration",
-                "Login",
-                "Laravel REST API",
-                "Token authentication",
-                "Protected routes",
-                "Dashboard"
-            ],
-
-            tech: [
-                "React",
-                "Laravel",
-                "Sanctum",
-                "REST API",
-                "MySQL"
-            ],
-
-            github:
-                "https://github.com/Dilshad1232"
-
-        }
-
-    };
-
-
-    /* =====================================
-                SHOW PROJECT
-    ===================================== */
-
-    function showProject(projectName) {
-
-        const project = projectData[projectName];
-
-        if (!project) {
-            return;
-        }
-
-
-        document.getElementById("modalCategory").textContent =
-            project.category;
-
-
-        document.getElementById("modalTitle").textContent =
-            project.title;
-
-
-        document.getElementById("modalDescription").textContent =
-            project.description;
-
-
-        /* Features */
-
-        const features =
-            document.getElementById("modalFeatures");
-
-        features.innerHTML = "";
-
-
-        project.features.forEach(function (feature) {
-
-            const li = document.createElement("li");
-
-            li.className =
-                "flex items-start gap-3 text-sm text-gray-600";
-
-            const icon = document.createElement("span");
-
-            icon.className =
-                "text-accent font-bold";
-
-            icon.textContent = "✓";
-
-
-            const text = document.createElement("span");
-
-            text.textContent = feature;
-
-
-            li.appendChild(icon);
-            li.appendChild(text);
-
-            features.appendChild(li);
-
-        });
-
-
-        /* Technologies */
-
-        const tech =
-            document.getElementById("modalTech");
-
-        tech.innerHTML = "";
-
-
-        project.tech.forEach(function (technology) {
-
-            const span = document.createElement("span");
-
-            span.className =
-                "bg-dark text-white px-3 py-2 text-xs";
-
-            span.textContent = technology;
-
-            tech.appendChild(span);
-
-        });
-
-
-        /* GitHub */
-
-        document.getElementById("modalGithub").href =
-            project.github;
-
-
-        /* Open */
-
-        document.getElementById("projectModal")
-            .classList.add("active");
-
-        document.body.style.overflow = "hidden";
-
-    }
-
-
-    /* =====================================
-                CLOSE PROJECT
-    ===================================== */
-
-    function closeProject() {
-
-        document.getElementById("projectModal")
-            .classList.remove("active");
-
-        document.body.style.overflow = "";
-
-    }
-
-
-    /* Close by clicking outside */
-
-    document.getElementById("projectModal")
-        .addEventListener("click", function (event) {
-
-            if (event.target === this) {
-                closeProject();
+            },
+            {
+                threshold: .12
             }
+        );
+
+
+    revealElements.forEach(element => {
+        observer.observe(element);
+    });
+
+
+    /* =========================
+       FAQ
+    ========================= */
+
+    document.querySelectorAll(".faq-question")
+        .forEach(button => {
+
+            button.addEventListener("click", () => {
+
+                const item =
+                    button.closest(".faq-item");
+
+                document.querySelectorAll(".faq-item")
+                    .forEach(other => {
+
+                        if (other !== item) {
+                            other.classList.remove("open");
+                        }
+
+                    });
+
+                item.classList.toggle("open");
+
+            });
 
         });
 
 
-    /* Escape */
+    /* =========================
+       ACTIVE NAVIGATION
+    ========================= */
 
-    document.addEventListener("keydown", function (event) {
+    const sections =
+        document.querySelectorAll("section[id]");
 
-        if (event.key === "Escape") {
-            closeProject();
-        }
+    const navLinks =
+        document.querySelectorAll(".nav-link");
 
+    const navObserver =
+        new IntersectionObserver(
+            entries => {
+
+                entries.forEach(entry => {
+
+                    if (entry.isIntersecting) {
+
+                        navLinks.forEach(link => {
+
+                            link.classList.remove("active");
+
+                            if (
+                                link.getAttribute("href") ===
+                                "#" + entry.target.id
+                            ) {
+
+                                link.classList.add("active");
+
+                            }
+
+                        });
+
+                    }
+
+                });
+
+            },
+           {
+                 rootMargin: "-35% 0px -55% 0px"
+            }
+        );
+
+
+    sections.forEach(section => {
+        navObserver.observe(section);
     });
+
+
+    /* =========================
+       YEAR
+    ========================= */
+
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+
+    /* =========================
+       SUBTLE MOUSE GLOW
+    ========================= */
+
+    const glow =
+        document.createElement("div");
+
+    glow.style.position = "fixed";
+    glow.style.width = "300px";
+    glow.style.height = "300px";
+    glow.style.borderRadius = "50%";
+    glow.style.pointerEvents = "none";
+    glow.style.zIndex = "0";
+    glow.style.background =
+        "radial-gradient(circle, rgba(59,130,246,.08), transparent 65%)";
+    glow.style.transform = "translate(-50%,-50%)";
+    glow.style.opacity = "0";
+    glow.style.transition = "opacity .3s ease";
+
+    document.body.appendChild(glow);
+
+
+    if (window.matchMedia("(pointer:fine)").matches) {
+
+        window.addEventListener("mousemove", event => {
+
+            glow.style.left = event.clientX + "px";
+            glow.style.top = event.clientY + "px";
+            glow.style.opacity = "1";
+
+        });
+
+    }
+
+
+    /* =========================
+       TILT EFFECT
+    ========================= */
+
+    if (window.matchMedia("(pointer:fine)").matches) {
+
+        document.querySelectorAll(".service-card, .project-card")
+            .forEach(card => {
+
+                card.addEventListener("mousemove", event => {
+
+                    const rect =
+                        card.getBoundingClientRect();
+
+                    const x =
+                        event.clientX - rect.left;
+
+                    const y =
+                        event.clientY - rect.top;
+
+                    const rotateX =
+                        ((y / rect.height) - .5) * -3;
+
+                    const rotateY =
+                        ((x / rect.width) - .5) * 3;
+
+                    card.style.transform =
+                        `perspective(800px)
+                         rotateX(${rotateX}deg)
+                         rotateY(${rotateY}deg)
+                         translateY(-8px)`;
+
+                });
+
+
+                card.addEventListener("mouseleave", () => {
+
+                    card.style.transform = "";
+
+                });
+
+            });
+
+    }
+
+
 
 </script>
-
+<script>
+    /* =========================================================
+       PREMIUM CONTACT FORM
+       NETLIFY FORMS
+    ========================================================= */
+    
+    const contactForm = document.getElementById("contactForm");
+    const contactSubmit = document.getElementById("contactSubmit");
+    const contactSuccess = document.getElementById("contactSuccess");
+    const contactError = document.getElementById("contactError");
+    const sendAnother = document.getElementById("sendAnother");
+    const messageBox = document.getElementById("message");
+    const charCount = document.getElementById("charCount");
+    
+    
+    // Character counter
+    if (messageBox && charCount) {
+    
+        messageBox.addEventListener("input", () => {
+    
+            const length = messageBox.value.length;
+    
+            charCount.textContent = `${length} / 1200`;
+    
+            if (length > 1050) {
+                charCount.style.color = "#f59e0b";
+            } else {
+                charCount.style.color = "";
+            }
+    
+        });
+    
+    }
+    
+    
+    // Form Submit
+    if (contactForm) {
+    
+        contactForm.addEventListener("submit", async function (e) {
+    
+            e.preventDefault();
+    
+            if (!contactForm.checkValidity()) {
+                contactForm.reportValidity();
+                return;
+            }
+    
+    
+            // Loading state
+            contactSubmit.disabled = true;
+    
+            const normal = contactSubmit.querySelector(".submit-normal");
+            const loading = contactSubmit.querySelector(".submit-loading");
+    
+            if (normal) normal.classList.add("hidden");
+            if (loading) loading.classList.remove("hidden");
+    
+    
+            try {
+    
+                const formData = new FormData(contactForm);
+    
+                const response = await fetch("/", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/x-www-form-urlencoded"
+                    },
+                    body: new URLSearchParams(formData).toString()
+                });
+    
+    
+                if (!response.ok) {
+                    throw new Error("Form submission failed");
+                }
+    
+    
+                // Success
+                contactForm.classList.add("hidden");
+                contactError.classList.add("hidden");
+                contactSuccess.classList.remove("hidden");
+    
+                // Scroll gently to success message
+                setTimeout(() => {
+    
+                    contactSuccess.scrollIntoView({
+                        behavior: "smooth",
+                        block: "center"
+                    });
+    
+                }, 100);
+    
+    
+                // Reset form
+                contactForm.reset();
+    
+                if (charCount) {
+                    charCount.textContent = "0 / 1200";
+                }
+    
+    
+            } catch (error) {
+    
+                console.error("Contact form error:", error);
+    
+                contactError.classList.remove("hidden");
+    
+            } finally {
+    
+                contactSubmit.disabled = false;
+    
+                if (normal) normal.classList.remove("hidden");
+                if (loading) loading.classList.add("hidden");
+    
+            }
+    
+        });
+    
+    }
+    
+    
+    // Send another enquiry
+    if (sendAnother) {
+    
+        sendAnother.addEventListener("click", () => {
+    
+            contactSuccess.classList.add("hidden");
+            contactError.classList.add("hidden");
+            contactForm.classList.remove("hidden");
+    
+            setTimeout(() => {
+    
+                document.getElementById("name")?.focus();
+    
+            }, 100);
+    
+        });
+    
+    }
+    </script>
 </body>
 </html>
