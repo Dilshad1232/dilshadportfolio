@@ -2187,18 +2187,26 @@
     </a>
 
 
-    <!-- View Resume -->
-    <button
-        type="button"
-        onclick="openResumeModal()"
-        class="btn-secondary px-6 py-3.5 rounded-xl font-bold
-               inline-flex items-center gap-2">
+   
+<!-- View Resume --><!-- =========================================================
+     RESUME PREVIEW MODAL
+========================================================= -->
+<!-- =========================================================
+     VIEW RESUME BUTTON
+========================================================= -->
 
-        <i class="fa-regular fa-file-lines text-sm"></i>
+<button
+    type="button"
+    onclick="openResumeModal()"
+    class="btn-secondary px-6 py-3.5 rounded-xl font-bold
+           inline-flex items-center gap-2">
 
-        View Resume
+    <i class="fa-regular fa-file-lines text-sm"></i>
 
-    </button>
+    View Resume
+
+</button>
+
 
 
     <!-- Download Resume -->
@@ -6614,157 +6622,712 @@ document.addEventListener("keydown", function(event) {
     }
     </script>
 
-    <!-- =========================================================
-     RESUME MODAL
+<!-- =========================================================
+     RESUME PREVIEW MODAL
 ========================================================= -->
+
 <div
-id="resumeModal"
-class="fixed inset-0 z-[9999] hidden items-center justify-center bg-black/70 p-3 sm:p-5 backdrop-blur-sm"
-role="dialog"
-aria-modal="true"
-aria-labelledby="resumeModalTitle"
+    id="resumeModal"
+    class="fixed inset-0 z-[99999] hidden items-center justify-center
+           bg-black/80 p-2 sm:p-4 backdrop-blur-md"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="resumeModalTitle"
 >
 
-<!-- Modal Container -->
-<div
-    id="resumeModalBox"
-    class="relative flex h-[95vh] w-full max-w-5xl flex-col overflow-hidden rounded-2xl bg-white shadow-2xl sm:h-[92vh]"
->
+    <div
+        id="resumeModalContent"
+        class="relative flex h-[96vh] w-full max-w-5xl
+               flex-col overflow-hidden rounded-2xl bg-white shadow-2xl"
+    >
 
-    <!-- Modal Header -->
-    <div class="flex shrink-0 items-center justify-between border-b border-gray-200 bg-white px-4 py-3 sm:px-6">
+        <!-- =================================================
+             HEADER
+        ================================================== -->
 
-        <div class="flex items-center gap-3">
-            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-gray-100">
-                <i class="fa-regular fa-file-pdf text-red-500"></i>
-            </div>
-
-            <div>
-                <h2
-                    id="resumeModalTitle"
-                    class="text-base font-bold text-gray-900 sm:text-lg"
-                >
-                    Dilshad Alam — Resume
-                </h2>
-
-                <p class="text-xs text-gray-500 sm:text-sm">
-                    Full Stack Developer
-                </p>
-            </div>
-        </div>
-
-        <!-- Close Button -->
-        <button
-            type="button"
-            onclick="closeResumeModal()"
-            aria-label="Close resume"
-            class="flex h-10 w-10 items-center justify-center rounded-xl text-gray-500 transition hover:bg-gray-100 hover:text-gray-900"
+        <div
+            class="flex shrink-0 items-center justify-between
+                   border-b border-gray-200 bg-white
+                   px-4 py-3 sm:px-6"
         >
-            <i class="fa-solid fa-xmark text-xl"></i>
-        </button>
 
-    </div>
+            <div class="flex min-w-0 items-center gap-3">
 
+                <div
+                    class="flex h-10 w-10 shrink-0 items-center
+                           justify-center rounded-xl bg-red-50"
+                >
 
-    <!-- PDF Preview -->
-    <div class="min-h-0 flex-1 bg-gray-100 p-2 sm:p-4">
+                    <i
+                        class="fa-solid fa-file-pdf text-red-500"
+                    ></i>
 
-        <iframe
-            id="resumeFrame"
-            src=""
-            title="Dilshad Alam Resume Preview"
-            class="h-full w-full rounded-lg border border-gray-200 bg-white"
-        ></iframe>
-
-    </div>
+                </div>
 
 
-    <!-- Modal Footer -->
-    <div class="flex shrink-0 flex-col gap-3 border-t border-gray-200 bg-white px-4 py-3 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+                <div class="min-w-0">
 
-        <p class="text-center text-xs text-gray-500 sm:text-left">
-            Preview my resume before downloading.
-        </p>
+                    <h2
+                        id="resumeModalTitle"
+                        class="truncate text-sm font-bold
+                               text-gray-900 sm:text-base"
+                    >
+                        Dilshad Alam — Resume
+                    </h2>
 
-        <div class="flex w-full gap-2 sm:w-auto">
+                    <p class="text-xs text-gray-500">
+                        Full Stack Developer
+                    </p>
 
-            <!-- Download -->
-            <a
-                href="assets/resume/Dilshad-Alam-Resume.pdf"
-                download="Dilshad-Alam-Resume.pdf"
-                class="flex flex-1 items-center justify-center gap-2 rounded-xl bg-gray-900 px-5 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-black sm:flex-none"
-            >
-                <i class="fa-solid fa-download"></i>
-                Download Resume
-            </a>
+                </div>
 
-            <!-- Close -->
+            </div>
+
+
+            <!-- Close Button -->
+
             <button
                 type="button"
                 onclick="closeResumeModal()"
-                class="flex items-center justify-center rounded-xl border border-gray-300 px-5 py-3 text-sm font-semibold text-gray-700 transition-all duration-300 hover:border-gray-900 hover:text-gray-900"
+                class="ml-3 flex h-10 w-10 shrink-0
+                       items-center justify-center rounded-xl
+                       text-gray-500 transition
+                       hover:bg-gray-100 hover:text-black"
+                aria-label="Close resume"
             >
-                Close
+
+                <i class="fa-solid fa-xmark text-xl"></i>
+
             </button>
 
         </div>
 
+
+        <!-- =================================================
+             PDF VIEWER
+        ================================================== -->
+
+        <div
+            id="resumeViewer"
+            class="relative min-h-0 flex-1 overflow-auto
+                   bg-gray-200 p-2 sm:p-4"
+        >
+
+            <!-- Loading -->
+
+            <div
+                id="resumeLoading"
+                class="absolute inset-0 z-20 flex
+                       flex-col items-center justify-center
+                       bg-gray-100"
+            >
+
+                <div
+                    class="mb-4 h-10 w-10 animate-spin
+                           rounded-full border-4 border-gray-300
+                           border-t-gray-900"
+                ></div>
+
+                <p
+                    class="text-sm font-semibold text-gray-600"
+                >
+                    Loading resume...
+                </p>
+
+            </div>
+
+
+            <!-- PDF Pages -->
+
+            <div
+                id="pdfContainer"
+                class="flex min-h-full flex-col
+                       items-center gap-4"
+            ></div>
+
+
+            <!-- =================================================
+                 ERROR / FALLBACK
+            ================================================== -->
+
+            <div
+                id="resumeError"
+                class="hidden min-h-full flex-col
+                       items-center justify-center
+                       px-5 text-center"
+            >
+
+                <div
+                    class="mb-4 flex h-16 w-16 items-center
+                           justify-center rounded-2xl bg-red-50"
+                >
+
+                    <i
+                        class="fa-solid fa-file-circle-xmark
+                               text-2xl text-red-500"
+                    ></i>
+
+                </div>
+
+
+                <h3
+                    class="mb-2 text-lg font-bold text-gray-900"
+                >
+                    Resume preview unavailable
+                </h3>
+
+
+                <p
+                    class="mb-5 max-w-md text-sm text-gray-500"
+                >
+                    Your browser could not display the preview.
+                    You can open or download the PDF instead.
+                </p>
+
+
+                <a
+                    href="./Dilshad-Alam-Resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-2
+                           rounded-xl bg-gray-900 px-5 py-3
+                           text-sm font-bold text-white
+                           transition hover:bg-black"
+                >
+
+                    <i
+                        class="fa-solid fa-arrow-up-right-from-square"
+                    ></i>
+
+                    Open Resume
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             FOOTER
+        ================================================== -->
+
+        <div
+            class="flex shrink-0 flex-col gap-3
+                   border-t border-gray-200 bg-white
+                   p-3 sm:flex-row sm:items-center
+                   sm:justify-between sm:px-6"
+        >
+
+            <span
+                class="text-center text-xs text-gray-500
+                       sm:text-left"
+            >
+                Resume Preview
+            </span>
+
+
+            <div
+                class="flex w-full gap-2 sm:w-auto"
+            >
+
+                <!-- Download Resume -->
+
+                <a
+                    href="./Dilshad-Alam-Resume.pdf"
+                    download="Dilshad-Alam-Resume.pdf"
+                    class="flex flex-1 items-center
+                           justify-center gap-2 rounded-xl
+                           bg-gray-900 px-5 py-3
+                           text-sm font-bold text-white
+                           transition hover:bg-black
+                           sm:flex-none"
+                >
+
+                    <i class="fa-solid fa-download"></i>
+
+                    Download Resume
+
+                </a>
+
+
+                <!-- Close -->
+
+                <button
+                    type="button"
+                    onclick="closeResumeModal()"
+                    class="rounded-xl border border-gray-300
+                           px-5 py-3 text-sm font-bold
+                           text-gray-700 transition
+                           hover:border-gray-900
+                           hover:text-gray-900"
+                >
+
+                    Close
+
+                </button>
+
+            </div>
+
+        </div>
+
     </div>
 
-</div>
 </div>
 
 
 <!-- =========================================================
- RESUME MODAL JAVASCRIPT
+     RESUME PDF VIEWER - PDF.JS
 ========================================================= -->
-<script>
-const resumeModal = document.getElementById('resumeModal');
-const resumeFrame = document.getElementById('resumeFrame');
 
-const resumePDF = 'Dilshad-Alam-Resume.pdf';
+<script type="module">
 
-
-function openResumeModal() {
-
-    resumeFrame.src = resumePDF;
-
-    resumeModal.classList.remove('hidden');
-    resumeModal.classList.add('flex');
-
-    document.body.classList.add('overflow-hidden');
-}
-
-
-function closeResumeModal() {
-
-    resumeModal.classList.add('hidden');
-    resumeModal.classList.remove('flex');
-
-    resumeFrame.src = '';
-
-    document.body.classList.remove('overflow-hidden');
-}
-
-
-// Close when clicking outside modal
-resumeModal.addEventListener('click', function (event) {
-
-    if (event.target === resumeModal) {
-        closeResumeModal();
+    import * as pdfjsLib from
+        'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.min.mjs';
+    
+    
+    /* =========================================================
+       PDF.JS WORKER
+    ========================================================= */
+    
+    pdfjsLib.GlobalWorkerOptions.workerSrc =
+        'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.worker.min.mjs';
+    
+    
+    /* =========================================================
+       ELEMENTS
+    ========================================================= */
+    
+    const resumeModal =
+        document.getElementById('resumeModal');
+    
+    const resumeViewer =
+        document.getElementById('resumeViewer');
+    
+    const pdfContainer =
+        document.getElementById('pdfContainer');
+    
+    const resumeLoading =
+        document.getElementById('resumeLoading');
+    
+    const resumeError =
+        document.getElementById('resumeError');
+    
+    
+    /* =========================================================
+       RESUME PDF
+    ========================================================= */
+    
+    const resumePDF =
+        './Dilshad-Alam-Resume.pdf';
+    
+    
+    /* =========================================================
+       OPEN RESUME
+    ========================================================= */
+    
+    window.openResumeModal = async function () {
+    
+        if (!resumeModal) {
+    
+            console.error(
+                'Resume modal not found.'
+            );
+    
+            return;
+    
+        }
+    
+    
+        /* Show modal */
+    
+        resumeModal.classList.remove('hidden');
+    
+        resumeModal.classList.add('flex');
+    
+    
+        /* Disable body scrolling */
+    
+        document.body.classList.add(
+            'overflow-hidden'
+        );
+    
+    
+        /* Reset viewer */
+    
+        pdfContainer.innerHTML = '';
+    
+        resumeError.classList.add('hidden');
+    
+        resumeError.classList.remove('flex');
+    
+        resumeLoading.classList.remove('hidden');
+    
+    
+        if (resumeViewer) {
+    
+            resumeViewer.scrollTop = 0;
+    
+        }
+    
+    
+        /* Load PDF */
+    
+        try {
+    
+            await renderResume();
+    
+        }
+    
+        catch (error) {
+    
+            console.error(
+                'Resume PDF loading error:',
+                error
+            );
+    
+    
+            resumeLoading.classList.add(
+                'hidden'
+            );
+    
+    
+            resumeError.classList.remove(
+                'hidden'
+            );
+    
+    
+            resumeError.classList.add(
+                'flex'
+            );
+    
+        }
+    
+    };
+    
+    
+    /* =========================================================
+       RENDER RESUME PDF
+    ========================================================= */
+    
+    async function renderResume() {
+    
+        /* Load PDF */
+    
+        const loadingTask =
+            pdfjsLib.getDocument({
+                url: resumePDF
+            });
+    
+    
+        const pdf =
+            await loadingTask.promise;
+    
+    
+        console.log(
+            'Resume loaded:',
+            pdf.numPages,
+            'page(s)'
+        );
+    
+    
+        /* =====================================================
+           RENDER EACH PAGE
+        ===================================================== */
+    
+        for (
+            let pageNumber = 1;
+            pageNumber <= pdf.numPages;
+            pageNumber++
+        ) {
+    
+            const page =
+                await pdf.getPage(pageNumber);
+    
+    
+            /* Original viewport */
+    
+            const originalViewport =
+                page.getViewport({
+                    scale: 1
+                });
+    
+    
+            /* =================================================
+               RESPONSIVE WIDTH
+            ================================================= */
+    
+            const availableWidth =
+                Math.min(
+                    window.innerWidth - 24,
+                    900
+                );
+    
+    
+            const scale =
+                availableWidth /
+                originalViewport.width;
+    
+    
+            const viewport =
+                page.getViewport({
+                    scale: scale
+                });
+    
+    
+            /* =================================================
+               CANVAS
+            ================================================= */
+    
+            const canvas =
+                document.createElement(
+                    'canvas'
+                );
+    
+    
+            const context =
+                canvas.getContext(
+                    '2d',
+                    {
+                        alpha: false
+                    }
+                );
+    
+    
+            canvas.width =
+                Math.floor(
+                    viewport.width
+                );
+    
+    
+            canvas.height =
+                Math.floor(
+                    viewport.height
+                );
+    
+    
+            canvas.style.width =
+                '100%';
+    
+    
+            canvas.style.height =
+                'auto';
+    
+    
+            canvas.style.maxWidth =
+                '900px';
+    
+    
+            canvas.className =
+                'block rounded-lg bg-white shadow-md';
+    
+    
+            /* =================================================
+               PAGE WRAPPER
+            ================================================= */
+    
+            const pageWrapper =
+                document.createElement(
+                    'div'
+                );
+    
+    
+            pageWrapper.className =
+                'flex w-full justify-center';
+    
+    
+            pageWrapper.appendChild(
+                canvas
+            );
+    
+    
+            pdfContainer.appendChild(
+                pageWrapper
+            );
+    
+    
+            /* =================================================
+               RENDER PAGE
+            ================================================= */
+    
+            await page.render({
+    
+                canvasContext:
+                    context,
+    
+                viewport:
+                    viewport
+    
+            }).promise;
+    
+        }
+    
+    
+        /* Hide loading */
+    
+        resumeLoading.classList.add(
+            'hidden'
+        );
+    
     }
-
-});
-
-
-// Close with ESC key
-document.addEventListener('keydown', function (event) {
-
-    if (event.key === 'Escape' && !resumeModal.classList.contains('hidden')) {
-        closeResumeModal();
+    
+    
+    /* =========================================================
+       CLOSE RESUME MODAL
+    ========================================================= */
+    
+    window.closeResumeModal = function () {
+    
+        if (!resumeModal) {
+    
+            return;
+    
+        }
+    
+    
+        /* Hide modal */
+    
+        resumeModal.classList.add(
+            'hidden'
+        );
+    
+        resumeModal.classList.remove(
+            'flex'
+        );
+    
+    
+        /* Enable body scrolling */
+    
+        document.body.classList.remove(
+            'overflow-hidden'
+        );
+    
+    
+        /* Clear PDF */
+    
+        pdfContainer.innerHTML = '';
+    
+    
+        /* Reset error */
+    
+        resumeError.classList.add(
+            'hidden'
+        );
+    
+        resumeError.classList.remove(
+            'flex'
+        );
+    
+    };
+    
+    
+    /* =========================================================
+       CLICK OUTSIDE
+    ========================================================= */
+    
+    if (resumeModal) {
+    
+        resumeModal.addEventListener(
+            'click',
+            function (event) {
+    
+                if (
+                    event.target ===
+                    resumeModal
+                ) {
+    
+                    window.closeResumeModal();
+    
+                }
+    
+            }
+        );
+    
     }
+    
+    
+    /* =========================================================
+       ESC KEY
+    ========================================================= */
+    
+    document.addEventListener(
+        'keydown',
+        function (event) {
+    
+            if (
+                event.key === 'Escape' &&
+                resumeModal &&
+                !resumeModal.classList.contains(
+                    'hidden'
+                )
+            ) {
+    
+                window.closeResumeModal();
+    
+            }
+    
+        }
+    );
+    
+    
+    /* =========================================================
+       RESPONSIVE RE-RENDER
+    ========================================================= */
+    
+    let resizeTimer = null;
+    
+    
+    window.addEventListener(
+        'resize',
+        function () {
+    
+            clearTimeout(
+                resizeTimer
+            );
+    
+    
+            resizeTimer =
+                setTimeout(
+                    async function () {
+    
+                        if (
+                            resumeModal &&
+                            !resumeModal.classList.contains(
+                                'hidden'
+                            )
+                        ) {
+    
+                            try {
+    
+                                pdfContainer.innerHTML =
+                                    '';
+    
+                                resumeLoading.classList.remove(
+                                    'hidden'
+                                );
+    
+                                await renderResume();
+    
+                            }
+    
+                            catch (error) {
+    
+                                console.error(
+                                    error
+                                );
+    
+                            }
+    
+                        }
+    
+                    },
+                    400
+                );
+    
+        }
+    );
+    
+    </script>
 
-});
-</script>
 </body>
 </html>
