@@ -43,7 +43,10 @@
             rel="canonical"
             href="https://dilshadportfoliocom.netlify.app/"
         >
-    
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
     
         <!-- =========================================================
              OPEN GRAPH / FACEBOOK / LINK SHARING
@@ -2157,31 +2160,61 @@
                     </p>
     
     
-                    <!-- CTA Buttons -->
-                    <div class="flex flex-wrap gap-3 mt-8">
-    
-                        <a href="#services"
-                           class="btn-primary px-6 py-3.5 rounded-xl font-bold
-                                  inline-flex items-center gap-2">
-    
-                            Explore Packages
-    
-                            <i class="fa-solid fa-arrow-right text-sm"></i>
-    
-                        </a>
-    
-    
-                        <a href="#work"
-                           class="btn-secondary px-6 py-3.5 rounded-xl font-bold
-                                  inline-flex items-center gap-2">
-    
-                            View My Work
-    
-                            <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
-    
-                        </a>
-    
-                    </div>
+                   <!-- CTA Buttons -->
+<div class="flex flex-wrap gap-3 mt-8">
+
+    <!-- Explore Packages -->
+    <a href="#services"
+       class="btn-primary px-6 py-3.5 rounded-xl font-bold
+              inline-flex items-center gap-2">
+
+        Explore Packages
+
+        <i class="fa-solid fa-arrow-right text-sm"></i>
+
+    </a>
+
+
+    <!-- View My Work -->
+    <a href="#work"
+       class="btn-secondary px-6 py-3.5 rounded-xl font-bold
+              inline-flex items-center gap-2">
+
+        View My Work
+
+        <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+
+    </a>
+
+
+    <!-- View Resume -->
+    <button
+        type="button"
+        onclick="openResumeModal()"
+        class="btn-secondary px-6 py-3.5 rounded-xl font-bold
+               inline-flex items-center gap-2">
+
+        <i class="fa-regular fa-file-lines text-sm"></i>
+
+        View Resume
+
+    </button>
+
+
+    <!-- Download Resume -->
+    <!-- <a
+        href="Dilshad Alam Resume.pdf"
+        download="Dilshad-Alam-Resume.pdf"
+        class="btn-primary px-6 py-3.5 rounded-xl font-bold
+               inline-flex items-center gap-2">
+
+        <i class="fa-solid fa-download text-sm"></i>
+
+        Download Resume
+
+    </a> -->
+
+</div>
     
     
                     <!-- Trust Points -->
@@ -4172,117 +4205,996 @@ document.addEventListener("keydown", function(event) {
      SKILLS
 ========================= -->
 
+<!-- =========================================================
+     PREMIUM SKILLS / TECHNICAL EXPERTISE
+========================================================= -->
+
 <section id="skills" class="py-28 bg-white/[.015]">
 
     <div class="max-w-7xl mx-auto px-5 lg:px-8">
 
-        <div class="text-center reveal">
+        <!-- HEADER -->
+        <div class="max-w-3xl mx-auto text-center reveal">
 
             <div class="section-label">
-                Technology
+                Technical Expertise
             </div>
 
             <h2 class="section-title text-4xl md:text-5xl mt-3">
-                Built with the
+                Skills that
                 <span class="gradient-text">
-                    right stack.
+                    build real products.
                 </span>
             </h2>
+
+            <p class="text-slate-400 leading-7 mt-5">
+                Hands-on experience with backend development, modern
+                frontend technologies, databases, APIs, authentication
+                and third-party integrations.
+            </p>
 
         </div>
 
 
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6
-                    gap-4 mt-14">
+        <!-- =====================================================
+             SKILL CATEGORIES
+        ====================================================== -->
+
+        <div class="grid lg:grid-cols-2 gap-5 mt-14">
 
 
-            <div class="skill-card p-6 reveal">
-                <div class="skill-icon text-indigo-400">
-                    <i class="fa-brands fa-php"></i>
+            <!-- =================================================
+                 BACKEND
+            ================================================== -->
+
+            <div class="skill-card p-7 reveal">
+
+                <div class="flex items-start gap-4">
+
+                    <div class="skill-icon text-indigo-400">
+                        <i class="fa-solid fa-server"></i>
+                    </div>
+
+                    <div>
+
+                        <div class="text-xs uppercase tracking-[.18em]
+                                    text-slate-500 font-bold">
+                            Backend Development
+                        </div>
+
+                        <h3 class="text-xl font-bold mt-1">
+                            PHP & Laravel
+                        </h3>
+
+                    </div>
+
                 </div>
 
-                <div class="font-bold">
-                    PHP
+
+                <p class="text-sm text-slate-500 leading-6 mt-5">
+                    Building structured, database-driven web applications
+                    using Laravel MVC architecture and modern backend practices.
+                </p>
+
+
+                <div class="flex flex-wrap gap-2 mt-5">
+
+                    <span class="tech">PHP</span>
+                    <span class="tech">Laravel 12</span>
+                    <span class="tech">MVC</span>
+                    <span class="tech">Eloquent ORM</span>
+                    <span class="tech">REST API</span>
+                    <span class="tech">CRUD</span>
+                    <span class="tech">Middleware</span>
+                    <span class="tech">Validation</span>
+
                 </div>
 
-                <div class="text-xs text-slate-500 mt-1">
-                    Backend
-                </div>
             </div>
 
 
-            <div class="skill-card p-6 reveal reveal-delay-1">
-                <div class="skill-icon text-red-400">
-                    <i class="fa-solid fa-fire"></i>
+
+            <!-- =================================================
+                 AUTHENTICATION
+            ================================================== -->
+
+            <div class="skill-card p-7 reveal reveal-delay-1">
+
+                <div class="flex items-start gap-4">
+
+                    <div class="skill-icon text-purple-400">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+
+                    <div>
+
+                        <div class="text-xs uppercase tracking-[.18em]
+                                    text-slate-500 font-bold">
+                            Security & Authentication
+                        </div>
+
+                        <h3 class="text-xl font-bold mt-1">
+                            Auth & Role Management
+                        </h3>
+
+                    </div>
+
                 </div>
 
-                <div class="font-bold">
-                    Laravel
+
+                <p class="text-sm text-slate-500 leading-6 mt-5">
+                    Implementing secure authentication, protected routes,
+                    role-based access and API authentication for
+                    multi-user applications.
+                </p>
+
+
+                <div class="flex flex-wrap gap-2 mt-5">
+
+                    <span class="tech">Laravel Sanctum</span>
+                    <span class="tech">Authentication</span>
+                    <span class="tech">Authorization</span>
+                    <span class="tech">RBAC</span>
+                    <span class="tech">Protected Routes</span>
+                    <span class="tech">Admin / User Roles</span>
+
                 </div>
 
-                <div class="text-xs text-slate-500 mt-1">
-                    Framework
-                </div>
             </div>
 
 
-            <div class="skill-card p-6 reveal reveal-delay-2">
-                <div class="skill-icon text-cyan-400">
-                    <i class="fa-brands fa-js"></i>
+
+            <!-- =================================================
+                 FRONTEND
+            ================================================== -->
+
+            <div class="skill-card p-7 reveal reveal-delay-2">
+
+                <div class="flex items-start gap-4">
+
+                    <div class="skill-icon text-cyan-400">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+
+                    <div>
+
+                        <div class="text-xs uppercase tracking-[.18em]
+                                    text-slate-500 font-bold">
+                            Frontend Development
+                        </div>
+
+                        <h3 class="text-xl font-bold mt-1">
+                            Modern & Responsive UI
+                        </h3>
+
+                    </div>
+
                 </div>
 
-                <div class="font-bold">
-                    JavaScript
+
+                <p class="text-sm text-slate-500 leading-6 mt-5">
+                    Creating responsive interfaces with clean layouts,
+                    modern interactions and mobile-first design.
+                </p>
+
+
+                <div class="flex flex-wrap gap-2 mt-5">
+
+                    <span class="tech">HTML5</span>
+                    <span class="tech">CSS3</span>
+                    <span class="tech">JavaScript</span>
+                    <span class="tech">jQuery</span>
+                    <span class="tech">Bootstrap 5</span>
+                    <span class="tech">Tailwind CSS</span>
+                    <span class="tech">React.js</span>
+
                 </div>
 
-                <div class="text-xs text-slate-500 mt-1">
-                    Frontend
-                </div>
             </div>
 
 
-            <div class="skill-card p-6 reveal reveal-delay-3">
-                <div class="skill-icon text-sky-400">
-                    <i class="fa-brands fa-react"></i>
+
+            <!-- =================================================
+                 DATABASE
+            ================================================== -->
+
+            <div class="skill-card p-7 reveal reveal-delay-3">
+
+                <div class="flex items-start gap-4">
+
+                    <div class="skill-icon text-orange-400">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+
+                    <div>
+
+                        <div class="text-xs uppercase tracking-[.18em]
+                                    text-slate-500 font-bold">
+                            Database
+                        </div>
+
+                        <h3 class="text-xl font-bold mt-1">
+                            MySQL & Data Management
+                        </h3>
+
+                    </div>
+
                 </div>
 
-                <div class="font-bold">
-                    React
+
+                <p class="text-sm text-slate-500 leading-6 mt-5">
+                    Designing and working with relational databases,
+                    migrations, relationships and application data.
+                </p>
+
+
+                <div class="flex flex-wrap gap-2 mt-5">
+
+                    <span class="tech">MySQL</span>
+                    <span class="tech">Migrations</span>
+                    <span class="tech">Relationships</span>
+                    <span class="tech">Query Builder</span>
+                    <span class="tech">Eloquent</span>
+                    <span class="tech">Database Design</span>
+
                 </div>
 
-                <div class="text-xs text-slate-500 mt-1">
-                    UI
-                </div>
             </div>
 
 
-            <div class="skill-card p-6 reveal">
-                <div class="skill-icon text-blue-400">
-                    <i class="fa-solid fa-wind"></i>
+
+            <!-- =================================================
+                 API & INTEGRATIONS
+            ================================================== -->
+
+            <div class="skill-card p-7 reveal">
+
+                <div class="flex items-start gap-4">
+
+                    <div class="skill-icon text-green-400">
+                        <i class="fa-solid fa-plug"></i>
+                    </div>
+
+                    <div>
+
+                        <div class="text-xs uppercase tracking-[.18em]
+                                    text-slate-500 font-bold">
+                            APIs & Integrations
+                        </div>
+
+                        <h3 class="text-xl font-bold mt-1">
+                            Third-Party Integrations
+                        </h3>
+
+                    </div>
+
                 </div>
 
-                <div class="font-bold">
-                    Tailwind
+
+                <p class="text-sm text-slate-500 leading-6 mt-5">
+                    Integrating external services and APIs into Laravel
+                    applications for payments, communication and email workflows.
+                </p>
+
+
+                <div class="flex flex-wrap gap-2 mt-5">
+
+                    <span class="tech">Razorpay</span>
+                    <span class="tech">Twilio</span>
+                    <span class="tech">SMTP</span>
+                    <span class="tech">REST APIs</span>
+                    <span class="tech">API Integration</span>
+                    <span class="tech">Postman</span>
+
                 </div>
 
-                <div class="text-xs text-slate-500 mt-1">
-                    Styling
-                </div>
             </div>
 
 
-            <div class="skill-card p-6 reveal reveal-delay-1">
-                <div class="skill-icon text-orange-400">
-                    <i class="fa-solid fa-database"></i>
+
+            <!-- =================================================
+                 DEVELOPMENT TOOLS
+            ================================================== -->
+
+            <div class="skill-card p-7 reveal reveal-delay-1">
+
+                <div class="flex items-start gap-4">
+
+                    <div class="skill-icon text-blue-400">
+                        <i class="fa-solid fa-toolbox"></i>
+                    </div>
+
+                    <div>
+
+                        <div class="text-xs uppercase tracking-[.18em]
+                                    text-slate-500 font-bold">
+                            Development & Tools
+                        </div>
+
+                        <h3 class="text-xl font-bold mt-1">
+                            Build, Test & Deploy
+                        </h3>
+
+                    </div>
+
                 </div>
 
-                <div class="font-bold">
-                    MySQL
+
+                <p class="text-sm text-slate-500 leading-6 mt-5">
+                    Comfortable with development workflows, API testing,
+                    version control, debugging and deployment processes.
+                </p>
+
+
+                <div class="flex flex-wrap gap-2 mt-5">
+
+                    <span class="tech">Git</span>
+                    <span class="tech">GitHub</span>
+                    <span class="tech">Postman</span>
+                    <span class="tech">Vite</span>
+                    <span class="tech">Netlify</span>
+                    <span class="tech">Deployment</span>
+                    <span class="tech">Debugging</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             PRACTICAL CAPABILITIES
+        ====================================================== -->
+
+        <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-3">
+
+            <div class="glass rounded-2xl p-5 reveal">
+
+                <div class="text-blue-400 text-lg">
+                    <i class="fa-solid fa-layer-group"></i>
+                </div>
+
+                <div class="font-bold mt-3">
+                    Admin Panels
                 </div>
 
                 <div class="text-xs text-slate-500 mt-1">
-                    Database
+                    Dashboards & management systems
                 </div>
+
+            </div>
+
+
+            <div class="glass rounded-2xl p-5 reveal reveal-delay-1">
+
+                <div class="text-purple-400 text-lg">
+                    <i class="fa-solid fa-users-gear"></i>
+                </div>
+
+                <div class="font-bold mt-3">
+                    Role-Based Systems
+                </div>
+
+                <div class="text-xs text-slate-500 mt-1">
+                    Admin / User workflows
+                </div>
+
+            </div>
+
+
+            <div class="glass rounded-2xl p-5 reveal reveal-delay-2">
+
+                <div class="text-green-400 text-lg">
+                    <i class="fa-solid fa-credit-card"></i>
+                </div>
+
+                <div class="font-bold mt-3">
+                    Payment Systems
+                </div>
+
+                <div class="text-xs text-slate-500 mt-1">
+                    Razorpay integration
+                </div>
+
+            </div>
+
+
+            <div class="glass rounded-2xl p-5 reveal reveal-delay-3">
+
+                <div class="text-cyan-400 text-lg">
+                    <i class="fa-solid fa-mobile-screen"></i>
+                </div>
+
+                <div class="font-bold mt-3">
+                    Responsive UI
+                </div>
+
+                <div class="text-xs text-slate-500 mt-1">
+                    Mobile, tablet & desktop
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     EXPERIENCE
+========================================================= -->
+
+<section id="experience" class="py-28">
+
+    <div class="max-w-6xl mx-auto px-5 lg:px-8">
+
+        <!-- HEADER -->
+
+        <div class="max-w-3xl mx-auto text-center reveal">
+
+            <div class="section-label">
+                Professional Experience
+            </div>
+
+            <h2 class="section-title text-4xl md:text-5xl mt-3">
+                Experience that goes
+                <span class="gradient-text">
+                    beyond tutorials.
+                </span>
+            </h2>
+
+            <p class="text-slate-400 leading-7 mt-5">
+                Hands-on experience building and working with
+                PHP, Laravel, MySQL, APIs, authentication,
+                payment systems and modern web applications.
+            </p>
+
+        </div>
+
+
+        <!-- =====================================================
+             TIMELINE
+        ====================================================== -->
+
+        <div class="relative mt-16">
+
+
+            <!-- Timeline Line -->
+
+            <div class="absolute left-[18px] md:left-1/2
+                        top-0 bottom-0 w-px
+                        bg-gradient-to-b
+                        from-blue-500/50
+                        via-purple-500/30
+                        to-transparent
+                        md:-translate-x-1/2">
+            </div>
+
+
+
+            <!-- =================================================
+                 EXPERIENCE 01
+            ================================================== -->
+
+            <div class="relative grid md:grid-cols-2
+                        gap-8 md:gap-14 mb-14 reveal">
+
+
+                <!-- DATE -->
+
+                <div class="md:text-right md:pr-8 pl-12 md:pl-0">
+
+                    <div class="text-xs uppercase
+                                tracking-[.18em]
+                                text-blue-400 font-bold">
+                        Professional Experience
+                    </div>
+
+                    <div class="text-sm text-slate-500 mt-2">
+                        PHP / Laravel Development
+                    </div>
+
+                </div>
+
+
+                <!-- CARD -->
+
+                <div class="glass rounded-3xl p-7
+                            border border-white/[.07]
+                            hover:border-blue-400/20
+                            transition-all duration-300">
+
+                    <div class="flex flex-col sm:flex-row
+                                sm:items-start
+                                justify-between gap-4">
+
+                        <div>
+
+                            <div class="text-xs uppercase
+                                        tracking-[.16em]
+                                        text-blue-400 font-bold">
+                                PHP / Laravel Developer
+                            </div>
+
+                            <h3 class="text-2xl font-black mt-2">
+                                Jankiweb Infotech OPC Pvt. Ltd.
+                            </h3>
+
+                            <p class="text-sm text-slate-500 mt-2">
+                                Lucknow, Uttar Pradesh
+                            </p>
+
+                        </div>
+
+
+                        <div class="shrink-0 px-3 py-1.5
+                                    rounded-full
+                                    bg-blue-500/10
+                                    border border-blue-400/10
+                                    text-blue-300
+                                    text-xs font-bold">
+                            Developer
+                        </div>
+
+                    </div>
+
+
+                    <p class="text-slate-400 leading-7 mt-6">
+                        Worked on PHP and Laravel-based web application
+                        development, database-driven modules,
+                        authentication, APIs, responsive interfaces
+                        and application integrations.
+                    </p>
+
+
+                    <!-- RESPONSIBILITIES -->
+
+                    <div class="mt-7">
+
+                        <div class="text-xs uppercase
+                                    tracking-[.18em]
+                                    text-slate-500 font-bold">
+                            Key Responsibilities
+                        </div>
+
+                        <div class="grid sm:grid-cols-2
+                                    gap-3 mt-4">
+
+                            <div class="flex gap-3">
+
+                                <i class="fa-solid fa-check
+                                          text-blue-400 mt-1 text-xs"></i>
+
+                                <span class="text-sm text-slate-400">
+                                    Laravel MVC application development
+                                </span>
+
+                            </div>
+
+
+                            <div class="flex gap-3">
+
+                                <i class="fa-solid fa-check
+                                          text-blue-400 mt-1 text-xs"></i>
+
+                                <span class="text-sm text-slate-400">
+                                    CRUD modules and database workflows
+                                </span>
+
+                            </div>
+
+
+                            <div class="flex gap-3">
+
+                                <i class="fa-solid fa-check
+                                          text-blue-400 mt-1 text-xs"></i>
+
+                                <span class="text-sm text-slate-400">
+                                    Authentication & authorization
+                                </span>
+
+                            </div>
+
+
+                            <div class="flex gap-3">
+
+                                <i class="fa-solid fa-check
+                                          text-blue-400 mt-1 text-xs"></i>
+
+                                <span class="text-sm text-slate-400">
+                                    Admin panels and dashboards
+                                </span>
+
+                            </div>
+
+
+                            <div class="flex gap-3">
+
+                                <i class="fa-solid fa-check
+                                          text-blue-400 mt-1 text-xs"></i>
+
+                                <span class="text-sm text-slate-400">
+                                    REST API development & testing
+                                </span>
+
+                            </div>
+
+
+                            <div class="flex gap-3">
+
+                                <i class="fa-solid fa-check
+                                          text-blue-400 mt-1 text-xs"></i>
+
+                                <span class="text-sm text-slate-400">
+                                    MySQL & Eloquent ORM
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- TECHNOLOGIES -->
+
+                    <div class="flex flex-wrap gap-2 mt-7 pt-6
+                                border-t border-white/[.06]">
+
+                        <span class="tech">PHP</span>
+                        <span class="tech">Laravel</span>
+                        <span class="tech">MySQL</span>
+                        <span class="tech">JavaScript</span>
+                        <span class="tech">Bootstrap</span>
+                        <span class="tech">Tailwind CSS</span>
+                        <span class="tech">REST API</span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TIMELINE DOT -->
+
+                <div class="absolute left-[10px] top-1
+                            w-4 h-4 rounded-full
+                            bg-blue-500
+                            border-4 border-[#080d1d]
+                            shadow-lg shadow-blue-500/30
+                            md:left-1/2
+                            md:-translate-x-1/2">
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 EXPERIENCE 02
+            ================================================== -->
+
+            <div class="relative grid md:grid-cols-2
+                        gap-8 md:gap-14 reveal">
+
+
+                <!-- CARD -->
+
+                <div class="md:col-start-2
+                            glass rounded-3xl p-7
+                            border border-white/[.07]
+                            hover:border-purple-400/20
+                            transition-all duration-300
+                            md:order-2">
+
+                    <div class="flex flex-col sm:flex-row
+                                sm:items-start
+                                justify-between gap-4">
+
+                        <div>
+
+                            <div class="text-xs uppercase
+                                        tracking-[.16em]
+                                        text-purple-400 font-bold">
+                                PHP Developer Intern
+                            </div>
+
+                            <h3 class="text-2xl font-black mt-2">
+                                Ekana Technologies Pvt. Ltd.
+                            </h3>
+
+                            <p class="text-sm text-slate-500 mt-2">
+                                Web Development
+                            </p>
+
+                        </div>
+
+
+                        <div class="shrink-0 px-3 py-1.5
+                                    rounded-full
+                                    bg-purple-500/10
+                                    border border-purple-400/10
+                                    text-purple-300
+                                    text-xs font-bold">
+                            Internship
+                        </div>
+
+                    </div>
+
+
+                    <p class="text-slate-400 leading-7 mt-6">
+                        Gained practical experience in PHP-based web
+                        development and worked with Laravel, MySQL,
+                        frontend technologies and application workflows.
+                    </p>
+
+
+                    <div class="mt-7">
+
+                        <div class="text-xs uppercase
+                                    tracking-[.18em]
+                                    text-slate-500 font-bold">
+                            Key Contributions
+                        </div>
+
+
+                        <div class="space-y-3 mt-4">
+
+
+                            <div class="flex gap-3">
+
+                                <i class="fa-solid fa-check
+                                          text-purple-400 mt-1 text-xs"></i>
+
+                                <span class="text-sm text-slate-400">
+                                    Developed database-driven PHP/Laravel modules
+                                </span>
+
+                            </div>
+
+
+                            <div class="flex gap-3">
+
+                                <i class="fa-solid fa-check
+                                          text-purple-400 mt-1 text-xs"></i>
+
+                                <span class="text-sm text-slate-400">
+                                    Worked with MySQL and CRUD operations
+                                </span>
+
+                            </div>
+
+
+                            <div class="flex gap-3">
+
+                                <i class="fa-solid fa-check
+                                          text-purple-400 mt-1 text-xs"></i>
+
+                                <span class="text-sm text-slate-400">
+                                    Built responsive frontend interfaces
+                                </span>
+
+                            </div>
+
+
+                            <div class="flex gap-3">
+
+                                <i class="fa-solid fa-check
+                                          text-purple-400 mt-1 text-xs"></i>
+
+                                <span class="text-sm text-slate-400">
+                                    Assisted with API integration and debugging
+                                </span>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="flex flex-wrap gap-2 mt-7 pt-6
+                                border-t border-white/[.06]">
+
+                        <span class="tech">PHP</span>
+                        <span class="tech">Laravel</span>
+                        <span class="tech">MySQL</span>
+                        <span class="tech">JavaScript</span>
+                        <span class="tech">Bootstrap</span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DATE -->
+
+                <div class="md:col-start-1
+                            md:row-start-1
+                            md:text-right
+                            md:pr-8
+                            pl-12 md:pl-0
+                            md:order-1">
+
+                    <div class="text-xs uppercase
+                                tracking-[.18em]
+                                text-purple-400 font-bold">
+                        Early Experience
+                    </div>
+
+                    <div class="text-sm text-slate-500 mt-2">
+                        PHP Web Development
+                    </div>
+
+                </div>
+
+
+                <!-- TIMELINE DOT -->
+
+                <div class="absolute left-[10px] top-1
+                            w-4 h-4 rounded-full
+                            bg-purple-500
+                            border-4 border-[#080d1d]
+                            shadow-lg shadow-purple-500/30
+                            md:left-1/2
+                            md:-translate-x-1/2">
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             EXPERIENCE HIGHLIGHT
+        ====================================================== -->
+
+        <div class="mt-16 glass rounded-3xl p-7 md:p-9
+                    border border-white/[.07]
+                    reveal">
+
+            <div class="grid md:grid-cols-3 gap-6 items-center">
+
+
+                <div>
+
+                    <div class="text-xs uppercase
+                                tracking-[.18em]
+                                text-slate-500 font-bold">
+                        What I Bring
+                    </div>
+
+                    <h3 class="text-2xl font-black mt-2">
+                        Practical
+                        <span class="gradient-text">
+                            development mindset.
+                        </span>
+                    </h3>
+
+                </div>
+
+
+                <div class="md:col-span-2
+                            grid sm:grid-cols-2 gap-4">
+
+
+                    <div class="flex gap-3">
+
+                        <div class="w-9 h-9 shrink-0
+                                    rounded-xl
+                                    bg-blue-500/10
+                                    border border-blue-400/10
+                                    flex items-center justify-center
+                                    text-blue-400">
+
+                            <i class="fa-solid fa-code"></i>
+
+                        </div>
+
+                        <div>
+
+                            <div class="font-bold text-sm">
+                                Backend Focused
+                            </div>
+
+                            <div class="text-xs text-slate-500 mt-1">
+                                Laravel, APIs, MySQL & authentication
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="flex gap-3">
+
+                        <div class="w-9 h-9 shrink-0
+                                    rounded-xl
+                                    bg-purple-500/10
+                                    border border-purple-400/10
+                                    flex items-center justify-center
+                                    text-purple-400">
+
+                            <i class="fa-solid fa-puzzle-piece"></i>
+
+                        </div>
+
+                        <div>
+
+                            <div class="font-bold text-sm">
+                                Integration Ready
+                            </div>
+
+                            <div class="text-xs text-slate-500 mt-1">
+                                Razorpay, Twilio, SMTP & APIs
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="flex gap-3">
+
+                        <div class="w-9 h-9 shrink-0
+                                    rounded-xl
+                                    bg-green-500/10
+                                    border border-green-400/10
+                                    flex items-center justify-center
+                                    text-green-400">
+
+                            <i class="fa-solid fa-shield-halved"></i>
+
+                        </div>
+
+                        <div>
+
+                            <div class="font-bold text-sm">
+                                Secure Workflows
+                            </div>
+
+                            <div class="text-xs text-slate-500 mt-1">
+                                Auth, roles & protected routes
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="flex gap-3">
+
+                        <div class="w-9 h-9 shrink-0
+                                    rounded-xl
+                                    bg-cyan-500/10
+                                    border border-cyan-400/10
+                                    flex items-center justify-center
+                                    text-cyan-400">
+
+                            <i class="fa-solid fa-mobile-screen"></i>
+
+                        </div>
+
+                        <div>
+
+                            <div class="font-bold text-sm">
+                                Responsive First
+                            </div>
+
+                            <div class="text-xs text-slate-500 mt-1">
+                                Modern desktop & mobile interfaces
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
             </div>
 
         </div>
@@ -5701,5 +6613,158 @@ document.addEventListener("keydown", function(event) {
     
     }
     </script>
+
+    <!-- =========================================================
+     RESUME MODAL
+========================================================= -->
+<div
+id="resumeModal"
+class="fixed inset-0 z-[9999] hidden items-center justify-center bg-black/70 p-3 sm:p-5 backdrop-blur-sm"
+role="dialog"
+aria-modal="true"
+aria-labelledby="resumeModalTitle"
+>
+
+<!-- Modal Container -->
+<div
+    id="resumeModalBox"
+    class="relative flex h-[95vh] w-full max-w-5xl flex-col overflow-hidden rounded-2xl bg-white shadow-2xl sm:h-[92vh]"
+>
+
+    <!-- Modal Header -->
+    <div class="flex shrink-0 items-center justify-between border-b border-gray-200 bg-white px-4 py-3 sm:px-6">
+
+        <div class="flex items-center gap-3">
+            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-gray-100">
+                <i class="fa-regular fa-file-pdf text-red-500"></i>
+            </div>
+
+            <div>
+                <h2
+                    id="resumeModalTitle"
+                    class="text-base font-bold text-gray-900 sm:text-lg"
+                >
+                    Dilshad Alam — Resume
+                </h2>
+
+                <p class="text-xs text-gray-500 sm:text-sm">
+                    Full Stack Developer
+                </p>
+            </div>
+        </div>
+
+        <!-- Close Button -->
+        <button
+            type="button"
+            onclick="closeResumeModal()"
+            aria-label="Close resume"
+            class="flex h-10 w-10 items-center justify-center rounded-xl text-gray-500 transition hover:bg-gray-100 hover:text-gray-900"
+        >
+            <i class="fa-solid fa-xmark text-xl"></i>
+        </button>
+
+    </div>
+
+
+    <!-- PDF Preview -->
+    <div class="min-h-0 flex-1 bg-gray-100 p-2 sm:p-4">
+
+        <iframe
+            id="resumeFrame"
+            src=""
+            title="Dilshad Alam Resume Preview"
+            class="h-full w-full rounded-lg border border-gray-200 bg-white"
+        ></iframe>
+
+    </div>
+
+
+    <!-- Modal Footer -->
+    <div class="flex shrink-0 flex-col gap-3 border-t border-gray-200 bg-white px-4 py-3 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+
+        <p class="text-center text-xs text-gray-500 sm:text-left">
+            Preview my resume before downloading.
+        </p>
+
+        <div class="flex w-full gap-2 sm:w-auto">
+
+            <!-- Download -->
+            <a
+                href="assets/resume/Dilshad-Alam-Resume.pdf"
+                download="Dilshad-Alam-Resume.pdf"
+                class="flex flex-1 items-center justify-center gap-2 rounded-xl bg-gray-900 px-5 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-black sm:flex-none"
+            >
+                <i class="fa-solid fa-download"></i>
+                Download Resume
+            </a>
+
+            <!-- Close -->
+            <button
+                type="button"
+                onclick="closeResumeModal()"
+                class="flex items-center justify-center rounded-xl border border-gray-300 px-5 py-3 text-sm font-semibold text-gray-700 transition-all duration-300 hover:border-gray-900 hover:text-gray-900"
+            >
+                Close
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+</div>
+
+
+<!-- =========================================================
+ RESUME MODAL JAVASCRIPT
+========================================================= -->
+<script>
+const resumeModal = document.getElementById('resumeModal');
+const resumeFrame = document.getElementById('resumeFrame');
+
+const resumePDF = 'Dilshad Alam Resume.pdf';
+
+
+function openResumeModal() {
+
+    resumeFrame.src = resumePDF;
+
+    resumeModal.classList.remove('hidden');
+    resumeModal.classList.add('flex');
+
+    document.body.classList.add('overflow-hidden');
+}
+
+
+function closeResumeModal() {
+
+    resumeModal.classList.add('hidden');
+    resumeModal.classList.remove('flex');
+
+    resumeFrame.src = '';
+
+    document.body.classList.remove('overflow-hidden');
+}
+
+
+// Close when clicking outside modal
+resumeModal.addEventListener('click', function (event) {
+
+    if (event.target === resumeModal) {
+        closeResumeModal();
+    }
+
+});
+
+
+// Close with ESC key
+document.addEventListener('keydown', function (event) {
+
+    if (event.key === 'Escape' && !resumeModal.classList.contains('hidden')) {
+        closeResumeModal();
+    }
+
+});
+</script>
 </body>
 </html>
