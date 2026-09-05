@@ -226,7 +226,7 @@
         <style>
     
         
-    <style>
+
 
 /* =========================================================
    PREMIUM CONTACT FORM
@@ -1970,7 +1970,7 @@
 
     </style>
     
-        </style>
+       
     
     </head>
 
@@ -2108,17 +2108,12 @@
 
 
                 <h1 class="hero-title text-6xl md:text-7xl lg:text-[78px]">
-
-                    Build a website
-
+                    Full Stack Developer
                     <br>
-
-                    that looks
-
+                    building websites that look
                     <span class="gradient-text">
                         premium.
                     </span>
-
                 </h1>
 
 
@@ -2859,10 +2854,16 @@
      WORK
 ========================= -->
 
+```html
+<!-- =========================================================
+     PREMIUM PROJECTS SECTION
+========================================================= -->
+
 <section id="work" class="py-28">
 
     <div class="max-w-7xl mx-auto px-5 lg:px-8">
 
+        <!-- SECTION HEADER -->
         <div class="flex flex-col md:flex-row md:items-end
                     justify-between gap-5 reveal">
 
@@ -2873,28 +2874,36 @@
                 </div>
 
                 <h2 class="section-title text-4xl md:text-5xl mt-3">
-                    Projects built with
+                    Full Stack Web Development
                     <span class="gradient-text">
-                        purpose.
+                        Projects.
                     </span>
                 </h2>
 
             </div>
 
             <p class="text-slate-500 max-w-md leading-7">
-                A selection of web projects covering business,
-                e-commerce, job portals and modern authentication.
+                A selection of real-world web applications and websites
+                built with PHP, Laravel, MySQL, React and modern web technologies.
             </p>
 
         </div>
 
 
+        <!-- =====================================================
+             PROJECT GRID
+        ====================================================== -->
+
         <div class="grid md:grid-cols-2 gap-6 mt-14">
 
 
-            <!-- PROJECT 1 -->
+            <!-- =================================================
+                 PROJECT 1 — FUTURE PRINT & PACK
+            ================================================== -->
 
-            <article class="project-card reveal">
+            <article
+                class="project-card reveal"
+                aria-label="Future Print and Pack Laravel project">
 
                 <div class="project-preview">
 
@@ -2907,7 +2916,6 @@
                         </div>
 
                         <div class="project-content">
-
                             <div class="project-heading"></div>
 
                             <div class="project-lines">
@@ -2915,7 +2923,6 @@
                                 <span></span>
                                 <span></span>
                             </div>
-
                         </div>
 
                     </div>
@@ -2926,16 +2933,285 @@
                 <div class="p-7">
 
                     <div class="text-xs text-blue-400 font-bold uppercase tracking-widest">
-                        E-Commerce
+                        Business & Packaging Platform
                     </div>
 
                     <h3 class="text-2xl font-bold mt-2">
-                        E-Commerce Website
+                        Future Print & Pack
                     </h3>
 
                     <p class="text-slate-500 mt-3 leading-7">
-                        A modern online shopping experience with
-                        structured product presentation and responsive UI.
+                        A modern packaging and printing business platform
+                        built with Laravel, featuring quotation management,
+                        authentication, admin functionality and an AI-assisted
+                        packaging enquiry experience.
+                    </p>
+
+                    <div class="flex flex-wrap gap-2 mt-5">
+
+                        <span class="tech">PHP</span>
+                        <span class="tech">Laravel 12</span>
+                        <span class="tech">MySQL</span>
+                        <span class="tech">Tailwind CSS</span>
+
+                    </div>
+
+                    <div class="flex flex-wrap gap-3 mt-6">
+
+                        <button
+                            type="button"
+                            onclick="openProjectModal('future-print-pack')"
+                            class="btn-primary px-4 py-3 rounded-xl text-sm font-bold inline-flex items-center gap-2">
+
+                            View Details
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+
+                        </button>
+
+                        <a
+                            href="https://github.com/Dilshad1232/Future_Print_Pack"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn-secondary px-4 py-3 rounded-xl text-sm font-bold inline-flex items-center gap-2">
+
+                            GitHub
+                            <i class="fa-brands fa-github"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 PROJECT 2 — RAMOTOR
+            ================================================== -->
+
+            <article
+                class="project-card reveal reveal-delay-1"
+                aria-label="RAMotor Car Service Management System">
+
+                <div class="project-preview">
+
+                    <div class="project-window">
+
+                        <div class="project-top">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </div>
+
+                        <div class="project-content">
+                            <div class="project-heading"></div>
+
+                            <div class="project-lines">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="p-7">
+
+                    <div class="text-xs text-cyan-400 font-bold uppercase tracking-widest">
+                        Automotive Management
+                    </div>
+
+                    <h3 class="text-2xl font-bold mt-2">
+                        RAMotor — Car Service Management
+                    </h3>
+
+                    <p class="text-slate-500 mt-3 leading-7">
+                        A full-stack car service management application
+                        with service booking, customer management, mechanics,
+                        admin workflows and Razorpay payment integration.
+                    </p>
+
+                    <div class="flex flex-wrap gap-2 mt-5">
+
+                        <span class="tech">PHP</span>
+                        <span class="tech">Laravel</span>
+                        <span class="tech">MySQL</span>
+                        <span class="tech">Razorpay</span>
+
+                    </div>
+
+                    <div class="flex flex-wrap gap-3 mt-6">
+
+                        <button
+                            type="button"
+                            onclick="openProjectModal('ramotor')"
+                            class="btn-primary px-4 py-3 rounded-xl text-sm font-bold inline-flex items-center gap-2">
+
+                            View Details
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+
+                        </button>
+
+                        <a
+                            href="https://github.com/Dilshad1232/ramotor"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn-secondary px-4 py-3 rounded-xl text-sm font-bold inline-flex items-center gap-2">
+
+                            GitHub
+                            <i class="fa-brands fa-github"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 PROJECT 3 — MULTI USER MANAGEMENT
+            ================================================== -->
+
+            <article
+                class="project-card reveal"
+                aria-label="Multi User Management System Laravel project">
+
+                <div class="project-preview">
+
+                    <div class="project-window">
+
+                        <div class="project-top">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </div>
+
+                        <div class="project-content">
+                            <div class="project-heading"></div>
+
+                            <div class="project-lines">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="p-7">
+
+                    <div class="text-xs text-purple-400 font-bold uppercase tracking-widest">
+                        Role-Based Management
+                    </div>
+
+                    <h3 class="text-2xl font-bold mt-2">
+                        Multi-User Management System
+                    </h3>
+
+                    <p class="text-slate-500 mt-3 leading-7">
+                        A Laravel-based role management application with
+                        separate Admin and User areas, submission workflows,
+                        notifications, protected APIs and Laravel Sanctum.
+                    </p>
+
+                    <div class="flex flex-wrap gap-2 mt-5">
+
+                        <span class="tech">PHP</span>
+                        <span class="tech">Laravel</span>
+                        <span class="tech">MySQL</span>
+                        <span class="tech">Sanctum</span>
+
+                    </div>
+
+                    <div class="flex flex-wrap gap-3 mt-6">
+
+                        <button
+                            type="button"
+                            onclick="openProjectModal('multi-user')"
+                            class="btn-primary px-4 py-3 rounded-xl text-sm font-bold inline-flex items-center gap-2">
+
+                            View Details
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+
+                        </button>
+
+                        <a
+                            href="https://github.com/Dilshad1232/Multi-User_Management-System"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn-secondary px-4 py-3 rounded-xl text-sm font-bold inline-flex items-center gap-2">
+
+                            GitHub
+                            <i class="fa-brands fa-github"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 PROJECT 4 — E-COMMERCE
+            ================================================== -->
+
+            <article
+                class="project-card reveal reveal-delay-1"
+                aria-label="PHP Laravel E-Commerce Website">
+
+                <div class="project-preview">
+
+                    <div class="project-window">
+
+                        <div class="project-top">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </div>
+
+                        <div class="project-content">
+                            <div class="project-heading"></div>
+
+                            <div class="project-lines">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="p-7">
+
+                    <div class="text-xs text-blue-400 font-bold uppercase tracking-widest">
+                        E-Commerce Development
+                    </div>
+
+                    <h3 class="text-2xl font-bold mt-2">
+                        PHP Laravel E-Commerce Website
+                    </h3>
+
+                    <p class="text-slate-500 mt-3 leading-7">
+                        A modern e-commerce web application focused on
+                        structured product presentation, responsive UI,
+                        database integration and online shopping workflows.
                     </p>
 
                     <div class="flex flex-wrap gap-2 mt-5">
@@ -2947,14 +3223,29 @@
 
                     </div>
 
+                    <button
+                        type="button"
+                        onclick="openProjectModal('ecommerce')"
+                        class="btn-secondary px-4 py-3 rounded-xl text-sm font-bold inline-flex items-center gap-2 mt-6">
+
+                        View Details
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+
+                    </button>
+
                 </div>
 
             </article>
 
 
-            <!-- PROJECT 2 -->
 
-            <article class="project-card reveal reveal-delay-1">
+            <!-- =================================================
+                 PROJECT 5 — KUSHINAGAR JOBS
+            ================================================== -->
+
+            <article
+                class="project-card reveal"
+                aria-label="KushinagarJobs Laravel Job Portal">
 
                 <div class="project-preview">
 
@@ -2967,7 +3258,6 @@
                         </div>
 
                         <div class="project-content">
-
                             <div class="project-heading"></div>
 
                             <div class="project-lines">
@@ -2975,7 +3265,6 @@
                                 <span></span>
                                 <span></span>
                             </div>
-
                         </div>
 
                     </div>
@@ -2986,16 +3275,17 @@
                 <div class="p-7">
 
                     <div class="text-xs text-purple-400 font-bold uppercase tracking-widest">
-                        Job Portal
+                        Job Portal Development
                     </div>
 
                     <h3 class="text-2xl font-bold mt-2">
-                        KushinagarJobs
+                        KushinagarJobs — Laravel Job Portal
                     </h3>
 
                     <p class="text-slate-500 mt-3 leading-7">
-                        Job discovery platform with employer-side
-                        functionality and structured job listings.
+                        A job discovery platform built with Laravel,
+                        featuring structured job listings and employer-side
+                        functionality for managing job opportunities.
                     </p>
 
                     <div class="flex flex-wrap gap-2 mt-5">
@@ -3003,18 +3293,33 @@
                         <span class="tech">Laravel</span>
                         <span class="tech">PHP</span>
                         <span class="tech">MySQL</span>
-                        <span class="tech">Tailwind</span>
+                        <span class="tech">Tailwind CSS</span>
 
                     </div>
+
+                    <button
+                        type="button"
+                        onclick="openProjectModal('kushinagarjobs')"
+                        class="btn-secondary px-4 py-3 rounded-xl text-sm font-bold inline-flex items-center gap-2 mt-6">
+
+                        View Details
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+
+                    </button>
 
                 </div>
 
             </article>
 
 
-            <!-- PROJECT 3 -->
 
-            <article class="project-card reveal">
+            <!-- =================================================
+                 PROJECT 6 — REACT + LARAVEL
+            ================================================== -->
+
+            <article
+                class="project-card reveal reveal-delay-1"
+                aria-label="React Laravel Authentication System">
 
                 <div class="project-preview">
 
@@ -3027,7 +3332,6 @@
                         </div>
 
                         <div class="project-content">
-
                             <div class="project-heading"></div>
 
                             <div class="project-lines">
@@ -3035,7 +3339,80 @@
                                 <span></span>
                                 <span></span>
                             </div>
+                        </div>
 
+                    </div>
+
+                </div>
+
+
+                <div class="p-7">
+
+                    <div class="text-xs text-green-400 font-bold uppercase tracking-widest">
+                        Full Stack Application
+                    </div>
+
+                    <h3 class="text-2xl font-bold mt-2">
+                        React + Laravel Authentication
+                    </h3>
+
+                    <p class="text-slate-500 mt-3 leading-7">
+                        A full-stack authentication application connecting
+                        a React frontend with a Laravel backend API using
+                        Laravel Sanctum and protected application routes.
+                    </p>
+
+                    <div class="flex flex-wrap gap-2 mt-5">
+
+                        <span class="tech">React</span>
+                        <span class="tech">Laravel</span>
+                        <span class="tech">Sanctum</span>
+                        <span class="tech">REST API</span>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        onclick="openProjectModal('react-laravel')"
+                        class="btn-secondary px-4 py-3 rounded-xl text-sm font-bold inline-flex items-center gap-2 mt-6">
+
+                        View Details
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 PROJECT 7 — CAR SERVICE
+            ================================================== -->
+
+            <article
+                class="project-card reveal"
+                aria-label="Car Service Management System">
+
+                <div class="project-preview">
+
+                    <div class="project-window">
+
+                        <div class="project-top">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </div>
+
+                        <div class="project-content">
+                            <div class="project-heading"></div>
+
+                            <div class="project-lines">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
                         </div>
 
                     </div>
@@ -3046,16 +3423,17 @@
                 <div class="p-7">
 
                     <div class="text-xs text-cyan-400 font-bold uppercase tracking-widest">
-                        Management System
+                        Business Management System
                     </div>
 
                     <h3 class="text-2xl font-bold mt-2">
-                        Car Service Management
+                        Car Service Management System
                     </h3>
 
                     <p class="text-slate-500 mt-3 leading-7">
-                        A structured web application designed to
-                        manage service-related business operations.
+                        A web-based business management application designed
+                        to organize service-related operations, customer
+                        information and workflow management.
                     </p>
 
                     <div class="flex flex-wrap gap-2 mt-5">
@@ -3067,75 +3445,625 @@
 
                     </div>
 
-                </div>
+                    <button
+                        type="button"
+                        onclick="openProjectModal('car-service')"
+                        class="btn-secondary px-4 py-3 rounded-xl text-sm font-bold inline-flex items-center gap-2 mt-6">
 
-            </article>
+                        View Details
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
 
-
-            <!-- PROJECT 4 -->
-
-            <article class="project-card reveal reveal-delay-1">
-
-                <div class="project-preview">
-
-                    <div class="project-window">
-
-                        <div class="project-top">
-                            <i></i>
-                            <i></i>
-                            <i></i>
-                        </div>
-
-                        <div class="project-content">
-
-                            <div class="project-heading"></div>
-
-                            <div class="project-lines">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <div class="p-7">
-
-                    <div class="text-xs text-green-400 font-bold uppercase tracking-widest">
-                        Full Stack
-                    </div>
-
-                    <h3 class="text-2xl font-bold mt-2">
-                        React + Laravel Authentication
-                    </h3>
-
-                    <p class="text-slate-500 mt-3 leading-7">
-                        Modern authentication flow connecting a
-                        React frontend with a Laravel backend API.
-                    </p>
-
-                    <div class="flex flex-wrap gap-2 mt-5">
-
-                        <span class="tech">React</span>
-                        <span class="tech">Laravel</span>
-                        <span class="tech">Sanctum</span>
-                        <span class="tech">API</span>
-
-                    </div>
+                    </button>
 
                 </div>
 
             </article>
+
 
         </div>
 
     </div>
 
 </section>
+
+
+
+<!-- =========================================================
+     PREMIUM PROJECT MODAL
+========================================================= -->
+
+<div
+    id="projectModal"
+    class="fixed inset-0 z-[9999] hidden items-center justify-center p-4">
+
+    <!-- Backdrop -->
+    <div
+        id="projectModalBackdrop"
+        class="absolute inset-0 bg-black/80 backdrop-blur-md">
+    </div>
+
+
+    <!-- Modal -->
+    <div
+        id="projectModalBox"
+        class="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto
+               bg-[#080d1d] border border-white/10 rounded-3xl
+               shadow-2xl">
+
+        <!-- Top Glow -->
+        <div
+            class="absolute -top-24 left-1/4 w-72 h-72
+                   bg-blue-600/10 blur-[100px] rounded-full
+                   pointer-events-none">
+        </div>
+
+
+        <!-- Close -->
+        <button
+            type="button"
+            onclick="closeProjectModal()"
+            aria-label="Close project details"
+            class="absolute top-5 right-5 z-20 w-10 h-10
+                   rounded-xl border border-white/10
+                   bg-white/5 text-slate-400
+                   hover:text-white hover:bg-white/10
+                   transition">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+
+        <div class="relative z-10 p-7 sm:p-9">
+
+
+            <!-- Project Header -->
+            <div class="pr-12">
+
+                <div
+                    id="modalCategory"
+                    class="text-xs text-blue-400 font-bold uppercase
+                           tracking-[0.18em]">
+                </div>
+
+                <h2
+                    id="modalTitle"
+                    class="text-3xl sm:text-4xl font-black mt-3">
+                </h2>
+
+                <p
+                    id="modalDescription"
+                    class="text-slate-400 leading-7 mt-5">
+                </p>
+
+            </div>
+
+
+            <!-- Divider -->
+            <div class="h-px bg-white/[0.07] my-7"></div>
+
+
+            <!-- Features -->
+            <div>
+
+                <div class="text-xs uppercase tracking-[0.18em]
+                            font-bold text-slate-500">
+                    Key Features
+                </div>
+
+                <div
+                    id="modalFeatures"
+                    class="grid sm:grid-cols-2 gap-3 mt-4">
+                </div>
+
+            </div>
+
+
+            <!-- Tech Stack -->
+            <div class="mt-8">
+
+                <div class="text-xs uppercase tracking-[0.18em]
+                            font-bold text-slate-500">
+                    Technology Stack
+                </div>
+
+                <div
+                    id="modalTech"
+                    class="flex flex-wrap gap-2 mt-4">
+                </div>
+
+            </div>
+
+
+            <!-- Role / Architecture -->
+            <div
+                id="modalArchitectureBox"
+                class="mt-8 p-5 rounded-2xl
+                       bg-white/[0.03]
+                       border border-white/[0.06]">
+
+                <div class="text-xs uppercase tracking-[0.18em]
+                            font-bold text-slate-500">
+                    Architecture / Role
+                </div>
+
+                <p
+                    id="modalArchitecture"
+                    class="text-sm text-slate-400 leading-7 mt-3">
+                </p>
+
+            </div>
+
+
+            <!-- Buttons -->
+            <div
+                id="modalActions"
+                class="flex flex-wrap gap-3 mt-8">
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     PROJECT MODAL JAVASCRIPT
+========================================================= -->
+
+<script>
+
+const projectData = {
+
+    "future-print-pack": {
+
+        category: "Business & Packaging Platform",
+
+        title: "Future Print & Pack",
+
+        description:
+            "A modern packaging and printing business platform built with Laravel, designed to present packaging solutions, collect quotation enquiries and provide an organized admin workflow.",
+
+        features: [
+            "Premium packaging and printing website",
+            "Product and packaging presentation",
+            "Quotation enquiry system",
+            "Admin quotation management",
+            "Authentication and protected admin area",
+            "Role-based Admin / User access",
+            "AI-assisted packaging enquiry experience",
+            "Responsive modern interface"
+        ],
+
+        tech: [
+            "PHP",
+            "Laravel 12",
+            "MySQL",
+            "Tailwind CSS",
+            "JavaScript",
+            "Blade"
+        ],
+
+        architecture:
+            "Full-stack Laravel application with database-backed quotation management, authentication, role-based admin protection and frontend AI-assisted enquiry functionality.",
+
+        github:
+            "https://github.com/Dilshad1232/Future_Print_Pack"
+
+    },
+
+
+    "ramotor": {
+
+        category: "Automotive Management",
+
+        title: "RAMotor — Car Service Management System",
+
+        description:
+            "A full-stack car service management application that connects customers, services, bookings, mechanics, administrators and online payments in one workflow.",
+
+        features: [
+            "User registration and login",
+            "Admin and User dashboards",
+            "Car service booking",
+            "Booking approval and rejection",
+            "Booking cancellation",
+            "Service rescheduling",
+            "Razorpay payment integration",
+            "Payment verification",
+            "Booking confirmation and receipt",
+            "Customer management",
+            "Service management",
+            "Mechanic management",
+            "Mechanic specializations",
+            "User and Admin profile management",
+            "Contact management",
+            "Laravel Sanctum API authentication"
+        ],
+
+        tech: [
+            "PHP",
+            "Laravel",
+            "MySQL",
+            "Laravel Sanctum",
+            "Razorpay",
+            "REST API",
+            "JavaScript"
+        ],
+
+        architecture:
+            "Role-based Laravel application with protected User/Admin areas, Sanctum-powered APIs, booking workflows, service management and Razorpay payment processing.",
+
+        github:
+            "https://github.com/Dilshad1232/ramotor"
+
+    },
+
+
+    "multi-user": {
+
+        category: "Role-Based Management",
+
+        title: "Multi-User Management System",
+
+        description:
+            "A Laravel-based multi-user management application providing separate Admin and User experiences with protected routes, submission workflows, notifications and authenticated APIs.",
+
+        features: [
+            "User registration and login",
+            "Admin and User role separation",
+            "Protected Admin dashboard",
+            "Protected User dashboard",
+            "Submission creation",
+            "Submission tracking",
+            "Submission approval",
+            "Submission rejection",
+            "Submission status management",
+            "User notifications",
+            "Mark notifications as read",
+            "Admin notification management",
+            "Activity logs",
+            "Site settings management",
+            "User profile management",
+            "Password reset",
+            "Email verification",
+            "Laravel Sanctum API authentication"
+        ],
+
+        tech: [
+            "PHP",
+            "Laravel",
+            "MySQL",
+            "Laravel Sanctum",
+            "REST API",
+            "Blade",
+            "Middleware"
+        ],
+
+        architecture:
+            "MVC-based Laravel application using authentication middleware, role-based authorization and Sanctum-protected REST APIs for separate Admin and User workflows.",
+
+        github:
+            "https://github.com/Dilshad1232/Multi-User_Management-System"
+
+    },
+
+
+    "ecommerce": {
+
+        category: "E-Commerce Development",
+
+        title: "PHP Laravel E-Commerce Website",
+
+        description:
+            "A modern e-commerce web application focused on structured product presentation, responsive user interfaces and database-driven shopping functionality.",
+
+        features: [
+            "Modern e-commerce interface",
+            "Responsive product presentation",
+            "Structured product information",
+            "Database integration",
+            "Shopping-oriented user experience",
+            "Responsive design for multiple screens"
+        ],
+
+        tech: [
+            "PHP",
+            "Laravel",
+            "MySQL",
+            "Bootstrap"
+        ],
+
+        architecture:
+            "Laravel-based web application using MVC architecture and MySQL database integration for structured e-commerce functionality.",
+
+        github: null
+
+    },
+
+
+    "kushinagarjobs": {
+
+        category: "Job Portal Development",
+
+        title: "KushinagarJobs — Laravel Job Portal",
+
+        description:
+            "A job discovery platform built with Laravel for structured job listings and employer-side functionality.",
+
+        features: [
+            "Job listing platform",
+            "Structured job listings",
+            "Job discovery workflow",
+            "Employer-side functionality",
+            "Responsive user interface",
+            "Laravel-based backend",
+            "Database-driven application"
+        ],
+
+        tech: [
+            "PHP",
+            "Laravel",
+            "MySQL",
+            "Tailwind CSS"
+        ],
+
+        architecture:
+            "Laravel MVC application with database-backed job listings and separate functionality for job seekers and employers.",
+
+        github: null
+
+    },
+
+
+    "react-laravel": {
+
+        category: "Full Stack Application",
+
+        title: "React + Laravel Authentication System",
+
+        description:
+            "A modern full-stack authentication application connecting a React frontend with a Laravel backend API.",
+
+        features: [
+            "React frontend",
+            "Laravel backend API",
+            "User registration",
+            "User login",
+            "Logout functionality",
+            "Protected routes",
+            "Authentication state management",
+            "Laravel Sanctum token authentication",
+            "REST API communication"
+        ],
+
+        tech: [
+            "React",
+            "Laravel",
+            "Sanctum",
+            "REST API",
+            "JavaScript"
+        ],
+
+        architecture:
+            "Separate React frontend and Laravel API backend connected through authenticated API requests with Laravel Sanctum.",
+
+        github: null
+
+    },
+
+
+    "car-service": {
+
+        category: "Business Management System",
+
+        title: "Car Service Management System",
+
+        description:
+            "A web-based car service management application designed to organize service-related business operations and customer workflows.",
+
+        features: [
+            "Service management",
+            "Customer information management",
+            "Business workflow management",
+            "Database-backed application",
+            "Responsive interface",
+            "Service-related operational structure"
+        ],
+
+        tech: [
+            "PHP",
+            "Laravel",
+            "MySQL",
+            "JavaScript"
+        ],
+
+        architecture:
+            "Laravel-based business management application using MVC architecture and MySQL for structured operational data.",
+
+        github: null
+
+    }
+
+};
+
+
+
+/* =========================================================
+   OPEN MODAL
+========================================================= */
+
+function openProjectModal(projectKey) {
+
+    const project = projectData[projectKey];
+
+    if (!project) return;
+
+    const modal = document.getElementById("projectModal");
+
+    const title = document.getElementById("modalTitle");
+    const category = document.getElementById("modalCategory");
+    const description = document.getElementById("modalDescription");
+    const features = document.getElementById("modalFeatures");
+    const tech = document.getElementById("modalTech");
+    const architecture = document.getElementById("modalArchitecture");
+    const actions = document.getElementById("modalActions");
+
+
+    category.textContent = project.category;
+
+    title.textContent = project.title;
+
+    description.textContent = project.description;
+
+    architecture.textContent = project.architecture;
+
+
+    /* Features */
+
+    features.innerHTML = project.features.map(feature => {
+
+        return `
+            <div class="flex items-start gap-3
+                        p-3 rounded-xl
+                        bg-white/[0.025]
+                        border border-white/[0.05]">
+
+                <div class="w-6 h-6 shrink-0 rounded-lg
+                            bg-blue-500/10
+                            border border-blue-400/10
+                            flex items-center justify-center
+                            text-blue-400 text-xs">
+
+                    <i class="fa-solid fa-check"></i>
+
+                </div>
+
+                <span class="text-sm text-slate-400 leading-6">
+                    ${feature}
+                </span>
+
+            </div>
+        `;
+
+    }).join("");
+
+
+    /* Technologies */
+
+    tech.innerHTML = project.tech.map(item => {
+
+        return `
+            <span class="tech">
+                ${item}
+            </span>
+        `;
+
+    }).join("");
+
+
+    /* Action Buttons */
+
+    actions.innerHTML = "";
+
+    if (project.github) {
+
+        actions.innerHTML += `
+            <a
+                href="${project.github}"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-primary px-5 py-3 rounded-xl
+                       text-sm font-bold
+                       inline-flex items-center gap-2">
+
+                <i class="fa-brands fa-github"></i>
+
+                View GitHub Repository
+
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+
+            </a>
+        `;
+
+    }
+
+
+    actions.innerHTML += `
+        <button
+            type="button"
+            onclick="closeProjectModal()"
+            class="btn-secondary px-5 py-3 rounded-xl
+                   text-sm font-bold
+                   inline-flex items-center gap-2">
+
+            <i class="fa-solid fa-xmark"></i>
+
+            Close Details
+
+        </button>
+    `;
+
+
+    /* Show */
+
+    modal.classList.remove("hidden");
+
+    modal.classList.add("flex");
+
+    document.body.style.overflow = "hidden";
+
+}
+
+
+
+/* =========================================================
+   CLOSE MODAL
+========================================================= */
+
+function closeProjectModal() {
+
+    const modal = document.getElementById("projectModal");
+
+    modal.classList.add("hidden");
+
+    modal.classList.remove("flex");
+
+    document.body.style.overflow = "";
+
+}
+
+
+
+/* =========================================================
+   BACKDROP CLICK
+========================================================= */
+
+document
+    .getElementById("projectModalBackdrop")
+    .addEventListener("click", closeProjectModal);
+
+
+
+/* =========================================================
+   ESC KEY
+========================================================= */
+
+document.addEventListener("keydown", function(event) {
+
+    if (event.key === "Escape") {
+
+        closeProjectModal();
+
+    }
+
+});
+
+</script>
+
 
 
 <!-- =========================
