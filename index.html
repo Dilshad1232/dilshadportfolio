@@ -1993,11 +1993,11 @@
 <!-- =========================
      NAVBAR
 ========================= -->
-
 <header class="fixed top-0 left-0 right-0 z-50 nav-glass">
 
     <nav class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between">
 
+        <!-- LOGO -->
         <a href="#home" class="flex items-center gap-3">
 
             <div class="logo-mark">
@@ -2017,6 +2017,7 @@
         </a>
 
 
+        <!-- NAVIGATION -->
         <div class="hidden lg:flex items-center gap-8 text-sm">
 
             <a href="#home" class="nav-link active">Home</a>
@@ -2029,16 +2030,35 @@
         </div>
 
 
+        <!-- AVAILABILITY -->
+        <div class="hidden xl:flex items-center gap-2
+                    px-3 py-2 rounded-full
+                    border border-emerald-400/20
+                    bg-emerald-400/5
+                    text-emerald-400
+                    text-xs font-semibold whitespace-nowrap">
+
+            <span class="live-dot"></span>
+
+            Available for website projects
+
+        </div>
+
+
+        <!-- CTA -->
         <div class="hidden lg:block">
 
             <a href="#contact"
                class="btn-primary px-5 py-3 rounded-xl text-sm font-bold inline-flex">
+
                 Start a Project
+
             </a>
 
         </div>
 
 
+        <!-- MOBILE BUTTON -->
         <button id="mobileBtn"
                 class="lg:hidden w-11 h-11 rounded-xl border border-white/10 bg-white/5">
 
@@ -2049,6 +2069,7 @@
     </nav>
 
 
+    <!-- MOBILE MENU -->
     <div id="mobileMenu"
          class="hidden lg:hidden border-t border-white/5 bg-[#050816]/95 backdrop-blur-xl">
 
@@ -2084,7 +2105,6 @@
 
 </header>
 
-
 <!-- =========================
      HERO
 ========================= -->
@@ -2105,7 +2125,7 @@
 
             <!-- LEFT -->
 
-            <div class="reveal">
+            <!-- <div class="reveal">
 
                 <div class="hero-badge mb-7">
 
@@ -2113,84 +2133,88 @@
 
                     Available for website projects
 
-                </div>
+                </div> -->
 
 
-                <h1 class="hero-title text-6xl md:text-7xl lg:text-[78px]">
-                    Full Stack Developer
-                    <br>
-                    building websites that look
-                    <span class="gradient-text">
-                        premium.
-                    </span>
-                </h1>
+              <!-- LEFT -->
+
+<div class="reveal">
+
+    <h1 class="hero-title text-6xl md:text-7xl lg:text-[78px]">
+        Full Stack Developer
+        <br>
+        building websites that look
+        <span class="gradient-text">
+            premium.
+        </span>
+    </h1>
 
 
-                <p class="mt-7 text-lg text-slate-400 max-w-xl leading-8">
+    <p class="mt-7 text-lg text-slate-400 max-w-xl leading-8">
 
-                    Premium, responsive and modern websites for
-                    portfolios, businesses, landing pages and small
-                    online stores — without the agency-level price tag.
+        Premium, responsive and modern websites for
+        portfolios, businesses, landing pages and small
+        online stores — without the agency-level price tag.
 
-                </p>
-
-
-                <div class="flex flex-wrap gap-4 mt-9">
-
-                    <a href="#services"
-                       class="btn-primary px-6 py-4 rounded-xl font-bold inline-flex items-center gap-2">
-
-                        Explore Packages
-
-                        <i class="fa-solid fa-arrow-right text-sm"></i>
-
-                    </a>
+    </p>
 
 
-                    <a href="#work"
-                       class="btn-secondary px-6 py-4 rounded-xl font-bold inline-flex items-center gap-2">
+    <div class="flex flex-wrap gap-4 mt-9">
 
-                        View My Work
+        <a href="#services"
+           class="btn-primary px-6 py-4 rounded-xl font-bold inline-flex items-center gap-2">
 
-                        <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+            Explore Packages
 
-                    </a>
+            <i class="fa-solid fa-arrow-right text-sm"></i>
 
-                </div>
-
-
-                <div class="flex flex-wrap items-center gap-x-6 gap-y-3 mt-8 text-xs text-slate-500">
-
-                    <span>
-                        <i class="fa-solid fa-check text-blue-400 mr-1"></i>
-                        Mobile Responsive
-                    </span>
-
-                    <span>
-                        <i class="fa-solid fa-check text-blue-400 mr-1"></i>
-                        Modern UI
-                    </span>
-
-                    <span>
-                        <i class="fa-solid fa-check text-blue-400 mr-1"></i>
-                        SEO Ready
-                    </span>
-
-                </div>
+        </a>
 
 
-                <div class="flex flex-wrap gap-2 mt-7">
+        <a href="#work"
+           class="btn-secondary px-6 py-4 rounded-xl font-bold inline-flex items-center gap-2">
 
-                    <span class="tech">PHP</span>
-                    <span class="tech">Laravel</span>
-                    <span class="tech">Tailwind</span>
-                    <span class="tech">JavaScript</span>
-                    <span class="tech">React</span>
-                    <span class="tech">MySQL</span>
+            View My Work
 
-                </div>
+            <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
 
-            </div>
+        </a>
+
+    </div>
+
+
+    <div class="flex flex-wrap items-center gap-x-6 gap-y-3 mt-8 text-xs text-slate-500">
+
+        <span>
+            <i class="fa-solid fa-check text-blue-400 mr-1"></i>
+            Mobile Responsive
+        </span>
+
+        <span>
+            <i class="fa-solid fa-check text-blue-400 mr-1"></i>
+            Modern UI
+        </span>
+
+        <span>
+            <i class="fa-solid fa-check text-blue-400 mr-1"></i>
+            SEO Ready
+        </span>
+
+    </div>
+
+
+    <div class="flex flex-wrap gap-2 mt-7">
+
+        <span class="tech">PHP</span>
+        <span class="tech">Laravel</span>
+        <span class="tech">Tailwind</span>
+        <span class="tech">JavaScript</span>
+        <span class="tech">React</span>
+        <span class="tech">MySQL</span>
+
+    </div>
+
+</div>
 
 
             <!-- RIGHT -->
